@@ -7,7 +7,7 @@ Significaba abrir un disco por primera vez, leer las notas del compositor, estud
 La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño, dejo de ser valorado y se convirtio en un objeto de consumo alquilado en este mundo de los pagos por mensualidades. 
 
 El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado. 
-> [!]
+> 
 >El streaming convirtió la música en agua corriente: siempre disponible, infinitamente reemplazable, imposible de poseer.
 
 Esa democratización de hasta escuchar gratis en streaming no prevé el esfuerzo que hay detrás de una creación. 
@@ -24,7 +24,7 @@ Las disqueras independientes mueren porque no pueden competir con los algoritmos
 
 No somos únicamente una plataforma de streaming. No somos únicamente un marketplace de ecosistemas creativos. 
 
-Somos una idea. Un ideal. 
+*Somos una idea. Un ideal.*
 
 Un ideal que para llegarse a concretar requiere de pedagogía, de creer en nosotros, de creer en el arte como transformación  de una sociedad equitativa y remunerada.
 
@@ -32,7 +32,7 @@ Somos la idea que cree que el arte recupera su peso, donde la obra creativa se c
 
 Donde cada transacción devuelve valor directamente a quien creó la obra, así mismo a las pequeñas disqueras como a los grandes sellos discográficos.
 
-La tecnología blockchain nos permite hacer algo que antes era imposible: crear objetos digitales con las mismas propiedades de un vinilo de edición limitada,escasez verificable, propiedad demostrable,que esa pieza no solo sea la música  y arte adeherido a el, sino que  el poseedor puede tener cualquier cosa a imaginación  del artista. La venta de un objeto real (un libro de partituras, un acceso a un concierto, acceso vitalicio a un podcast mientras tenga la pieza), tenemos de nuestro la la encriptación de seguridad bancaria, transferencia directa, pero con las ventajas del mundo digital: acceso instantáneo, distribución global, y programabilidad que garantiza que el artista reciba su parte en cada reventa, de manera perpetua, sin intermediarios.
+La tecnología blockchain nos permite hacer algo que antes era imposible: crear objetos digitales con las mismas propiedades de un vinilo de edición limitada,escasez verificable, propiedad demostrable,que esa pieza no solo sea la música  y arte adeherido a el, sino que  el poseedor puede tener cualquier cosa a imaginación  del artista. La venta de un objeto real (un libro de partituras, un acceso a un concierto, acceso vitalicio a un podcast mientras tenga la pieza), tenemos de nuestro lado la encriptación de seguridad bancaria, transferencia directa, acceso instantáneo, distribución global y programabilidad que garantiza que el artista reciba su parte en cada reventa, de manera perpetua, sin intermediarios, todo en la blockchain de manera descentralizada.
 
 Grooves es una idea. 
 
