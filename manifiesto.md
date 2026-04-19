@@ -4,7 +4,11 @@
 
 Significaba abrir un disco por primera vez, leer las notas del compositor, estudiar el arte de la portada, sentir el peso del vinilo entre las manos. El objeto era inseparable de la experiencia. El artista firmaba cada edición sabiendo que su obra viviría en estantes, en colecciones, en las manos de personas que la valoraban lo suficiente como para apreciarla y apoyarla teniéndola como un activo.
 
-La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño. El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado. El streaming convirtió la música en agua corriente: siempre disponible, infinitamente reemplazable, imposible de poseer.
+La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño, dejo de ser valorado y se convirtio en un objeto de consumo alquilado en este mundo de los pagos por mensualidades. 
+
+El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado. 
+> [!TIP]
+>El streaming convirtió la música en agua corriente: siempre disponible, infinitamente reemplazable, imposible de poseer.
 
 Esa democratización de hasta escuchar gratis en streaming no prevé el esfuerzo que hay detrás de una creación. Todo el equipo y trabajo humano, el talento que en su medida genera evolución humana. Un artista necesita más de un millón de reproducciones en Spotify para ganar lo equivalente a un salario mínimo mensual. Las disqueras independientes mueren porque no pueden competir con los algoritmos de descubrimiento de las plataformas. Los fans más leales, esos que van a cada concierto, que compran cada vinilo, que predican la obra, reciben exactamente lo mismo que el oyente casual que escuchó una canción en una playlist y la olvidó al día siguiente: nada.
 
