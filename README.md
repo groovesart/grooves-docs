@@ -36,4 +36,4 @@ Grooves es revolución. Un ecosistema creativo donde el arte recupera su peso do
 
 ---
 
-**https//:grooves.art**
+**https://grooves.art**
