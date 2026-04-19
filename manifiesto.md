@@ -45,5 +45,5 @@ Una idea contada más de mil veces se transforma en una revolución. Grooves es 
 No se trata de pedirle al artista que retire su música de las plataformas de streaming de la noche a la mañana. Se trata de algo más profundo: comprender una idea. Una revolución. Un artista sube su álbum a Grooves como un Pressing. Sus fans lo adquieren, lo poseen, acceden a su mundo creativo, esto puede ser muchas cosas, a la imaginación  del artista, es una activo, comprender que se adquiere un activo. 
 
 > [!TIP]
-> Si diez artistas lo hacen, es una anécdota. Si mil lo hacen, es una tendencia. Si una generación entera de creadores decide que su arte es mas que un "stream", que un alquiler, que se puede generar ecosistemas creativos reales y tangibles. **Grooves no va a cambiar la industria musical. Los artistas que crean en esta idea van a cambiar la industria musical. Grooves es la herramienta, el camino.**
+> Si diez artistas lo hacen, es una anécdota. Si mil lo hacen, es una tendencia. Si una generación entera de creadores decide que su arte es mas que un "stream", que un alquiler, que se puede generar ecosistemas creativos reales y tangibles, es una revolución. **Grooves no va a cambiar la industria musical. Los artistas que crean en esta idea van a cambiar la industria musical. Grooves es una herramienta.**
 
