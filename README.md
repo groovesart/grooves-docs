@@ -2,7 +2,7 @@
   <img src="assets/logo-medium.png" alt="Grooves" class="logo-home">
 </div>
 
-## Ecosistemas Creativos.
+##     ECOSISTEMAS CREATIVOS
 
 **Whitepaper v2.0 — Abril 2026**
 
