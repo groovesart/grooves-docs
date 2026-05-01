@@ -57,7 +57,7 @@ Una idea contada más de mil veces se transforma en una revolución. Grooves es 
 
 No se trata de pedirle al artista que retire su música de las plataformas de streaming de la noche a la mañana. Se trata de algo más profundo: comprender una idea. Una revolución. Un artista sube su álbum a Grooves como un Pressing. Sus fans lo adquieren, lo poseen, acceden a su mundo creativo, esto puede ser muchas cosas, a la imaginación del artista, es una activo, comprender que se adquiere un activo.
 
-Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos — además de creer — compremos música. Que lleguemos a casa de un amigo y podamos decir "mira los discos que me compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue adquirido, algo que es nuestro. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología — parte de nosotros mismos.
+Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos además de creer, compremos música. Que lleguemos a casa de un amigo y podamos decir "mira los discos que compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue apoyado y adquirido. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología, parte de nosotros mismos.
 
 ```mermaid
 graph TB
