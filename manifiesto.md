@@ -6,6 +6,19 @@ Significaba abrir un disco por primera vez, leer las notas del compositor, estud
 
 La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño, dejo de ser valorado y se convirtio en un objeto de consumo alquilado en este mundo de los pagos por mensualidades.
 
+```mermaid
+graph LR
+    A[Vinilo] -->|Propiedad real| B[CD / Cassette]
+    B -->|Propiedad real| C[Descarga Digital]
+    C -->|Se pierde la propiedad| D[Streaming]
+    D -->|Se recupera la propiedad| E[GROOVES]
+    style A fill:#C8A96E,color:#111,stroke:#8a7548
+    style B fill:#C8A96E,color:#111,stroke:#8a7548
+    style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style D fill:#c0392b,color:#fff,stroke:#962d22
+    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
+```
+
 El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado.
 
 > El streaming convirtió la música en agua corriente: siempre disponible, infinitamente reemplazable, imposible de poseer.
@@ -44,7 +57,20 @@ Una idea contada más de mil veces se transforma en una revolución. Grooves es 
 
 No se trata de pedirle al artista que retire su música de las plataformas de streaming de la noche a la mañana. Se trata de algo más profundo: comprender una idea. Una revolución. Un artista sube su álbum a Grooves como un Pressing. Sus fans lo adquieren, lo poseen, acceden a su mundo creativo, esto puede ser muchas cosas, a la imaginación del artista, es una activo, comprender que se adquiere un activo.
 
-Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos además de creer, compremos música. Que lleguemos a casa de un amigo y podamos decir "mira los discos que compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue adquirido. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología, parte de nosotros mismos.
+Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos — además de creer — compremos música. Que lleguemos a casa de un amigo y podamos decir "mira los discos que me compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue adquirido, algo que es nuestro. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología — parte de nosotros mismos.
+
+```mermaid
+graph TB
+    A[10 artistas] -->|Anécdota| B[100 artistas]
+    B -->|Movimiento| C[1,000 artistas]
+    C -->|Tendencia| D[Una generación]
+    D -->|REVOLUCIÓN| E[La industria cambia]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#2a2a30,color:#d4d4d8,stroke:#555
+    style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style D fill:#C8A96E,color:#111,stroke:#8a7548,stroke-width:2px
+    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
+```
 
 > [!TIP]
 > Si diez artistas lo hacen, es una anécdota. Si mil lo hacen, es una tendencia. Si una generación entera de creadores decide que su arte es mas que un "stream", que un alquiler, que se puede generar ecosistemas creativos reales y tangibles, es una revolución. **Grooves no va a cambiar la industria musical. Los artistas que crean en esta idea van a cambiar la industria musical. Grooves es una herramienta.**

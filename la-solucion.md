@@ -10,6 +10,23 @@ Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto d
 * **Escasez programable.** El artista decide cuántos Pressings existen de cada obra.
 * **Propiedad transferible.** El poseedor puede venderlo, regalarlo o transferirlo. En cada reventa, el artista recibe automáticamente su royalty.
 
+```mermaid
+graph TB
+    P[PRESSING] --> A[Autenticidad Verificable]
+    P --> B[Escasez Programable]
+    P --> C[Propiedad Transferible]
+    A --> A1[Registrado en blockchain]
+    B --> B1[El artista define la cantidad]
+    C --> C1[Royalties automáticos en reventa]
+    style P fill:#C8A96E,color:#111,stroke:#8a7548,stroke-width:2px
+    style A fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style B fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style A1 fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B1 fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style C1 fill:#2a2a30,color:#d4d4d8,stroke:#444
+```
+
 Lo que hace único al Pressing es que **el artista o sello define libremente qué derechos de acceso otorga**. El audio del álbum es solo el punto de partida. Un Pressing puede desbloquear cualquier combinación de experiencias que el creador imagine:
 
 ---
@@ -39,6 +56,25 @@ El conjunto de Pressings de una obra se denomina un **Edition**:
 
 El artista o sello configura libremente qué derechos de acceso otorga cada Pressing. Esta es la lista de posibilidades, pero no el límite — cualquier experiencia digital puede vincularse:
 
+```mermaid
+graph TB
+    P[PRESSING] --> AU[Audio Completo]
+    P --> AV[Arte Visual]
+    P --> CE[Contenido Exclusivo]
+    P --> EV[Acceso a Eventos]
+    P --> CO[Comunidad Privada]
+    P --> EVO[Contenido Evolutivo]
+    P --> ME[Merch & Físicos]
+    style P fill:#C8A96E,color:#111,stroke:#8a7548,stroke-width:2px
+    style AU fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style AV fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style CE fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style EV fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style CO fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style EVO fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style ME fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+```
+
 | Derecho de Acceso | Descripción | Ejemplo |
 |---|---|---|
 | **Audio completo** | Álbum, EP o sencillo en calidad lossless | El álbum completo en FLAC/WAV |
@@ -52,10 +88,24 @@ El artista o sello configura libremente qué derechos de acceso otorga cada Pres
 > [!TIP]
 > La clave es que el Pressing no es solo un disco: es una membrecía creativa. Poseer un Pressing significa tener acceso permanente al mundo del artista, y ese acceso crece en valor con su carrera.
 
-
 ---
 
 ## 3.3 — Flujo del Artista Independiente
+
+```mermaid
+graph LR
+    A[Crear Cuenta] --> B[Subir Obra]
+    B --> C[Authenticity Engine]
+    C --> D[Configurar Edition]
+    D --> E[Create Pressing]
+    E --> F[Recibir Pagos]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style C fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style D fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style E fill:#C8A96E,color:#111,stroke:#8a7548
+    style F fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+```
 
 1. **Crea tu cuenta en Grooves.** Conecta tu wallet o crea una dentro de la plataforma.
 2. **Sube tu obra al Pressing Studio.** Audio, arte, metadata y define tus derechos de acceso.
@@ -70,9 +120,27 @@ El artista o sello configura libremente qué derechos de acceso otorga cada Pres
 
 Los sellos discográficos operan con Open Editions para gestionar catálogos extensos. Pueden convertir su catálogo completo en Pressings, gestionar inventario flexible, configurar distribución de royalties entre sello, artista, productores y colaboradores vía smart contracts, y crear Pressings por lotes para subir cientos de álbumes en una sola operación. También pueden crear Sealed Editions especiales para lanzamientos premium o catálogos históricos.
 
+> [!NOTE]
+> **Batch Creation:** Los sellos pueden subir cientos de álbumes en una sola transacción, configurar royalty splits automáticos entre sello/artista/productores, y gestionar todo desde una sola interfaz.
+
 ---
 
 ## 3.5 — Flujo del Coleccionista / Fan
+
+```mermaid
+graph LR
+    A[Explorar Marketplace] --> B[Adquirir Pressing]
+    B --> C[Reproducir Colección]
+    C --> D[Acceder a Derechos]
+    D --> E[Revender si desea]
+    E -->|Royalty al artista| F[Artista cobra]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#C8A96E,color:#111,stroke:#8a7548
+    style C fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style D fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style E fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style F fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+```
 
 1. **Explora el marketplace.** Descubre artistas, navega catálogos, escucha previews.
 2. **Adquiere Pressings.** Compra directamente del artista o en el mercado secundario.
@@ -98,6 +166,19 @@ Los servicios de on-ramp como MoonPay, Transak o Stripe Crypto se integran vía 
 
 ### La experiencia desde la perspectiva del usuario
 
+```mermaid
+graph LR
+    A[Ve un Pressing] --> B[Clic en Comprar]
+    B --> C[Elige tarjeta o PayPal]
+    C --> D[Ingresa datos de pago]
+    D --> E[Recibe su Pressing]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#C8A96E,color:#111,stroke:#8a7548
+    style C fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style D fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+```
+
 1. Ve un Pressing que le gusta en el marketplace.
 2. Hace clic en "Comprar".
 3. Elige pagar con tarjeta de crédito, débito o PayPal.
@@ -106,4 +187,3 @@ Los servicios de on-ramp como MoonPay, Transak o Stripe Crypto se integran vía 
 
 > [!NOTE]
 > En ningún momento del proceso el usuario necesita saber qué es una wallet, qué es USDC, ni qué es blockchain. La tecnología es invisible. La experiencia es idéntica a comprar en cualquier tienda online.
-
