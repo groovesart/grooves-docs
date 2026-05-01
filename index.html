@@ -6,7 +6,8 @@
   <title>Grooves — Ecosistemas Creativos</title>
   <meta name="description" content="Grooves — Ecosistemas Creativos. Whitepaper v2.0">
   <meta name="theme-color" content="#111113">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23C8A96E'/><circle cx='16' cy='16' r='5' fill='%23111'/></svg>" type="image/svg+xml">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-128.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -16,9 +17,10 @@
 
     /* Sidebar */
     .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--bg-sidebar)!important;border-right:1px solid var(--border);overflow-y:auto;z-index:100;transition:transform .3s ease}
-    .sidebar-brand{padding:28px 24px 20px;border-bottom:1px solid var(--border)}
-    .sidebar-brand a{color:var(--gold)!important;font-size:20px;font-weight:700;letter-spacing:3px;text-decoration:none!important;border:none!important;display:block}
-    .sidebar-brand span{display:block;color:var(--text-dim);font-size:11px;letter-spacing:1px;margin-top:4px;font-weight:400}
+    .sidebar-brand{padding:20px 20px 16px;border-bottom:1px solid var(--border);text-align:center}
+    .sidebar-brand a{display:block;text-decoration:none!important;border:none!important}
+    .sidebar-brand img{width:200px;height:auto;display:block;margin:0 auto}
+    .sidebar-brand span{display:block;color:var(--text-dim);font-size:10px;letter-spacing:2px;margin-top:6px;font-weight:400;text-transform:uppercase}
     .sidebar-nav{padding:16px 0}
     .sidebar-nav ul{list-style:none!important;padding:0!important;margin:0!important}
     .sidebar-nav li a,.sidebar-nav ul li a{display:block;padding:10px 24px;color:var(--text-dim)!important;text-decoration:none!important;border:none!important;border-bottom:none!important;font-size:14px;font-weight:500;transition:all .2s;border-left:3px solid transparent!important}
@@ -42,14 +44,14 @@
     .content h2,.markdown-section h2{color:var(--gold-light)!important;font-size:20px!important;font-weight:600!important;margin-top:40px!important;margin-bottom:16px!important;padding-bottom:8px!important;border-bottom:1px solid var(--border)!important}
     .content h3,.markdown-section h3{color:var(--text-bright)!important;font-size:16px!important;font-weight:600!important;margin-top:28px!important;margin-bottom:12px!important}
 
-    /* Paragraphs — JUSTIFY */
+    /* Paragraphs */
     .content p,.markdown-section p{margin-bottom:16px!important;color:var(--text)!important;text-align:justify!important;line-height:1.7!important}
     .content strong,.markdown-section strong{color:var(--text-bright)!important}
     .content em,.markdown-section em{color:var(--text)!important}
     .content a,.markdown-section a{color:var(--gold)!important;text-decoration:none!important}
     .content a:hover,.markdown-section a:hover{color:var(--gold-light)!important}
 
-    /* Lists — JUSTIFY */
+    /* Lists */
     .content ul,.content ol,.markdown-section ul,.markdown-section ol{margin:12px 0 20px 20px!important}
     .content li,.markdown-section li{margin:8px 0!important;color:var(--text)!important;text-align:justify!important;line-height:1.7!important}
     .content li strong,.markdown-section li strong{color:var(--text-bright)!important}
@@ -62,11 +64,11 @@
     .content tbody tr:nth-child(even),.markdown-section tbody tr:nth-child(even){background:#1a1a20!important}
     .content tbody tr:hover,.markdown-section tbody tr:hover{background:var(--bg-card)!important}
 
-    /* Blockquotes — JUSTIFY */
+    /* Blockquotes */
     .content blockquote,.markdown-section blockquote{border-left:4px solid var(--gold)!important;background:var(--bg-card)!important;padding:16px 20px!important;margin:20px 0!important;border-radius:0 8px 8px 0!important;color:var(--text)!important}
     .content blockquote p,.markdown-section blockquote p{color:var(--text)!important;margin-bottom:0!important;text-align:justify!important}
 
-    /* Alert Boxes */
+    /* Alerts */
     .alert{border-radius:8px!important;padding:18px 22px!important;margin:24px 0!important;border-left:4px solid!important;border-top:none!important;border-right:none!important;border-bottom:none!important}
     .alert.callout.note{background:#1a1d2e!important;border-left-color:#4a6fa5!important}
     .alert.callout.tip{background:#1a2e1a!important;border-left-color:#4a8c5c!important}
@@ -85,7 +87,11 @@
     .content pre,.markdown-section pre{background:var(--bg-card)!important;border:1px solid var(--border)!important;border-radius:8px!important;padding:16px!important;overflow-x:auto}
     .content pre code,.markdown-section pre code{background:transparent!important;padding:0!important}
 
-    /* Pagination — CLEAN */
+    /* Images in content (logo on homepage) */
+    .content img,.markdown-section img{max-width:100%!important;height:auto!important}
+    .logo-home{display:block;margin:0 auto 24px;max-width:380px!important}
+
+    /* Pagination */
     .docsify-pagination-container{display:flex!important;justify-content:space-between!important;margin-top:48px!important;padding-top:24px!important;border-top:1px solid var(--border)!important;gap:16px!important}
     .pagination-item{flex:1!important;max-width:50%!important}
     .pagination-item a{display:block!important;padding:16px 20px!important;background:var(--bg-card)!important;border:1px solid var(--border)!important;border-radius:8px!important;text-decoration:none!important;transition:border-color .2s}
@@ -97,6 +103,11 @@
     .pagination-item--next a{text-align:right!important}
     .pagination-item--previous a{text-align:left!important}
 
+    /* Footer */
+    .page-footer{margin-top:60px;padding:30px 0;border-top:1px solid var(--border);text-align:center}
+    .page-footer img{width:140px;height:auto;opacity:.5;display:block;margin:0 auto 12px}
+    .page-footer p{color:var(--text-dim)!important;font-size:12px!important;text-align:center!important;margin:0!important;letter-spacing:.5px}
+
     /* Search */
     .search{padding:14px 16px;border-bottom:1px solid var(--border)}
     .search input{width:100%!important;background:var(--bg-card)!important;color:var(--text)!important;border:1px solid var(--border)!important;border-radius:6px!important;padding:10px 14px!important;font-size:14px!important;font-family:var(--font)!important;outline:none!important}
@@ -106,6 +117,16 @@
     .search .matching-post{background:var(--bg-card)!important;border-bottom:1px solid var(--border)!important;padding:10px 14px!important}
     .search .matching-post a{color:var(--gold)!important}
     .search .matching-post p{color:var(--text-dim)!important;font-size:13px!important}
+
+    /* Mermaid */
+    .mermaid{background:transparent!important;margin:24px 0!important;text-align:center!important;overflow-x:auto!important}
+    .mermaid svg{max-width:100%!important;height:auto!important}
+    .mermaid .node rect,.mermaid .node polygon{rx:8;ry:8}
+    .mermaid .edgeLabel{background:#1e1e24!important;color:#d4d4d8!important;padding:2px 6px;border-radius:4px;font-size:12px}
+    .mermaid .label{color:#d4d4d8!important;font-family:var(--font)!important;font-size:16px!important}
+    .mermaid .edgePath .path{stroke:#555!important;stroke-width:1.5px}
+    .mermaid .cluster rect{fill:#1e1e24!important;stroke:#444!important;rx:8;ry:8}
+    .mermaid .cluster text{fill:#d4d4d8!important}
 
     /* Scrollbar */
     ::-webkit-scrollbar{width:5px}
@@ -132,18 +153,11 @@
       .pagination-item{max-width:100%!important}
       .alert{padding:14px 16px!important}
       .content blockquote,.markdown-section blockquote{padding:12px 16px!important;margin:16px 0!important}
+      .mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch;padding:8px 0}
+      .mermaid svg{min-width:auto!important;max-width:none!important}
+      .logo-home{max-width:260px!important}
+      .sidebar-brand img{width:160px}
     }
-
-    /* Mermaid diagrams */
-    .mermaid{background:transparent!important;margin:24px 0!important;text-align:center!important;overflow-x:auto!important}
-    .mermaid svg{max-width:100%!important;height:auto!important}
-    .mermaid .node rect,.mermaid .node polygon{rx:8;ry:8}
-    .mermaid .edgeLabel{background:#1e1e24!important;color:#d4d4d8!important;padding:2px 6px;border-radius:4px;font-size:12px}
-    .mermaid .label{color:#d4d4d8!important;font-family:var(--font)!important;font-size:13px!important}
-    .mermaid .edgePath .path{stroke:#555!important;stroke-width:1.5px}
-    .mermaid .cluster rect{fill:#1e1e24!important;stroke:#444!important;rx:8;ry:8}
-    .mermaid .cluster text{fill:#d4d4d8!important}
-    @media(max-width:860px){.mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch;padding:8px 0}.mermaid svg{min-width:auto!important;max-width:none!important}}
 
     /* Hide defaults */
     body>nav,.github-corner,.docsify-darklight-theme-toggle,.app-nav{display:none!important}
@@ -160,7 +174,9 @@
   <div class="overlay" onclick="toggleSidebar()"></div>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-brand">
-      <a href="#/">GROOVES</a>
+      <a href="#/">
+        <img src="assets/logo-small.png" alt="Grooves">
+      </a>
       <span>Ecosistemas Creativos</span>
     </div>
     <div class="search" id="search-container"></div>
@@ -192,13 +208,16 @@
       noEmoji:true,
       routerMode:'hash',
       search:{placeholder:'Buscar...',noData:'Sin resultados',depth:3},
-      'flexible-alerts':{
-        note:{label:''},
-        tip:{label:''},
-        warning:{label:''},
-        attention:{label:''}
-      },
-      pagination:{previousText:'ANTERIOR',nextText:'SIGUIENTE',crossChapter:true,crossChapterText:true}
+      'flexible-alerts':{note:{label:''},tip:{label:''},warning:{label:''},attention:{label:''}},
+      pagination:{previousText:'ANTERIOR',nextText:'SIGUIENTE',crossChapter:true,crossChapterText:true},
+      plugins:[
+        function(hook){
+          var footer='<div class="page-footer"><img src="assets/logo-small.png" alt="Grooves"><p>Grooves © 2026 — Ecosistemas Creativos</p><p>www.grooves.art</p></div>';
+          hook.afterEach(function(html){
+            return html+footer;
+          });
+        }
+      ]
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
@@ -207,42 +226,9 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({
-      startOnLoad:false,
-      theme:'dark',
-      themeVariables:{
-        darkMode:true,
-        background:'#16161a',
-        primaryColor:'#C8A96E',
-        primaryTextColor:'#111',
-        primaryBorderColor:'#8a7548',
-        lineColor:'#555',
-        secondaryColor:'#1a2e1a',
-        tertiaryColor:'#1a1d2e',
-        fontFamily:'Inter,sans-serif',
-        fontSize:'16px'
-      }
-    });
-    // Docsify mermaid rendering hook
-    window.$docsify.markdown={
-      renderer:{
-        code:function(code,lang){
-          if(lang==='mermaid'){
-            return '<div class="mermaid">'+code+'</div>';
-          }
-          return this.origin.code.apply(this,arguments);
-        }
-      }
-    };
-    // Re-render mermaid on route change
-    window.$docsify.plugins=[].concat(
-      function(hook){
-        hook.doneEach(function(){
-          mermaid.run({querySelector:'.mermaid'});
-        });
-      },
-      window.$docsify.plugins||[]
-    );
+    mermaid.initialize({startOnLoad:false,theme:'dark',themeVariables:{darkMode:true,background:'#16161a',primaryColor:'#C8A96E',primaryTextColor:'#111',primaryBorderColor:'#8a7548',lineColor:'#555',secondaryColor:'#1a2e1a',tertiaryColor:'#1a1d2e',fontFamily:'Inter,sans-serif',fontSize:'16px'}});
+    window.$docsify.markdown={renderer:{code:function(code,lang){if(lang==='mermaid'){return'<div class="mermaid">'+code+'</div>'}return this.origin.code.apply(this,arguments)}}};
+    window.$docsify.plugins.push(function(hook){hook.doneEach(function(){mermaid.run({querySelector:'.mermaid'})})});
   </script>
 </body>
 </html>

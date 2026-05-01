@@ -1,4 +1,6 @@
-# GROOVES
+<div align="center">
+  <img src="assets/logo-medium.png" alt="Grooves" class="logo-home">
+</div>
 
 ## Ecosistemas Creativos.
 
@@ -6,18 +8,18 @@
 
 ---
 
-Grooves es revolución. Un ecosistema creativo donde el arte recupera su peso donde la obra creativa se convierte en un objeto que se posee, se transforma, se colecciona, se transfiere y se revaloriza. Donde cada transacción devuelve valor directamente a quien creó la obra.
+Grooves es un ecosistema creativo donde el arte recupera su peso — donde la obra creativa se convierte en un objeto que se posee, se colecciona, se transfiere y se revaloriza — y donde cada transacción devuelve valor directamente a quien creó la obra.
 
 > [!NOTE]
 > **Grooves no es una plataforma de streaming. No es un marketplace de coleccionables digitales.** Es una revolución en la forma en que el arte se crea, se posee y se valora.
 
 ### ¿Por qué Grooves?
 
-* **El artista crea gratis.** Cero costo para publicar sus obras (solo gas fee a Blockchain). Grooves solo cobra cuando se vende.
+* **El artista crea gratis.** Cero costo para publicar. Grooves solo cobra cuando se vende.
 * **95% para el creador.** En cada venta primaria, el artista recibe el 95%.
 * **Royalties perpetuos.** En cada reventa, el artista cobra automáticamente.
 * **Solo USDC.** Sin tokens especulativos. Dinero real, valor real.
-* **Tecnología invisible.** Paga también  con tarjeta o PayPal. Sin necesidad de saber de cripto.
+* **Tecnología invisible.** Paga con tarjeta o PayPal. Sin necesidad de saber de cripto.
 
 ---
 
@@ -36,4 +38,4 @@ Grooves es revolución. Un ecosistema creativo donde el arte recupera su peso do
 
 ---
 
-**https://grooves.art**
+**www.grooves.art**
