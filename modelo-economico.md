@@ -14,7 +14,7 @@ Publicar una obra en Grooves no tiene ningún costo para el artista. No hay tari
 ### Venta Primaria (artista → fan)
 
 ```mermaid
-graph LR
+graph TB
     FAN[Fan paga $15 USDC] --> AR[Artista / Sello: $13.95]
     FAN --> GR[Grooves: $0.75]
     FAN --> RE[Referido: $0.30]
@@ -33,7 +33,7 @@ graph LR
 ### Reventa Secundaria (fan → fan)
 
 ```mermaid
-graph LR
+graph TB
     COM[Comprador paga $50 USDC] --> VEN[Vendedor: $42.75]
     COM --> ART[Artista royalty: $5.00]
     COM --> GRV[Grooves: $1.25]

@@ -72,7 +72,7 @@
     .alert.callout.tip{background:#1a2e1a!important;border-left-color:#4a8c5c!important}
     .alert.callout.warning{background:#2e2a1a!important;border-left-color:var(--gold)!important}
     .alert.callout.attention{background:#2e1a1a!important;border-left-color:#c0392b!important}
-    .alert .title{font-weight:600!important;margin-bottom:6px;color:var(--text-bright)!important;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+    .alert .title{display:none!important;height:0!important;margin:0!important;padding:0!important}
     .alert p{color:var(--text)!important;text-align:justify!important}
     p.tip,.markdown-section p.tip{background:#1a2e1a!important;border-left:4px solid #4a8c5c!important;padding:16px 20px!important;border-radius:0 8px 8px 0!important;color:var(--text)!important;text-align:justify!important}
     p.warn,.markdown-section p.warn{background:#2e2a1a!important;border-left:4px solid var(--gold)!important;padding:16px 20px!important;border-radius:0 8px 8px 0!important;color:var(--text)!important;text-align:justify!important}
@@ -143,7 +143,7 @@
     .mermaid .edgePath .path{stroke:#555!important;stroke-width:1.5px}
     .mermaid .cluster rect{fill:#1e1e24!important;stroke:#444!important;rx:8;ry:8}
     .mermaid .cluster text{fill:#d4d4d8!important}
-    @media(max-width:860px){.mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch}.mermaid svg{min-width:500px}}
+    @media(max-width:860px){.mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch;padding:8px 0}.mermaid svg{min-width:auto!important;max-width:none!important}}
 
     /* Hide defaults */
     body>nav,.github-corner,.docsify-darklight-theme-toggle,.app-nav{display:none!important}
@@ -192,6 +192,12 @@
       noEmoji:true,
       routerMode:'hash',
       search:{placeholder:'Buscar...',noData:'Sin resultados',depth:3},
+      'flexible-alerts':{
+        note:{label:''},
+        tip:{label:''},
+        warning:{label:''},
+        attention:{label:''}
+      },
       pagination:{previousText:'ANTERIOR',nextText:'SIGUIENTE',crossChapter:true,crossChapterText:true}
     };
   </script>
@@ -214,7 +220,7 @@
         secondaryColor:'#1a2e1a',
         tertiaryColor:'#1a1d2e',
         fontFamily:'Inter,sans-serif',
-        fontSize:'13px'
+        fontSize:'16px'
       }
     });
     // Docsify mermaid rendering hook

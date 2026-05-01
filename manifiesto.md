@@ -7,7 +7,7 @@ Significaba abrir un disco por primera vez, leer las notas del compositor, estud
 La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño, dejo de ser valorado y se convirtio en un objeto de consumo alquilado en este mundo de los pagos por mensualidades.
 
 ```mermaid
-graph LR
+graph TB
     A[Vinilo] -->|Propiedad real| B[CD / Cassette]
     B -->|Propiedad real| C[Descarga Digital]
     C -->|Se pierde la propiedad| D[Streaming]

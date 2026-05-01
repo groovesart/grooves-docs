@@ -5,7 +5,7 @@
 En el modelo actual de streaming, el artista cede el control de su obra al momento de distribuirla. Las plataformas deciden cuánto paga cada reproducción (fracciones de centavo), cómo se descubre la música (algoritmos opacos), y quién tiene acceso. El artista no tiene relación directa con su audiencia. No sabe quién valora su música porque el sistema no está diseñado para que nadie la posea.
 
 ```mermaid
-graph LR
+graph TB
     A[Artista] -->|Sube música| B[Plataforma de Streaming]
     B -->|Algoritmo decide| C[Oyente]
     C -->|$0.003 por stream| B
@@ -27,7 +27,7 @@ Pero el problema no termina en el artista independiente. Los propios sellos disc
 Grooves está diseñado para que cualquier creador — desde el artista independiente hasta el sello discográfico más grande del mundo — encuentre un modelo superior al actual. Para el artista independiente, significa control total y pagos directos. Para un gran sello, significa una nueva forma de monetizar catálogos que hoy solo generan fracciones de centavo por stream, creando experiencias premium que sus fanáticos están dispuestos a poseer y coleccionar.
 
 ```mermaid
-graph LR
+graph TB
     A[Artista] -->|Crea Pressing| B[GROOVES]
     B -->|Compra directa| C[Fan]
     C -->|95% al artista| A

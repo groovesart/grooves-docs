@@ -93,7 +93,7 @@ graph TB
 ## 3.3 — Flujo del Artista Independiente
 
 ```mermaid
-graph LR
+graph TB
     A[Crear Cuenta] --> B[Subir Obra]
     B --> C[Authenticity Engine]
     C --> D[Configurar Edition]
@@ -128,7 +128,7 @@ Los sellos discográficos operan con Open Editions para gestionar catálogos ext
 ## 3.5 — Flujo del Coleccionista / Fan
 
 ```mermaid
-graph LR
+graph TB
     A[Explorar Marketplace] --> B[Adquirir Pressing]
     B --> C[Reproducir Colección]
     C --> D[Acceder a Derechos]
@@ -167,7 +167,7 @@ Los servicios de on-ramp como MoonPay, Transak o Stripe Crypto se integran vía 
 ### La experiencia desde la perspectiva del usuario
 
 ```mermaid
-graph LR
+graph TB
     A[Ve un Pressing] --> B[Clic en Comprar]
     B --> C[Elige tarjeta o PayPal]
     C --> D[Ingresa datos de pago]
