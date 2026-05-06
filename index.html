@@ -8,147 +8,130 @@
   <meta name="theme-color" content="#111113">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-128.png">
+  <!-- Docsify base theme (provides sidebar layout structure) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--gold:#C8A96E;--gold-light:#d9bf8a;--gold-dim:#8a7548;--bg:#111113;--bg-sidebar:#0c0c0e;--bg-content:#16161a;--bg-card:#1e1e24;--border:#2a2a30;--text:#d4d4d8;--text-bright:#fafafa;--text-dim:#71717a;--sidebar-w:280px;--font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-    html{font-size:16px}
-    body{font-family:var(--font)!important;background:var(--bg)!important;color:var(--text)!important;line-height:1.7;overflow-x:hidden}
+    /* ── Override theme colors ── */
+    :root{
+      --base-font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      --base-font-size:16px;
+      --base-line-height:1.7;
+      --base-color:#d4d4d8;
+      --base-background-color:#16161a;
+      --sidebar-background:#0c0c0e;
+      --sidebar-border-color:#2a2a30;
+      --sidebar-border-width:1px;
+      --sidebar-width:280px;
+      --sidebar-nav-link-color:#71717a;
+      --sidebar-nav-link-color--active:#C8A96E;
+      --sidebar-nav-link-border-color--active:#C8A96E;
+      --sidebar-nav-link-background-color--active:rgba(200,169,110,.08);
+      --sidebar-name-color:#C8A96E;
+      --sidebar-name-font-size:20px;
+      --heading-color:#C8A96E;
+      --heading-h1-color:#C8A96E;
+      --heading-h2-color:#d9bf8a;
+      --heading-h1-border-color:#8a7548;
+      --heading-h2-border-color:#2a2a30;
+      --heading-h1-font-size:28px;
+      --heading-h2-font-size:20px;
+      --heading-h3-font-size:16px;
+      --link-color:#C8A96E;
+      --link-text-decoration:none;
+      --blockquote-border-color:#C8A96E;
+      --blockquote-background:#1e1e24;
+      --code-inline-background:#1e1e24;
+      --code-inline-color:#C8A96E;
+      --table-head-background:#1e1e24;
+      --table-head-color:#C8A96E;
+      --table-body-border-color:#2a2a30;
+      --table-row-even-background:#1a1a20;
+      --table-row-odd-background:#16161a;
+      --search-input-background-color:#1e1e24;
+      --search-input-border-color:#2a2a30;
+      --search-input-color:#d4d4d8;
+      --pagination-title-color:#C8A96E;
+      --pagination-label-color:#71717a;
+      --notice-tip-background:#1a2e1a;
+      --notice-tip-border-color:#4a8c5c;
+      --notice-important-background:#1a1d2e;
+      --notice-important-border-color:#4a6fa5;
+    }
 
-    /* ── Docsify Sidebar Override ── */
-    .sidebar{background:var(--bg-sidebar)!important;border-right:1px solid var(--border)!important;font-family:var(--font)!important}
+    body{background:var(--base-background-color)!important;overflow-x:hidden}
+    .sidebar{background:var(--sidebar-background)!important}
 
-    /* Sidebar brand/logo - Docsify puts this in .app-name-link */
-    .app-name-link{display:block!important;text-align:center!important;padding:20px 16px 16px!important;border-bottom:1px solid var(--border)!important}
-    .app-name-link img{width:180px!important;height:auto!important;display:block!important;margin:0 auto!important}
-    .app-name-link span{display:block!important;color:var(--text-dim)!important;font-size:10px!important;letter-spacing:2px!important;margin-top:6px!important;font-weight:400!important;text-transform:uppercase!important}
+    /* ── Sidebar logo ── */
+    .app-name-link{text-decoration:none!important;display:block;text-align:center;padding:16px 12px 12px}
+    .app-name-link img{width:180px;height:auto;display:block;margin:0 auto}
+    .sidebar-subtitle{display:block;color:#71717a;font-size:10px;letter-spacing:2px;text-align:center;text-transform:uppercase;margin-top:6px;padding-bottom:12px;border-bottom:1px solid #2a2a30}
 
-    /* Sidebar nav links */
-    .sidebar-nav{padding:8px 0!important}
-    .sidebar-nav ul{list-style:none!important;padding:0!important;margin:0!important}
-    .sidebar-nav a,.sidebar-nav li a{color:var(--text-dim)!important;text-decoration:none!important;font-size:14px!important;font-weight:500!important;padding:10px 24px!important;display:block!important;border-left:3px solid transparent!important;transition:all .2s!important}
-    .sidebar-nav a:hover,.sidebar-nav li a:hover{color:var(--text)!important;background:rgba(200,169,110,.05)!important;border-left-color:var(--gold-dim)!important}
-    .sidebar-nav li.active>a{color:var(--gold)!important;background:rgba(200,169,110,.08)!important;border-left-color:var(--gold)!important}
-    .sidebar-nav a span{color:inherit!important}
+    /* ── Sidebar nav refinement ── */
+    .sidebar-nav a{font-size:14px!important;font-weight:500!important;transition:all .2s!important}
+    .sidebar-nav a:hover{color:#d4d4d8!important}
+    .sidebar-nav .active>a{font-weight:600!important}
 
-    /* Sidebar sub-items */
-    .sidebar-nav ul ul{padding-left:12px!important}
-    .sidebar-nav ul ul a{font-size:13px!important;padding:6px 24px!important}
+    /* ── Typography ── */
+    .markdown-section{max-width:780px!important;font-family:'Inter',-apple-system,sans-serif!important}
+    .markdown-section p{text-align:justify!important;line-height:1.7!important}
+    .markdown-section li{text-align:justify!important;line-height:1.7!important}
+    .markdown-section strong{color:#fafafa!important}
+    .markdown-section blockquote p{text-align:justify!important;margin-bottom:0!important}
+    .markdown-section h3{color:#fafafa!important}
 
-    /* ── Main Content ── */
-    section.content,#main,.markdown-section{background:var(--bg-content)!important;color:var(--text)!important;font-family:var(--font)!important;max-width:780px!important}
+    /* ── Tables ── */
+    .markdown-section table{width:100%!important;font-size:14px!important}
+    .markdown-section thead th{font-size:12px!important;text-transform:uppercase!important;letter-spacing:.5px!important;font-weight:600!important;padding:12px 16px!important}
+    .markdown-section tbody td{padding:10px 16px!important}
+    .markdown-section tbody tr:hover{background:#1e1e24!important}
 
-    /* Headings */
-    .markdown-section h1{color:var(--gold)!important;font-size:28px!important;font-weight:700!important;margin-bottom:8px!important;padding-bottom:14px!important;border-bottom:2px solid var(--gold-dim)!important}
-    .markdown-section h2{color:var(--gold-light)!important;font-size:20px!important;font-weight:600!important;margin-top:40px!important;margin-bottom:16px!important;padding-bottom:8px!important;border-bottom:1px solid var(--border)!important}
-    .markdown-section h3{color:var(--text-bright)!important;font-size:16px!important;font-weight:600!important;margin-top:28px!important;margin-bottom:12px!important}
-
-    /* Paragraphs */
-    .markdown-section p{margin-bottom:16px!important;color:var(--text)!important;text-align:justify!important;line-height:1.7!important}
-    .markdown-section strong{color:var(--text-bright)!important}
-    .markdown-section em{color:var(--text)!important}
-    .markdown-section a{color:var(--gold)!important;text-decoration:none!important}
-    .markdown-section a:hover{color:var(--gold-light)!important}
-
-    /* Lists */
-    .markdown-section ul,.markdown-section ol{margin:12px 0 20px 20px!important}
-    .markdown-section li{margin:8px 0!important;color:var(--text)!important;text-align:justify!important;line-height:1.7!important}
-    .markdown-section li strong{color:var(--text-bright)!important}
-
-    /* Tables */
-    .markdown-section table{width:100%!important;border-collapse:collapse!important;margin:20px 0!important;font-size:14px!important;display:table!important}
-    .markdown-section thead th{background:var(--bg-card)!important;color:var(--gold)!important;font-weight:600!important;padding:12px 16px!important;text-align:left!important;border:1px solid var(--border)!important;font-size:12px!important;text-transform:uppercase;letter-spacing:.5px}
-    .markdown-section tbody td{padding:10px 16px!important;border:1px solid var(--border)!important;color:var(--text)!important}
-    .markdown-section tbody tr:nth-child(odd){background:#16161a!important}
-    .markdown-section tbody tr:nth-child(even){background:#1a1a20!important}
-    .markdown-section tbody tr:hover{background:var(--bg-card)!important}
-
-    /* Blockquotes */
-    .markdown-section blockquote{border-left:4px solid var(--gold)!important;background:var(--bg-card)!important;padding:16px 20px!important;margin:20px 0!important;border-radius:0 8px 8px 0!important}
-    .markdown-section blockquote p{color:var(--text)!important;margin-bottom:0!important;text-align:justify!important}
-
-    /* Alerts */
-    .alert{border-radius:8px!important;padding:18px 22px!important;margin:24px 0!important;border-left:4px solid!important;border-top:none!important;border-right:none!important;border-bottom:none!important}
-    .alert.callout.note{background:#1a1d2e!important;border-left-color:#4a6fa5!important}
-    .alert.callout.tip{background:#1a2e1a!important;border-left-color:#4a8c5c!important}
-    .alert.callout.warning{background:#2e2a1a!important;border-left-color:var(--gold)!important}
-    .alert.callout.attention{background:#2e1a1a!important;border-left-color:#c0392b!important}
+    /* ── Alerts — hide labels ── */
     .alert .title{display:none!important}
-    .alert p{color:var(--text)!important;text-align:justify!important}
-    p.tip,.markdown-section p.tip{background:#1a2e1a!important;border-left:4px solid #4a8c5c!important;padding:16px 20px!important;border-radius:0 8px 8px 0!important;color:var(--text)!important;text-align:justify!important}
-    p.warn,.markdown-section p.warn{background:#2e2a1a!important;border-left:4px solid var(--gold)!important;padding:16px 20px!important;border-radius:0 8px 8px 0!important;color:var(--text)!important;text-align:justify!important}
+    .alert p{text-align:justify!important}
 
-    /* HR */
-    .markdown-section hr{border:none!important;border-top:1px solid var(--border)!important;margin:32px 0!important}
-
-    /* Code */
-    .markdown-section code{background:var(--bg-card)!important;color:var(--gold)!important;padding:2px 7px!important;border-radius:4px!important;font-size:13px!important}
-    .markdown-section pre{background:var(--bg-card)!important;border:1px solid var(--border)!important;border-radius:8px!important;padding:16px!important;overflow-x:auto}
-    .markdown-section pre code{background:transparent!important;padding:0!important}
-
-    /* Images */
+    /* ── Images ── */
     .markdown-section img{max-width:100%!important;height:auto!important}
     .logo-home{display:block!important;margin:0 auto 8px!important;max-width:380px!important}
 
-    /* Pagination */
-    .docsify-pagination-container{display:flex!important;justify-content:space-between!important;margin-top:48px!important;padding-top:24px!important;border-top:1px solid var(--border)!important;gap:16px!important}
-    .pagination-item{flex:1!important;max-width:50%!important}
-    .pagination-item a{display:block!important;padding:16px 20px!important;background:var(--bg-card)!important;border:1px solid var(--border)!important;border-radius:8px!important;text-decoration:none!important;transition:border-color .2s}
-    .pagination-item a:hover{border-color:var(--gold-dim)!important}
-    .pagination-item-label{font-size:11px!important;color:var(--text-dim)!important;text-transform:uppercase!important;letter-spacing:1px!important;margin-bottom:4px!important;display:block!important}
-    .pagination-item-title{font-size:14px!important;font-weight:600!important;color:var(--gold)!important;display:block!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
-    .pagination-item-subtitle,.pagination-item .pagination-item-subtitle{display:none!important;height:0!important;max-height:0!important;overflow:hidden!important;visibility:hidden!important;font-size:0!important;line-height:0!important;margin:0!important;padding:0!important}
-    .pagination-item--next{text-align:right!important}
-    .pagination-item--next a{text-align:right!important}
+    /* ── Pagination subtitle hide ── */
+    .pagination-item-subtitle{display:none!important;height:0!important;visibility:hidden!important;font-size:0!important;margin:0!important;padding:0!important}
+    .pagination-item-title{font-weight:600!important}
 
-    /* Footer */
-    .page-footer{margin-top:60px;padding:30px 0;border-top:1px solid var(--border);text-align:center}
+    /* ── Footer ── */
+    .page-footer{margin-top:60px;padding:30px 0;border-top:1px solid #2a2a30;text-align:center}
     .page-footer img{width:140px;height:auto;opacity:.5;display:block;margin:0 auto 12px}
-    .page-footer p{color:var(--text-dim)!important;font-size:12px!important;text-align:center!important;margin:4px 0 0!important;letter-spacing:.5px}
+    .page-footer p{color:#71717a!important;font-size:12px!important;text-align:center!important;margin:4px 0 0!important;letter-spacing:.5px}
 
-    /* Search */
-    .sidebar .search{border-bottom:1px solid var(--border)!important}
-    .sidebar .search input{background:var(--bg-card)!important;color:var(--text)!important;border:1px solid var(--border)!important;border-radius:6px!important;font-family:var(--font)!important}
-    .sidebar .search input:focus{border-color:var(--gold-dim)!important}
-    .sidebar .search input::placeholder{color:var(--text-dim)!important}
-    .sidebar .search .results-panel{background:var(--bg-sidebar)!important}
-    .sidebar .search .matching-post{background:var(--bg-card)!important;border-bottom:1px solid var(--border)!important}
-    .sidebar .search .matching-post a{color:var(--gold)!important}
-
-    /* Mermaid */
+    /* ── Mermaid ── */
     .mermaid{background:transparent!important;margin:24px 0!important;text-align:center!important;overflow-x:auto!important}
     .mermaid svg{max-width:100%!important;height:auto!important}
-    .mermaid .label{color:#d4d4d8!important;font-family:var(--font)!important;font-size:16px!important}
-    .mermaid .edgeLabel{background:#1e1e24!important;color:#d4d4d8!important}
+    .mermaid .label{font-family:'Inter',sans-serif!important;font-size:16px!important}
+    .mermaid .edgeLabel{background:#1e1e24!important}
     .mermaid .edgePath .path{stroke:#555!important}
-    .mermaid .cluster rect{fill:#1e1e24!important;stroke:#444!important}
 
-    /* Scrollbar */
+    /* ── Scrollbar ── */
     ::-webkit-scrollbar{width:5px}
     ::-webkit-scrollbar-track{background:transparent}
     ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
-    ::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
+    ::-webkit-scrollbar-thumb:hover{background:#8a7548}
     .sidebar::-webkit-scrollbar{width:3px}
 
-    /* Mobile */
+    /* ── Mobile ── */
     @media(max-width:768px){
       .markdown-section h1{font-size:22px!important}
       .markdown-section h2{font-size:17px!important;margin-top:30px!important}
-      .markdown-section h3{font-size:15px!important}
       .markdown-section p,.markdown-section li{font-size:15px!important}
-      .markdown-section table{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;font-size:13px!important}
+      .markdown-section table{display:block!important;overflow-x:auto!important;font-size:13px!important}
       .markdown-section thead th,.markdown-section tbody td{padding:8px 12px!important;white-space:nowrap!important}
       .docsify-pagination-container{flex-direction:column!important}
       .pagination-item{max-width:100%!important}
-      .alert{padding:14px 16px!important}
-      .markdown-section blockquote{padding:12px 16px!important;margin:16px 0!important}
-      .mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
-      .mermaid svg{min-width:auto!important;max-width:none!important}
       .logo-home{max-width:260px!important}
-      .app-name-link img{width:140px!important}
+      .app-name-link img{width:140px}
+      .mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
     }
 
-    /* Hide defaults */
+    /* ── Hide github corner ── */
     .github-corner{display:none!important}
   </style>
 </head>
@@ -156,7 +139,7 @@
   <div id="app"></div>
   <script>
     window.$docsify={
-      name:'<img src="assets/logo-small.png" alt="Grooves" style="width:180px;display:block;margin:0 auto"><span style="display:block;color:#71717a;font-size:10px;letter-spacing:2px;margin-top:6px;text-transform:uppercase;text-align:center">Ecosistemas Creativos</span>',
+      name:'<img src="assets/logo-small.png" alt="Grooves"><span class="sidebar-subtitle">Ecosistemas Creativos</span>',
       nameLink:'/',
       repo:false,
       loadSidebar:true,
