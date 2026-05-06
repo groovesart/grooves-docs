@@ -1,8 +1,7 @@
 <div align="center">
   <img src="assets/logo-medium.png" alt="Grooves" class="logo-home">
+  <p style="color:#71717a;font-size:13px;letter-spacing:3px;margin-top:4px">ECOSISTEMAS CREATIVOS</p>
 </div>
-
-##     ECOSISTEMAS CREATIVOS
 
 **Whitepaper v2.0 — Abril 2026**
 
