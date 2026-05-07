@@ -57,10 +57,10 @@ Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el mo
 
 ```mermaid
 graph TB
-    A[10] -->|Anécdota| B[100]
-    B -->|Movimiento| C[1,000]
-    C -->|Tendencia| D[Generación]
-    D -->|Revolución| E[Cambio]
+    A[10 artistas] -->|Anécdota| B[100 artistas]
+    B -->|Movimiento| C[1,000 artistas]
+    C -->|Tendencia| D[Una Generación]
+    D -->|Revolución| E[La industria cambia]
     style A fill:#2a2a30,color:#d4d4d8,stroke:#444
     style B fill:#2a2a30,color:#d4d4d8,stroke:#555
     style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
