@@ -9,8 +9,8 @@ La revolución digital prometió democratizar el acceso al arte. Cumplió esa pr
 ```mermaid
 graph TB
     A[Vinilo/CD/Cassete] -->|Propiedad real, un activo| B[Stream Digital]
-    B -->|Se pierde la propiedad| C[Compra de activo digital con funciones especificas por el artista]
-    C -->|Se recupera la propiedad y la transabilidad| D[GROOVES]
+    B -->|Se pierde la propiedad| E [GROOVES es herramienta para ] C[Compra de activo digital con funciones especificas por el artista]
+    C -->|Se recupera la propiedad y la transabilidad| 
     style A fill:#C8A96E,color:#111,stroke:#8a7548
     style B fill:#C8A96E,color:#111,stroke:#8a7548
     style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
