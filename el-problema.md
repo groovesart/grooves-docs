@@ -2,14 +2,14 @@
 
 ## 2.1 — Un ecosistema diseñado contra el creador
 
-En el modelo actual de streaming, el artista cede el control de su obra al momento de distribuirla. Las plataformas deciden cuánto paga cada reproducción (fracciones de centavo), cómo se descubre la música (algoritmos opacos), y quién tiene acceso. El artista no tiene relación directa con su audiencia. No sabe quién valora su música porque el sistema no está diseñado para que nadie la posea.
+En el modelo actual de streaming, el artista cede el control de su obra al momento de distribuirla. Las plataformas deciden cuánto se paga por cada reproducción (fracciones de centavo), las monitorias de la recolecciñon de esas regalias son por auditores privados que han levantado muchos cuestionamientos a través del tiempo, existe un montón de intermediarios (agregadoras) que deciden si tu musica la suben a plataformas o no, peor aún casos de artistas que tienen un crecimiento orgánico o se viralizo de la noche a la mañana un sencillo o album y ellos arbitrariamente deciden censurar el album proponiendo conjeturas de actuaciones indebidas que en muchos casos son falsas, aún así el artista no puede hacer nada. Las irregularidades en este sistema de alquiler musical han traido un sin fin de problemas y el que termina al final mas perjudicado es el creador. Asi mismo, se pierde la relación directa con su audiencia. Se toma la música como un alquiler, un objeto de consumo sin mas funcionabilidad. 
 
 ```mermaid
 graph TB
     A[Artista] -->|Sube música| B[Plataforma de Streaming]
-    B -->|Algoritmo decide| C[Oyente]
+    B -->|Algoritmo decide a donde distribuir| C[Oyente]
     C -->|$0.003 por stream| B
-    B -->|Fracciones de centavo| A
+    B -->|Regalías infimas| A
     style A fill:#C8A96E,color:#111,stroke:#8a7548
     style B fill:#c0392b,color:#fff,stroke:#962d22
     style C fill:#2a2a30,color:#d4d4d8,stroke:#444
@@ -17,22 +17,22 @@ graph TB
 
 El artista independiente enfrenta un sistema diseñado para volumen, donde un millón de canciones nuevas se suben cada semana y la atención del oyente se fragmenta hasta volverse insignificante. Las disqueras tradicionales, por su parte, ofrecen adelantos a cambio de derechos master que el artista rara vez recupera.
 
-Pero el problema no termina en el artista independiente. Los propios sellos discográficos — desde las pequeñas disqueras hasta las grandes majors — operan dentro de un modelo que subestima el valor de su catálogo. Un catálogo que contiene décadas de historia musical se reduce a fracciones de centavo por stream, sin ninguna herramienta para crear escasez, exclusividad o experiencias diferenciadas alrededor de su música.
+Pero el problema no termina en el artista independiente. Los propios sellos discográficos , desde las pequeñas disqueras hasta las grandes majors, operan dentro de un modelo que subestima el valor de su catálogo y las nuevas funciones que pueden optar por ello. Un catálogo que contiene décadas de historia musical se reduce a fracciones de centavo por stream, sin ninguna herramienta para crear escasez, exclusividad o experiencias diferenciadas alrededor de su música.
 
 > [!WARNING]
-> **1,000,000 streams = ~$3,000 USD.** Un artista necesita más de un millón de reproducciones para ganar lo equivalente a un salario mínimo mensual. El sistema actual no fue diseñado para remunerar al creador.
+> **1,000,000 streams = ~$3,000 USD. aprox** Un artista necesita más de un millón de reproducciones para ganar lo equivalente a un salario mínimo mensual aproximadamente. El sistema actual no fue diseñado para remunerar al creador.
 
 ### Grooves es una oportunidad para todos los actores del ecosistema musical
 
-Grooves está diseñado para que cualquier creador — desde el artista independiente hasta el sello discográfico más grande del mundo — encuentre un modelo superior al actual. Para el artista independiente, significa control total y pagos directos. Para un gran sello, significa una nueva forma de monetizar catálogos que hoy solo generan fracciones de centavo por stream, creando experiencias premium que sus fanáticos están dispuestos a poseer y coleccionar.
+Grooves está diseñado para que cualquier creador, desde el artista independiente hasta el sello discográfico más grande del mundo encuentre un modelo superior al actual. Para el artista independiente, significa control total, una gamma amplia de funcionabilidades sobre su arte y pagos directos con comisiones por reventas. Para un gran sello, significa una nueva forma de monetizar catálogos que hoy solo generan fracciones de centavo por stream, creando experiencias premium que sus fanáticos están dispuestos a poseer y coleccionar.
 
 ```mermaid
 graph TB
-    A[Artista] -->|Crea Pressing| B[GROOVES]
+    A[Artista] -->|Crea *Pressing*| B[GROOVES]
     B -->|Compra directa| C[Fan]
-    C -->|95% al artista| A
+    C -->|95% de esa venta directo al artista| A
     C -->|Revende| D[Otro Fan]
-    D -->|Royalty automático| A
+    D -->|% de royalty automático| A
     style A fill:#C8A96E,color:#111,stroke:#8a7548
     style B fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
     style C fill:#2a2a30,color:#d4d4d8,stroke:#444
@@ -40,7 +40,7 @@ graph TB
 ```
 
 > [!NOTE]
-> Imagina a un gran sello creando Pressings de acceso a catálogos históricos completos: toda la música de los años 70 de un artista legendario como un Sealed Edition de 10,000 unidades, con acceso a material inédito, sesiones de estudio remasterizadas y documentales exclusivos. O un Open Edition del catálogo completo de un género, donde cada Pressing incluye acceso a una comunidad curada por los propios artistas. Las posibilidades para monetizar catálogos que hoy solo generan fracciones de centavo por stream son ilimitadas.
+> Imagina a un gran sello creando Pressings de acceso a catálogos históricos completos: toda la música de los años 70 de un artista legendario como un Sealed Edition de 10,000 unidades (*pressings*), con acceso a material inédito, sesiones de estudio remasterizadas y documentales exclusivos o hasta entradas a instalaciones icónicas a los que posean un *pressing* de esos. O un Open Edition del catálogo completo de un género, donde cada *Pressing* incluye acceso a una comunidad curada por los propios artistas. Las posibilidades para monetizar catálogos que hoy solo generan fracciones de centavo por stream son ilimitadas.
 
 ---
 
@@ -50,10 +50,10 @@ Un usuario de Spotify que ha pagado $11 al mes durante 10 años ha invertido $1,
 
 | | Streaming (hoy) | Grooves (propiedad) |
 |---|---|---|
-| **Inversión 10 años** | $1,320 | ~$150 (10 Pressings) |
+| **Inversión 10 años** | $1,320 | ~$150 (10 *Pressings*) |
 | **¿Qué posee?** | Nada | 10 obras revendibles |
 | **Si cancela** | Pierde todo | Conserva todo |
-| **Si el artista crece** | Nada cambia | Sus Pressings se revalorizan |
+| **Si el artista crece** | Nada cambia | Sus *Pressings* se revalorizan y los puede reenveder mas caros, hay transabilidad |
 
 Contraste esto con el coleccionista de vinilos: cada disco que compró sigue siendo suyo. Puede venderlo, regalarlo, heredarlo. Algunos discos se revalorizan con el tiempo. La relación entre el fan y la obra es tangible, permanente, real.
 
@@ -71,8 +71,8 @@ graph TB
     end
     subgraph GROOVES["Modelo Grooves"]
         A2[Fan vende Pressing por $5,000] --> B2[Comprador paga]
-        B2 --> C2[Artista recibe royalty automático]
-        B2 --> D2[Vendedor recibe el resto]
+        B2 --> C2[Artista recibe % royalty automático en su cuenta]
+        B2 --> D2[Vendedor que reevendio recibe el resto sin intermediarios]
     end
     style HOY fill:#2e1a1a,stroke:#c0392b
     style GROOVES fill:#1a2e1a,stroke:#4a8c5c
@@ -81,4 +81,4 @@ graph TB
     style D2 fill:#2a2a30,color:#d4d4d8,stroke:#444
 ```
 
-La tecnología blockchain resuelve esto de forma programática: cada vez que una obra cambia de manos, un porcentaje definido por el artista regresa automáticamente a su billetera. No es una promesa contractual — es código ejecutable que no puede ser alterado.
+La tecnología blockchain resuelve esto de forma programática: cada vez que una obra cambia de manos, un porcentaje definido por el artista regresa automáticamente a su billetera, sin intermediarios, todo escrito publicamente y auditado por la blockchain que cualquier persona puede corroborar, de manera perpetua sin auditores privados. No es una promesa contractual — es código ejecutable descentralizado que no puede ser alterado.
