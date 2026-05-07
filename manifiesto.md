@@ -11,7 +11,7 @@ graph TB
     A[Vinilo / CD / Cassette] -->|Propiedad real, un activo| B[Stream Digital]
     B -->|Se pierde la propiedad| C[GROOVES es la herramienta]
     C --> D[Compra de activo digital con funciones especificas por el artista]
-    D -->|Se recupera la propiedad y la transabilidad| E[Propiedad + Transabilidad]
+    D -->|Se recupera el valor y la transabilidad| E[Valor a la creación + Transabilidad + Funcionalidades]
     style A fill:#C8A96E,color:#111,stroke:#8a7548
     style B fill:#c0392b,color:#fff,stroke:#962d22
     style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
