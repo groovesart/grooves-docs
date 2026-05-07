@@ -8,15 +8,13 @@ La revolución digital prometió democratizar el acceso al arte. Cumplió esa pr
 
 ```mermaid
 graph TB
-    A[Vinilo / CD / Cassette] -->|Propiedad real, un activo| B[Stream Digital]
-    B -->|Se pierde la propiedad| C[GROOVES es la herramienta]
-    C --> D[Compra de activo digital con funciones especificas por el artista]
-    D -->|Se recupera el valor y la transabilidad| E[Valor a la creación + Transabilidad + Funcionalidades]
+    A[Vinilo / CD / Cassette] -->|Propiedad real| B[Streaming]
+    B -->|Se pierde la propiedad| C[GROOVES]
+    C -->|Activo digital transable| D[Propiedad recuperada]
     style A fill:#C8A96E,color:#111,stroke:#8a7548
     style B fill:#c0392b,color:#fff,stroke:#962d22
     style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
-    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
-    style E fill:#C8A96E,color:#111,stroke:#8a7548
+    style D fill:#C8A96E,color:#111,stroke:#8a7548
 ```
 
 El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado.
@@ -59,16 +57,16 @@ Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el mo
 
 ```mermaid
 graph TB
-    A[10 artistas] -->|Anécdota| B[100 artistas]
-    B -->|Movimiento| C[1,000 artistas]
-    C -->|Tendencia| D[Una generación]
-    D -->|REVOLUCIÓN| E[La industria cambia]
+    A[10] -->|Anécdota| B[100]
+    B -->|Movimiento| C[1,000]
+    C -->|Tendencia| D[Generación]
+    D -->|Revolución| E[Cambio]
     style A fill:#2a2a30,color:#d4d4d8,stroke:#444
     style B fill:#2a2a30,color:#d4d4d8,stroke:#555
     style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
-    style D fill:#C8A96E,color:#111,stroke:#8a7548,stroke-width:2px
-    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
+    style D fill:#C8A96E,color:#111,stroke:#8a7548
+    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
 ```
 
 > [!TIP]
-> Si diez artistas lo hacen, es una anécdota. Si mil lo hacen, es una tendencia. Si una generación entera de creadores decide que su arte es mas que un "stream", que un alquiler, que se puede generar ecosistemas creativos reales y tangibles, es una revolución. **Grooves no va a cambiar la industria musical. Los artistas que crean en esta idea van a cambiar la industria musical. Grooves es una herramienta.**
+> *Si diez artistas lo hacen, es una anécdota. Si mil lo hacen, es una tendencia. Si una generación entera de creadores decide que su arte es mas que un "stream", que un alquiler, que se puede generar ecosistemas creativos reales y tangibles, es una revolución. **Grooves no va a cambiar la industria musical. Los artistas que crean en esta idea van a cambiar la industria musical. Grooves es una herramienta.***
