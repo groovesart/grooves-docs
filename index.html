@@ -164,7 +164,7 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({startOnLoad:false,theme:'dark',themeVariables:{darkMode:true,background:'#16161a',primaryColor:'#C8A96E',primaryTextColor:'#111',primaryBorderColor:'#8a7548',lineColor:'#555',secondaryColor:'#1a2e1a',tertiaryColor:'#1a1d2e',fontFamily:'Inter,sans-serif',fontSize:'16px'}});
+    mermaid.initialize({startOnLoad:false,theme:'dark',themeVariables:{darkMode:true,background:'#16161a',primaryColor:'#C8A96E',primaryTextColor:'#111',primaryBorderColor:'#8a7548',lineColor:'#555',secondaryColor:'#1a2e1a',tertiaryColor:'#1a1d2e',fontFamily:'Inter,sans-serif',fontSize:'14px'}});
     window.$docsify.markdown={renderer:{code:function(code,lang){if(lang==='mermaid'){return'<div class="mermaid">'+code+'</div>'}return this.origin.code.apply(this,arguments)}}};
     window.$docsify.plugins.push(function(hook){hook.doneEach(function(){mermaid.run({querySelector:'.mermaid'})})});
   </script>

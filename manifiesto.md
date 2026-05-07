@@ -8,14 +8,15 @@ La revolución digital prometió democratizar el acceso al arte. Cumplió esa pr
 
 ```mermaid
 graph TB
-    A[Vinilo/CD/Cassete] -->|Propiedad real, un activo| B[Stream Digital]
-    B -->|Se pierde la propiedad| E [GROOVES es herramienta para ] C[Compra de activo digital con funciones especificas por el artista]
-    C -->|Se recupera la propiedad y la transabilidad| 
+    A[Vinilo / CD / Cassette] -->|Propiedad real, un activo| B[Stream Digital]
+    B -->|Se pierde la propiedad| C[GROOVES es la herramienta]
+    C --> D[Compra de activo digital con funciones especificas por el artista]
+    D -->|Se recupera la propiedad y la transabilidad| E[Propiedad + Transabilidad]
     style A fill:#C8A96E,color:#111,stroke:#8a7548
-    style B fill:#C8A96E,color:#111,stroke:#8a7548
-    style C fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
-    style D fill:#c0392b,color:#fff,stroke:#962d22
-    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
+    style B fill:#c0392b,color:#fff,stroke:#962d22
+    style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c,stroke-width:2px
+    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style E fill:#C8A96E,color:#111,stroke:#8a7548
 ```
 
 El artista que perdió el control sobre su obra en el momento en que la subió a una plataforma de streaming y el oyente que paga una suscripción mensual por el privilegio de acceder a millones de canciones pero que realmente no las posee. En cuanto deja de pagar la mensualidad, pierde el acceso ilimitado.
@@ -38,7 +39,7 @@ No somos únicamente una plataforma de streaming. No somos únicamente un market
 
 Un ideal que para llegarse a concretar requiere de pedagogía, de creer en nosotros, de creer en el arte como transformación de una sociedad equitativa y remunerada.
 
-Somos la idea que cree que el arte recupera su peso, donde la obra creativa se convierte en un objeto que se posee, se transfoma, se colecciona, se transfiere y se revaloriza. 
+Somos la idea que cree que el arte recupera su peso, donde la obra creativa se convierte en un objeto que se posee, se transfoma, se colecciona, se transfiere y se revaloriza.
 
 Donde cada transacción devuelve valor directamente a quien creó la obra, así mismo a las pequeñas disqueras como a los grandes sellos discográficos.
 
