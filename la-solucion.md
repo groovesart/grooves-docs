@@ -4,7 +4,7 @@
 
 En Grooves, cada obra creativa publicada se denomina un **Pressing**.
 
-Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto digital autenticado que funciona como llave de acceso** a todo un universo creativo definido por el artista o el sello. Cada Pressing está registrado en blockchain, de manera perpetua, público en inernet de manera que cualquier persona lo puede auditar, lo que garantiza tres propiedades fundamentales:
+Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto digital autenticado que funciona como llave de acceso** a todo un universo creativo definido por el artista o el sello. Cada Pressing está registrado en blockchain, de manera perpetua, público en internet de manera que cualquier persona lo puede auditar. Esto garantiza tres propiedades fundamentales:
 
 * **Autenticidad verificable.** Cualquiera puede comprobar que el Pressing fue creado por el artista original.
 * **Escasez programable.** El artista decide cuántos Pressings existen de cada obra, si es una colección limitada o ilimitada.
