@@ -28,7 +28,7 @@ Grooves está diseñado para que cualquier creador, desde el artista independien
 
 ```mermaid
 graph TB
-    A[Artista] -->|Crea *Pressing*| B[GROOVES]
+    A[Artista] -->|Crea **Pressing**| B[GROOVES]
     B -->|Compra directa| C[Fan]
     C -->|95% de esa venta directo al artista| A
     C -->|Revende| D[Otro Fan]
