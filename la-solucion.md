@@ -9,7 +9,7 @@ Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto d
 * **Autenticidad verificable.** Cualquiera puede comprobar que el Pressing fue creado por el artista original.
 * **Escasez programable.** El artista decide cuántos Pressings existen de cada obra, si es una colección limitada o ilimitada.
 * **Propiedad transferible.** El poseedor puede venderlo, regalarlo o transferirlo. En cada reventa, el artista creador del pressing recibe automáticamente su % royalty.
-* * **Porcentajes de creación.** El Creador del pressing puede hacer splits de % de ganancia como se acuerde. Ejemplo: X% para los músicos participantes, x% para los managers, X% para el sello discografico, x% para los publishers etc. Todo estos "splits" pueden quedar consignados de manera perpetua o por tiempos establecidos a elección, automaticamente distribuidos en cada venta y reventa. Sin intermediarios. 
+* **Porcentajes de creación.** El Creador del pressing puede hacer splits de % de ganancia como se acuerde. Ejemplo: X% para los músicos participantes, x% para los managers, X% para el sello discografico, x% para los publishers etc. Todo estos "splits" pueden quedar consignados de manera perpetua o por tiempos establecidos a elección, automaticamente distribuidos en cada venta y reventa. Sin intermediarios. 
 
 ```mermaid
 graph TB
@@ -170,7 +170,7 @@ Los servicios de on-ramp como MoonPay, Transak o Stripe Crypto se integran vía 
 ```mermaid
 graph TB
     A[Ve un Pressing] --> B[Clic en Comprar]
-    B --> C[Elige metodo de pago,"tradicional" o Cripto]
+    B --> C[Elige pago tradicional o Cripto]
     C --> D[Ingresa datos de pago]
     D --> E[Recibe su Pressing]
     style A fill:#2a2a30,color:#d4d4d8,stroke:#444
