@@ -7,7 +7,7 @@ Durante décadas, la industria creativa ha sido dominada por intermediarios que 
 Cada Pressing que se adquiere en Grooves no es solo una compra, es un voto de confianza en un artista. Es una declaración de que esa obra tiene valor suficiente para ser poseída y transable, no solo escuchada. Y cuando ese Pressing se revaloriza y se revende, el artista sigue recibiendo su parte, porque el código así lo dicta.
 
 > [!TIP]
-> **El ecosistema creativo es de todos, manejado de manera justa y programable por el Artista. **
+> **El ecosistema creativo es de todos, manejado de manera justa y programable por el Artista.**
 
 
 ---
