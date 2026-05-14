@@ -16,3 +16,8 @@
 | **Fiat On-Ramp** | Pasarela de pago | Servicio integrado que convierte dólares de tarjeta de crédito, débito o PayPal a USDC automáticamente |
 | **Royalty** | Regalía | Porcentaje (5-15%) que el artista recibe automáticamente en cada reventa secundaria de su Pressing |
 | **EIP-2981** | Estándar de royalties | Protocolo de Ethereum que garantiza el pago automático de royalties en cada transacción on-chain |
+| **KYC** | Know Your Customer | Proceso de verificación de identidad mediante documento oficial. Requerido para crear Pressings. |
+| **Verificación** | Badge / Check | Sistema de niveles (Básico, Verificado, Oficial) que determina los permisos del usuario en la plataforma |
+| **Strike** | Penalización | Infracción registrada contra un usuario por violación de términos. Tres strikes = bloqueo permanente. |
+| **Claim** | Reclamación de titularidad | Proceso mediante el cual un artista verificado demuestra que es el titular legítimo de una obra detectada por el Authenticity Engine |
+| **Blacklist** | Lista negra on-chain | Wallet bloqueada en el smart contract. No puede interactuar con los contratos de Grooves en blockchain. |

@@ -4,7 +4,7 @@
 
 En Grooves, cada obra creativa publicada se denomina un **Pressing**.
 
-Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto digital autenticado que funciona como llave de acceso** a todo un universo creativo definido por el artista o el sello. Cada Pressing está registrado en blockchain, de manera perpetua, público en internet de manera que cualquier persona lo puede auditar. Esto garantiza tres propiedades fundamentales:
+Un Pressing no es simplemente un archivo de audio digitalizado. Es un **objeto digital autenticado que funciona como llave de acceso** a todo un universo creativo definido por el artista o el sello. Cada Pressing está registrado en blockchain, de manera perpetua, público en inernet de manera que cualquier persona lo puede auditar, lo que garantiza tres propiedades fundamentales:
 
 * **Autenticidad verificable.** Cualquiera puede comprobar que el Pressing fue creado por el artista original.
 * **Escasez programable.** El artista decide cuántos Pressings existen de cada obra, si es una colección limitada o ilimitada.
@@ -188,3 +188,94 @@ graph TB
 
 > [!NOTE]
 > En ningún momento del proceso el usuario necesita saber qué es una wallet, qué es USDC, ni qué es blockchain. La tecnología es invisible. La experiencia es idéntica a comprar en cualquier tienda online.
+
+---
+
+## 3.7 — Confianza y Seguridad: Verificación de Creadores
+
+Para que Grooves sea un ecosistema confiable donde artistas, sellos y fans operen con total seguridad, la plataforma implementa un sistema de verificación de identidad, protección de derechos de autor, y moderación comunitaria.
+
+### Niveles de Verificación
+
+No todos los usuarios necesitan el mismo nivel de acceso. Grooves opera con tres niveles progresivos:
+
+| Nivel | Puede hacer | Requisito |
+|---|---|---|
+| **Básico** | Comprar Pressings, escuchar, revender, explorar el marketplace | Email + contraseña |
+| **Verificado** | Todo lo básico + crear Pressings + subir música + configurar splits | KYC (documento de identidad) + aceptar términos del creador |
+| **Verificado Oficial** | Todo lo verificado + claims de catálogos existentes + aprobación prioritaria | KYC + confirmación de identidad artística (redes sociales, sello confirma) |
+
+```mermaid
+graph TB
+    A[Crear Cuenta] --> B[Cuenta Básica]
+    B --> C[Solicitar Verificación]
+    C --> D[KYC + Términos]
+    D --> E[Verificado]
+    E --> F[Solicitar Oficial]
+    F --> G[Verificado Oficial]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style C fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style F fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style G fill:#C8A96E,color:#111,stroke:#8a7548
+```
+
+### KYC y Términos del Creador
+
+Antes de poder subir música, el usuario debe completar un proceso de verificación de identidad (KYC — Know Your Customer) y aceptar los Términos del Creador. El proceso es gratuito y toma minutos.
+
+El KYC verifica que la persona es quien dice ser mediante documento de identidad. Los Términos del Creador incluyen seis cláusulas fundamentales:
+
+* **Titularidad.** Todo material subido es de autoría del creador o cuenta con autorización legal del titular.
+* **Responsabilidad.** El creador asume total responsabilidad legal por reclamaciones de terceros.
+* **Veracidad.** La información del perfil es veraz y corresponde a la identidad real.
+* **Uso indebido.** Subir material ajeno resulta en suspensión inmediata y posibles acciones legales.
+* **Sistema de strikes.** Infracciones acumulan strikes con consecuencias progresivas.
+* **Comisiones.** Aceptación de la estructura de comisiones vigente.
+
+### Authenticity Engine y Claims
+
+Cuando un creador verificado sube música al Pressing Studio, el Authenticity Engine analiza el audio buscando coincidencias con obras registradas. Si detecta un match, el sistema **no bloquea automáticamente** — pausa la creación y notifica al creador.
+
+```mermaid
+graph TB
+    A[Artista sube audio] --> B[Authenticity Engine analiza]
+    B -->|Sin match| C[Aprobado - se crea el Pressing]
+    B -->|Match detectado| D[Pausa - notifica al artista]
+    D --> E{Artista Verificado Oficial?}
+    E -->|Sí| F[Claim automático aprobado]
+    E -->|No| G[Revisión manual]
+    G -->|Aprobado| C
+    G -->|Rechazado| H[Creación bloqueada]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
+    style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style E fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style F fill:#C8A96E,color:#111,stroke:#8a7548
+    style G fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style H fill:#c0392b,color:#fff,stroke:#962d22
+```
+
+Este sistema permite que un artista legítimo suba su propia música (que ya existe en bases de datos de copyright) sin ser bloqueado injustamente, mientras que un usuario malintencionado que intente subir música ajena sea detenido.
+
+### Sistema de Strikes
+
+Cuando se confirma que un usuario subió material del cual no es titular, el sistema aplica consecuencias progresivas:
+
+| Strike | Consecuencia |
+|---|---|
+| **Primero** | Advertencia + Pressing suspendido y removido |
+| **Segundo** | Suspensión temporal de la cuenta (no puede crear ni vender) |
+| **Tercero** | Bloqueo permanente de la cuenta + wallet en blacklist del smart contract |
+
+> [!WARNING]
+> *El bloqueo permanente incluye la adición de la wallet del usuario a una blacklist en el smart contract. Esto significa que esa wallet no puede interactuar con los contratos de Grooves en blockchain, incluso si intenta hacerlo directamente sin pasar por la plataforma.*
+
+### Moderación Comunitaria
+
+Cualquier usuario de Grooves puede reportar un Pressing que considere sospechoso. Los reportes se revisan internamente y pueden resultar en la suspensión del contenido mientras se investiga. Este sistema permite que la comunidad participe activamente en mantener la integridad de la plataforma.
+
+El proceso de disputa funciona en ambas direcciones: si un creador cree que su Pressing fue suspendido injustamente, puede presentar un claim con evidencia de titularidad para revertir la decisión.
