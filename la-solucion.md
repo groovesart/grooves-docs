@@ -193,62 +193,26 @@ graph TB
 
 ## 3.7 — Confianza y Seguridad: Verificación de Creadores
 
-Para que Grooves sea un ecosistema confiable donde artistas, sellos y fans operen con total seguridad, la plataforma implementa un sistema de verificación de identidad, protección de derechos de autor, y moderación comunitaria.
+Para que Grooves funcione como un ecosistema confiable, necesita resolver cinco problemas fundamentales de seguridad y autenticidad. Cada uno tiene una solución concreta implementada en la plataforma.
 
-### Niveles de Verificación
+---
 
-No todos los usuarios necesitan el mismo nivel de acceso. Grooves opera con tres niveles progresivos:
+### Problema 1: Un artista legítimo sube su propia música y el sistema lo bloquea.
 
-| Nivel | Puede hacer | Requisito |
-|---|---|---|
-| **Básico** | Comprar Pressings, escuchar, revender, explorar el marketplace | Email + contraseña |
-| **Verificado** | Todo lo básico + crear Pressings + subir música + configurar splits | KYC (documento de identidad) + aceptar términos del creador |
-| **Verificado Oficial** | Todo lo verificado + claims de catálogos existentes + aprobación prioritaria | KYC + confirmación de identidad artística (redes sociales, sello confirma) |
+El Authenticity Engine detecta que la canción ya existe en bases de datos de copyright. Pero el que la sube ES el dueño legítimo. Bloquearlo automáticamente sería injusto y haría la plataforma inusable para artistas establecidos.
 
-```mermaid
-graph TB
-    A[Crear Cuenta] --> B[Cuenta Básica]
-    B --> C[Solicitar Verificación]
-    C --> D[KYC + Términos]
-    D --> E[Verificado]
-    E --> F[Solicitar Oficial]
-    F --> G[Verificado Oficial]
-    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
-    style B fill:#2a2a30,color:#d4d4d8,stroke:#444
-    style C fill:#2a2a30,color:#d4d4d8,stroke:#444
-    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
-    style E fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
-    style F fill:#2a2a30,color:#d4d4d8,stroke:#444
-    style G fill:#C8A96E,color:#111,stroke:#8a7548
-```
-
-### KYC y Términos del Creador
-
-Antes de poder subir música, el usuario debe completar un proceso de verificación de identidad (KYC — Know Your Customer) y aceptar los Términos del Creador. El proceso es gratuito y toma minutos.
-
-El KYC verifica que la persona es quien dice ser mediante documento de identidad. Los Términos del Creador incluyen seis cláusulas fundamentales:
-
-* **Titularidad.** Todo material subido es de autoría del creador o cuenta con autorización legal del titular.
-* **Responsabilidad.** El creador asume total responsabilidad legal por reclamaciones de terceros.
-* **Veracidad.** La información del perfil es veraz y corresponde a la identidad real.
-* **Uso indebido.** Subir material ajeno resulta en suspensión inmediata y posibles acciones legales.
-* **Sistema de strikes.** Infracciones acumulan strikes con consecuencias progresivas.
-* **Comisiones.** Aceptación de la estructura de comisiones vigente.
-
-### Authenticity Engine y Claims
-
-Cuando un creador verificado sube música al Pressing Studio, el Authenticity Engine analiza el audio buscando coincidencias con obras registradas. Si detecta un match, el sistema **no bloquea automáticamente** — pausa la creación y notifica al creador.
+**Solución:** El sistema no bloquea automáticamente — pausa la creación y notifica al artista. Si el artista tiene verificación oficial, su claim se aprueba automáticamente. Si no, entra en revisión manual.
 
 ```mermaid
 graph TB
     A[Artista sube audio] --> B[Authenticity Engine analiza]
-    B -->|Sin match| C[Aprobado - se crea el Pressing]
-    B -->|Match detectado| D[Pausa - notifica al artista]
-    D --> E{Artista Verificado Oficial?}
-    E -->|Sí| F[Claim automático aprobado]
+    B -->|Sin match| C[Aprobado]
+    B -->|Match detectado| D[Pausa]
+    D --> E{Verificado Oficial?}
+    E -->|Sí| F[Claim aprobado]
     E -->|No| G[Revisión manual]
     G -->|Aprobado| C
-    G -->|Rechazado| H[Creación bloqueada]
+    G -->|Rechazado| H[Bloqueado]
     style A fill:#2a2a30,color:#d4d4d8,stroke:#444
     style B fill:#1a1d2e,color:#d4d4d8,stroke:#4a6fa5
     style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
@@ -259,23 +223,83 @@ graph TB
     style H fill:#c0392b,color:#fff,stroke:#962d22
 ```
 
-Este sistema permite que un artista legítimo suba su propia música (que ya existe en bases de datos de copyright) sin ser bloqueado injustamente, mientras que un usuario malintencionado que intente subir música ajena sea detenido.
+---
 
-### Sistema de Strikes
+### Problema 2: ¿Cómo se protege legalmente la plataforma si alguien sube material que no es suyo?
 
-Cuando se confirma que un usuario subió material del cual no es titular, el sistema aplica consecuencias progresivas:
+Si un usuario sube música de la que no tiene derechos, Grooves necesita protección legal para no ser responsable de la infracción.
+
+**Solución:** Tres capas de protección legal.
+
+* **Términos del Creador.** Al solicitar verificación, el usuario acepta términos que incluyen: declaración de titularidad sobre todo material subido, responsabilidad legal total por reclamaciones de terceros, veracidad de la información del perfil, y aceptación del sistema de strikes.
+
+* **Attestation por upload.** Cada vez que crea un Pressing, el creador confirma explícitamente: "Declaro que soy titular o tengo autorización legal sobre los derechos de esta obra."
+
+* **Proceso DMCA/Takedown.** Si un tercero reporta infracción, la plataforma suspende el Pressing inmediatamente mientras se investiga. El creador puede presentar un contra-claim con evidencia de titularidad.
+
+---
+
+### Problema 3: ¿Quién puede subir música? No todo el mundo debería poder crear Pressings sin verificación.
+
+Si cualquier persona con un email puede subir música, la plataforma se llenaría de contenido pirata en cuestión de días.
+
+**Solución:** Sistema de dos niveles de cuenta. Solo los usuarios verificados pueden crear Pressings.
+
+| Nivel | Puede hacer | Requisito |
+|---|---|---|
+| **Básico** | Comprar, escuchar, revender, explorar | Email + contraseña |
+| **Creador Verificado** | Todo lo básico + subir música + crear Pressings + configurar splits | KYC (documento de identidad) + aceptar Términos del Creador |
+
+El proceso de KYC (Know Your Customer) es gratuito y toma minutos. El usuario sube foto de su documento de identidad, el servicio verifica automáticamente, y la cuenta queda habilitada para crear. Servicios como Sumsub, Persona o Jumio se integran como un widget dentro de la plataforma.
+
+---
+
+### Problema 4: ¿Cómo saber si un perfil es realmente quien dice ser? Alguien podría crear una cuenta con el nombre de un artista famoso.
+
+Sin un sistema de verificación visible, un impostor podría hacerse pasar por cualquier artista y vender Pressings fraudulentos.
+
+**Solución:** Sistema de badges con tres niveles progresivos de verificación.
+
+| Badge | Significado | Cómo se obtiene |
+|---|---|---|
+| Sin badge | Cuenta básica. Solo puede comprar. | Registro con email. |
+| Verificado (check gris) | Identidad confirmada. Puede crear Pressings. | KYC aprobado + Términos aceptados. |
+| Verificado Oficial (check dorado) | Identidad artística confirmada por la plataforma. | KYC + redes sociales vinculadas + sello confirma, o Grooves verifica directamente. |
+
+```mermaid
+graph TB
+    A[Cuenta Básica] --> B[KYC + Términos]
+    B --> C[Verificado]
+    C --> D[Redes + Sello confirma]
+    D --> E[Verificado Oficial]
+    style A fill:#2a2a30,color:#d4d4d8,stroke:#444
+    style B fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style C fill:#1a2e1a,color:#d4d4d8,stroke:#4a8c5c
+    style D fill:#2e2a1a,color:#d4d4d8,stroke:#C8A96E
+    style E fill:#C8A96E,color:#111,stroke:#8a7548
+```
+
+El badge es visible en el perfil del artista, en cada Pressing que publica, y en el marketplace. Los fans pueden verificar de un vistazo que están comprando de un artista legítimo.
+
+---
+
+### Problema 5: ¿Qué pasa con los usuarios malintencionados que logran pasar la verificación y aún así suben contenido fraudulento?
+
+Ningún sistema es infalible. Incluso con KYC y Authenticity Engine, alguien podría intentar subir material modificado o del que no tiene derechos.
+
+**Solución:** Sistema de strikes progresivo + moderación comunitaria + blacklist on-chain.
+
+**Strikes:**
 
 | Strike | Consecuencia |
 |---|---|
 | **Primero** | Advertencia + Pressing suspendido y removido |
-| **Segundo** | Suspensión temporal de la cuenta (no puede crear ni vender) |
-| **Tercero** | Bloqueo permanente de la cuenta + wallet en blacklist del smart contract |
+| **Segundo** | Suspensión temporal de la cuenta — no puede crear ni vender |
+| **Tercero** | Bloqueo permanente + wallet en blacklist del smart contract |
+
+**Moderación comunitaria:** Cualquier usuario puede reportar un Pressing sospechoso. Los reportes se revisan internamente y pueden resultar en la suspensión inmediata del contenido mientras se investiga.
+
+**Disputa bidireccional:** Si un creador cree que su Pressing fue suspendido injustamente, puede presentar un claim con evidencia de titularidad para revertir la decisión.
 
 > [!WARNING]
-> *El bloqueo permanente incluye la adición de la wallet del usuario a una blacklist en el smart contract. Esto significa que esa wallet no puede interactuar con los contratos de Grooves en blockchain, incluso si intenta hacerlo directamente sin pasar por la plataforma.*
-
-### Moderación Comunitaria
-
-Cualquier usuario de Grooves puede reportar un Pressing que considere sospechoso. Los reportes se revisan internamente y pueden resultar en la suspensión del contenido mientras se investiga. Este sistema permite que la comunidad participe activamente en mantener la integridad de la plataforma.
-
-El proceso de disputa funciona en ambas direcciones: si un creador cree que su Pressing fue suspendido injustamente, puede presentar un claim con evidencia de titularidad para revertir la decisión.
+> *El bloqueo permanente (tercer strike) incluye la adición de la wallet del usuario a una blacklist en el smart contract. Esto significa que esa wallet no puede interactuar con los contratos de Grooves en blockchain, incluso si intenta hacerlo directamente sin pasar por la plataforma. La blacklist es irreversible y está escrita en código inmutable.*
