@@ -1,172 +1,469 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Grooves — Ecosistemas Creativos</title>
-  <meta name="description" content="Grooves — Ecosistemas Creativos. Whitepaper v2.0">
-  <meta name="theme-color" content="#111113">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/icon-128.png">
-  <!-- Docsify base theme (provides sidebar layout structure) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* ── Override theme colors ── */
-    :root{
-      --base-font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-      --base-font-size:16px;
-      --base-line-height:1.7;
-      --base-color:#d4d4d8;
-      --base-background-color:#16161a;
-      --sidebar-background:#0c0c0e;
-      --sidebar-border-color:#2a2a30;
-      --sidebar-border-width:1px;
-      --sidebar-width:280px;
-      --sidebar-nav-link-color:#71717a;
-      --sidebar-nav-link-color--active:#C8A96E;
-      --sidebar-nav-link-border-color--active:#C8A96E;
-      --sidebar-nav-link-background-color--active:rgba(200,169,110,.08);
-      --sidebar-name-color:#C8A96E;
-      --sidebar-name-font-size:20px;
-      --heading-color:#C8A96E;
-      --heading-h1-color:#C8A96E;
-      --heading-h2-color:#d9bf8a;
-      --heading-h1-border-color:#8a7548;
-      --heading-h2-border-color:#2a2a30;
-      --heading-h1-font-size:28px;
-      --heading-h2-font-size:20px;
-      --heading-h3-font-size:16px;
-      --link-color:#C8A96E;
-      --link-text-decoration:none;
-      --blockquote-border-color:#C8A96E;
-      --blockquote-background:#1e1e24;
-      --code-inline-background:#1e1e24;
-      --code-inline-color:#C8A96E;
-      --table-head-background:#1e1e24;
-      --table-head-color:#C8A96E;
-      --table-body-border-color:#2a2a30;
-      --table-row-even-background:#1a1a20;
-      --table-row-odd-background:#16161a;
-      --search-input-background-color:#1e1e24;
-      --search-input-border-color:#2a2a30;
-      --search-input-color:#d4d4d8;
-      --pagination-title-color:#C8A96E;
-      --pagination-label-color:#71717a;
-      --notice-tip-background:#1a2e1a;
-      --notice-tip-border-color:#4a8c5c;
-      --notice-important-background:#1a1d2e;
-      --notice-important-border-color:#4a6fa5;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Grooves — White Paper</title>
+<meta name="description" content="Grooves — Ecosistemas Creativos. White Paper v3.0. El arte recupera su peso: se posee, se colecciona, se transfiere y se revaloriza.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Spline+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #0a0a0c;
+    --bg-2:      #0e0e11;
+    --surface:   #131318;
+    --surface-2: #17171d;
+    --border:    rgba(240,237,228,0.08);
+    --border-2:  rgba(240,237,228,0.13);
+    --gold:      #C8A96E;
+    --gold-soft: #d9bf8a;
+    --gold-dim:  rgba(200,169,110,0.10);
+    --gold-line: rgba(200,169,110,0.30);
+    --text:      #ece9e1;
+    --text-mut:  #9a978f;
+    --text-faint:#6b6862;
+    --green:     #4a8c5c;
+    --green-bg:  rgba(74,140,92,0.12);
+    --green-tx:  #7fc99a;
+    --blue:      #4a6fa5;
+    --blue-bg:   rgba(74,111,165,0.12);
+    --amber-bg:  rgba(200,169,110,0.10);
+    --red:       #c0563f;
+    --red-bg:    rgba(192,86,63,0.12);
+    --sidebar-w: 312px;
+    --reading:   720px;
+    --font-disp: 'Fraunces', Georgia, serif;
+    --font-body: 'Spline Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+  body{
+    background:var(--bg);color:var(--text);font-family:var(--font-body);
+    line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(900px 500px at 78% -5%, rgba(200,169,110,0.07), transparent 60%),
+      radial-gradient(700px 600px at -5% 100%, rgba(74,140,92,0.045), transparent 55%);
+  }
 
-    body{background:var(--base-background-color)!important;overflow-x:hidden}
-    .sidebar{background:var(--sidebar-background)!important}
+  /* ============ SIDEBAR ============ */
+  .layout{display:flex;min-height:100vh;position:relative;z-index:1}
+  .sidebar{
+    width:var(--sidebar-w);flex-shrink:0;
+    background:linear-gradient(180deg,var(--bg-2),var(--bg));
+    border-right:1px solid var(--border);
+    height:100vh;position:sticky;top:0;display:flex;flex-direction:column;
+  }
+  .sb-head{padding:26px 26px 18px;border-bottom:1px solid var(--border)}
+  .sb-logo{display:flex;align-items:center;gap:11px;text-decoration:none;cursor:pointer}
+  .sb-mark{width:34px;height:34px;flex-shrink:0}
+  .sb-mark circle.spin{transform-origin:center;animation:spin 14s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .sb-logo-text{font-family:var(--font-disp);font-size:20px;font-weight:600;letter-spacing:0.04em;color:var(--text)}
+  .sb-sub{font-size:10px;letter-spacing:0.28em;color:var(--text-faint);text-transform:uppercase;margin-top:9px;padding-left:1px}
 
-    /* ── Sidebar logo ── */
-    .app-name-link{text-decoration:none!important;display:block;text-align:center;padding:16px 12px 12px}
-    .app-name-link img{width:180px;height:auto;display:block;margin:0 auto}
-    .sidebar-subtitle{display:block;color:#71717a;font-size:10px;letter-spacing:2px;text-align:center;text-transform:uppercase;margin-top:6px;padding-bottom:12px;border-bottom:1px solid #2a2a30}
+  .sb-lang{display:flex;gap:5px;margin:16px 26px 4px}
+  .sb-lang button{
+    flex:1;background:var(--surface);border:1px solid var(--border);color:var(--text-mut);
+    font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;padding:7px;border-radius:8px;cursor:pointer;transition:all .2s;
+  }
+  .sb-lang button.on{background:var(--gold-dim);border-color:var(--gold-line);color:var(--gold)}
+  .sb-lang button:hover{color:var(--text)}
 
-    /* ── Sidebar nav refinement ── */
-    .sidebar-nav a{font-size:14px!important;font-weight:500!important;transition:all .2s!important}
-    .sidebar-nav a:hover{color:#d4d4d8!important}
-    .sidebar-nav .active>a{font-weight:600!important}
+  .sb-nav{flex:1;overflow-y:auto;padding:14px 16px 30px}
+  .sb-nav::-webkit-scrollbar{width:4px}
+  .sb-nav::-webkit-scrollbar-thumb{background:#2a2a30;border-radius:3px}
+  .sb-group{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-faint);padding:16px 12px 8px;font-weight:600}
+  .sb-link{
+    display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:9px;
+    color:var(--text-mut);text-decoration:none;font-size:13.5px;font-weight:400;transition:all .18s;position:relative;cursor:pointer;
+  }
+  .sb-link .n{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);min-width:18px}
+  .sb-link:hover{background:var(--surface);color:var(--text)}
+  .sb-link.active{background:var(--gold-dim);color:var(--gold-soft)}
+  .sb-link.active .n{color:var(--gold)}
+  .sb-link.active::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:2.5px;background:var(--gold);border-radius:2px}
 
-    /* ── Typography ── */
-    .markdown-section{max-width:780px!important;font-family:'Inter',-apple-system,sans-serif!important}
-    .markdown-section p{text-align:justify!important;line-height:1.7!important}
-    .markdown-section li{text-align:justify!important;line-height:1.7!important}
-    .markdown-section strong{color:#fafafa!important}
-    .markdown-section blockquote p{text-align:justify!important;margin-bottom:0!important}
-    .markdown-section h3{color:#fafafa!important}
+  /* ============ READING COLUMN ============ */
+  .main{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;padding:0 48px}
+  .chapter{width:100%;max-width:var(--reading);padding:64px 0 120px;animation:chapfade .5s ease}
+  @keyframes chapfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-    /* ── Tables ── */
-    .markdown-section table{width:100%!important;font-size:14px!important}
-    .markdown-section thead th{font-size:12px!important;text-transform:uppercase!important;letter-spacing:.5px!important;font-weight:600!important;padding:12px 16px!important}
-    .markdown-section tbody td{padding:10px 16px!important}
-    .markdown-section tbody tr:hover{background:#1e1e24!important}
+  .ch-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+  .ch-eyebrow .num{font-family:var(--font-mono);font-size:12px;color:var(--gold);letter-spacing:0.15em}
+  .ch-eyebrow .rule{height:1px;flex:1;min-width:30px;background:linear-gradient(90deg,var(--gold-line),transparent)}
+  .ch-status{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;padding:4px 10px;border-radius:20px;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .ch-status.op{background:var(--green-bg);color:var(--green-tx);border:1px solid rgba(74,140,92,0.3)}
+  .ch-status.dev{background:var(--amber-bg);color:var(--gold);border:1px solid var(--gold-line)}
+  .ch-status .dot{width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
 
-    /* ── Alerts — hide labels ── */
-    .alert .title{display:none!important}
-    .alert p{text-align:justify!important}
+  h1.ch-title{font-family:var(--font-disp);font-weight:500;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.08;letter-spacing:-0.01em;color:var(--text);margin-bottom:20px}
+  h1.ch-title em{font-style:italic;color:var(--gold-soft)}
+  .ch-lead{font-size:1.18rem;line-height:1.65;color:var(--text-mut);margin-bottom:14px;font-weight:400}
 
-    /* ── Images ── */
-    .markdown-section img{max-width:100%!important;height:auto!important}
-    .logo-home{display:block!important;margin:0 auto 8px!important;max-width:380px!important}
+  .chapter h2{font-family:var(--font-disp);font-weight:500;font-size:1.62rem;color:var(--gold-soft);margin:52px 0 18px;letter-spacing:-0.005em}
+  .chapter h3{font-family:var(--font-body);font-weight:600;font-size:1.12rem;color:var(--text);margin:34px 0 12px}
+  .chapter p{margin-bottom:18px;color:#c9c6bd;font-size:1.02rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .ch-lead{text-align:left}
+  .chapter p strong{color:#fff;font-weight:600}
+  .chapter em{color:var(--gold-soft);font-style:italic}
+  .chapter a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-line)}
+  .chapter ul,.chapter ol{margin:0 0 20px;padding-left:4px;list-style:none}
+  .chapter li{position:relative;padding-left:26px;margin-bottom:11px;color:#c9c6bd;text-align:justify}
+  .chapter ul li::before{content:"";position:absolute;left:6px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:.7}
+  .chapter ol{counter-reset:li}
+  .chapter ol li{counter-increment:li}
+  .chapter ol li::before{content:counter(li);position:absolute;left:0;top:1px;font-family:var(--font-mono);font-size:12px;color:var(--gold);background:var(--gold-dim);border:1px solid var(--gold-line);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 
-    /* ── Pagination subtitle hide ── */
-    .pagination-item-subtitle{display:none!important;height:0!important;visibility:hidden!important;font-size:0!important;margin:0!important;padding:0!important}
-    .pagination-item-title{font-weight:600!important}
+  .pquote{border-left:2px solid var(--gold);padding:6px 0 6px 26px;margin:32px 0;font-family:var(--font-disp);font-style:italic;font-size:1.3rem;line-height:1.5;color:var(--gold-soft)}
+  .pquote.big{font-size:1.55rem}
 
-    /* ── Footer ── */
-    .page-footer{margin-top:60px;padding:30px 0;border-top:1px solid #2a2a30;text-align:center}
-    .page-footer img{width:140px;height:auto;opacity:.5;display:block;margin:0 auto 12px}
-    .page-footer p{color:#71717a!important;font-size:12px!important;text-align:center!important;margin:4px 0 0!important;letter-spacing:.5px}
+  .callout{display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-left:2px solid var(--gold);border-radius:12px;padding:18px 20px;margin:26px 0}
+  .callout.warn{border-left-color:var(--red)}
+  .callout.note{border-left-color:var(--blue)}
+  .callout .ico{flex-shrink:0;width:22px;height:22px;color:var(--gold);margin-top:2px}
+  .callout.warn .ico{color:var(--red)} .callout.note .ico{color:#7fa8e0}
+  .callout p{margin:0;font-size:0.97rem;color:var(--text-mut)}
+  .callout strong{color:var(--text)}
 
-    /* ── Mermaid ── */
-    .mermaid{background:transparent!important;margin:24px 0!important;text-align:center!important;overflow-x:auto!important}
-    .mermaid svg{max-width:100%!important;height:auto!important}
-    .mermaid .label{font-family:'Inter',sans-serif!important;font-size:16px!important}
-    .mermaid .edgeLabel{background:#1e1e24!important}
-    .mermaid .edgePath .path{stroke:#555!important}
+  /* data table */
+  .chapter table{width:100%;border-collapse:collapse;margin:26px 0;font-size:0.92rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .chapter thead th{background:var(--surface-2);color:var(--gold);font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;text-align:left;padding:13px 16px;font-weight:500}
+  .chapter tbody td{padding:12px 16px;border-top:1px solid var(--border);color:#c9c6bd;vertical-align:top}
+  .chapter tbody tr:hover{background:var(--surface)}
+  .chapter tbody td strong{color:var(--text)}
 
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar{width:5px}
-    ::-webkit-scrollbar-track{background:transparent}
-    ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
-    ::-webkit-scrollbar-thumb:hover{background:#8a7548}
-    .sidebar::-webkit-scrollbar{width:3px}
+  /* cards grid (reusable) */
+  .cards{display:grid;gap:16px;margin:30px 0}
+  .cards.c2{grid-template-columns:1fr 1fr}
+  .cards.c3{grid-template-columns:1fr 1fr 1fr}
+  .card{background:linear-gradient(160deg,var(--surface),var(--bg-2));border:1px solid var(--border-2);border-radius:16px;padding:24px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+  .card:hover{transform:translateY(-3px);border-color:var(--gold-line)}
+  .card-ico{display:block;margin-bottom:14px;width:34px;height:34px;color:var(--gold)}
+  .card-ico svg{width:34px;height:34px;display:block}
+  .card h4{font-family:var(--font-disp);font-size:1.18rem;color:var(--text);margin-bottom:8px;font-weight:500}
+  .card p{font-size:0.92rem;color:var(--text-mut);margin:0}
+  .card-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px}
 
-    /* ── Mobile ── */
-    @media(max-width:768px){
-      .markdown-section h1{font-size:22px!important}
-      .markdown-section h2{font-size:17px!important;margin-top:30px!important}
-      .markdown-section p,.markdown-section li{font-size:15px!important}
-      .markdown-section table{display:block!important;overflow-x:auto!important;font-size:13px!important}
-      .markdown-section thead th,.markdown-section tbody td{padding:8px 12px!important;white-space:nowrap!important}
-      .docsify-pagination-container{flex-direction:column!important}
-      .pagination-item{max-width:100%!important}
-      .logo-home{max-width:260px!important}
-      .app-name-link img{width:140px}
-      .mermaid{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
-    }
+  /* figure (animated SVG container) */
+  .figure{margin:40px 0;background:radial-gradient(circle at 50% 35%,var(--surface-2),var(--bg-2));border:1px solid var(--border);border-radius:18px;padding:36px 24px 30px;position:relative;overflow:hidden}
+  .figure-cap{text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase;margin-top:20px}
+  .figure svg{width:100%;height:auto;display:block;margin:0 auto}
+  /* Cap the diagram size on desktop so wide SVGs don't dominate the column. */
+  .figure svg.svg-desktop{max-width:540px}
+  /* Dual diagrams: a horizontal version for desktop, a stacked/vertical
+     version for mobile. Only one shows at a time — no horizontal scroll. */
+  .svg-mobile{display:none!important}
 
-    /* ── Hide github corner ── */
-    .github-corner{display:none!important}
-  </style>
+  /* flow steps (reusable) */
+  .flow{display:flex;align-items:stretch;gap:0;margin:30px 0 6px;flex-wrap:wrap;justify-content:center}
+  .flow-step{flex:1;min-width:120px;text-align:center;padding:0 8px;opacity:0;animation:fadeUp .6s ease forwards}
+  .flow-step:nth-of-type(1){animation-delay:.15s}
+  .flow-step:nth-of-type(3){animation-delay:.45s}
+  .flow-step:nth-of-type(5){animation-delay:.75s}
+  .flow-step:nth-of-type(7){animation-delay:1.05s}
+  .flow-num{width:30px;height:30px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-line);color:var(--gold);font-family:var(--font-mono);font-size:13px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+  .flow-step h5{font-size:0.9rem;color:var(--text);margin-bottom:5px;font-weight:600}
+  .flow-step p{font-size:0.8rem;color:var(--text-faint);margin:0;line-height:1.45}
+  .flow-arrow{display:flex;align-items:center;color:var(--gold-line);font-size:20px;flex:0 0 auto;padding-top:6px;opacity:0;animation:fadeUp .6s ease forwards}
+  .flow-arrow:nth-of-type(2){animation-delay:.3s}.flow-arrow:nth-of-type(4){animation-delay:.6s}.flow-arrow:nth-of-type(6){animation-delay:.9s}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+  /* stat highlight */
+  .statline{display:flex;gap:20px;flex-wrap:wrap;margin:30px 0}
+  .stat{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .stat .big{font-family:var(--font-disp);font-size:2.2rem;color:var(--gold);font-weight:600;line-height:1}
+  .stat .lbl{font-size:0.82rem;color:var(--text-mut);margin-top:8px}
+
+  /* chapter nav */
+  .ch-nav{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:30px;border-top:1px solid var(--border)}
+  .ch-nav a{flex:1;text-decoration:none;padding:18px 22px;border:1px solid var(--border);border-radius:14px;transition:all .2s;background:var(--surface);cursor:pointer}
+  .ch-nav a:hover{border-color:var(--gold-line);background:var(--surface-2)}
+  .ch-nav .dir{font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;color:var(--text-faint);text-transform:uppercase}
+  .ch-nav .ttl{color:var(--gold-soft);font-family:var(--font-disp);font-size:1.05rem;margin-top:5px;display:block}
+  .ch-nav .next{text-align:right}
+  .ch-nav a.empty{visibility:hidden}
+
+  /* footer */
+  .ch-footer{margin-top:50px;text-align:center;color:var(--text-faint);font-size:12px;letter-spacing:0.04em;line-height:1.8}
+
+  /* inline roadmap badge (for features described but not built) */
+  .rm-badge{display:inline-block;font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--gold);background:var(--gold-dim);border:1px solid var(--gold-line);border-radius:20px;padding:2px 8px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+  .inline-roadmap{color:var(--text-mut)}
+
+  /* ============ HERO / PORTADA ============ */
+  .hero{padding:24px 0 100px;animation:chapfade .6s ease}
+  .hero-stage{display:flex;justify-content:center;margin-bottom:28px}
+  .hero-discs{width:100%;max-width:260px;height:auto;overflow:visible}
+  .hero-discs .disc-left{animation:disc-spin 20s linear infinite, disc-in-l 1.1s cubic-bezier(.2,.8,.2,1) both}
+  .hero-discs .disc-right{animation:disc-spin 26s linear infinite reverse, disc-in-r 1.1s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes disc-spin{to{transform:rotate(360deg)}}
+  @keyframes disc-in-l{from{transform:translateX(28px) scale(.94);opacity:0}to{transform:translateX(0) scale(1);opacity:1}}
+  @keyframes disc-in-r{from{transform:translateX(-28px) scale(.94);opacity:0}to{transform:translateX(0) scale(1);opacity:1}}
+
+  .hero-text{text-align:center;max-width:640px;margin:0 auto}
+  .hero-kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:0.35em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;opacity:0;animation:fadeUp .7s ease .5s both}
+  .hero-title{font-family:var(--font-disp);font-weight:600;font-size:clamp(2.6rem,13vw,6rem);letter-spacing:0.04em;line-height:1;color:var(--text);margin-bottom:6px;opacity:0;animation:fadeUp .8s ease .65s both;background:linear-gradient(180deg,#fff,#cfc7b6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;max-width:100%;overflow-wrap:break-word}
+  .hero-tagline{font-family:var(--font-disp);font-style:italic;font-size:clamp(1.1rem,3vw,1.5rem);color:var(--gold-soft);margin-bottom:26px;opacity:0;animation:fadeUp .8s ease .8s both}
+  .hero-lead{font-size:1.08rem;line-height:1.7;color:var(--text-mut);margin-bottom:32px;text-align:center;opacity:0;animation:fadeUp .8s ease .95s both}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;opacity:0;animation:fadeUp .8s ease 1.1s both}
+  .hero-btn{font-family:var(--font-body);font-size:0.98rem;font-weight:600;padding:13px 26px;border-radius:30px;cursor:pointer;text-decoration:none;transition:all .25s;border:1px solid var(--gold)}
+  .hero-btn:not(.ghost){background:var(--gold);color:#15110a}
+  .hero-btn:not(.ghost):hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,169,110,0.25)}
+  .hero-btn.ghost{background:transparent;color:var(--gold);border-color:var(--gold-line)}
+  .hero-btn.ghost:hover{border-color:var(--gold);background:var(--gold-dim)}
+  .hero-meta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease 1.25s both}
+  .hm-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;text-align:left;min-width:240px;flex:1;max-width:300px}
+  .hm-k{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+  .hm-v{display:block;font-size:0.85rem;color:var(--text-mut)}
+
+  /* status dashboard (cap 08) */
+  .status-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0}
+  .st-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;position:relative}
+  .st-card.op{border-top:2px solid var(--green)}
+  .st-card.dev{border-top:2px solid var(--gold)}
+  .st-head{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:11px}
+  .st-card.op .st-head{color:var(--green-tx)}
+  .st-card.dev .st-head{color:var(--gold)}
+  .st-dot{width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+  .st-card h4{font-family:var(--font-disp);font-size:1.05rem;color:var(--text);margin-bottom:7px;font-weight:500}
+  .st-card p{font-size:0.85rem;color:var(--text-mut);margin:0;text-align:left;line-height:1.55}
+
+  /* vision close (cap 10) */
+  .vision-close{text-align:center;margin:60px 0 10px;padding:40px 20px;border:1px solid var(--border);border-radius:18px;background:radial-gradient(circle at 50% 0%,var(--surface-2),var(--bg-2))}
+  .vc-mark svg{width:52px;height:52px;margin:0 auto 18px}
+  .vc-mark svg circle:nth-child(1),.vc-mark svg circle:nth-child(3){transform-origin:center;animation:disc-spin 16s linear infinite}
+  .vc-name{font-family:var(--font-disp);font-size:1.3rem;color:var(--text);margin-bottom:4px!important;text-align:center}
+  .vc-url{color:var(--gold);font-family:var(--font-mono);font-size:0.85rem;letter-spacing:0.1em;margin-bottom:18px!important;text-align:center}
+  .vc-meta{color:var(--text-faint);font-size:11px;letter-spacing:0.08em;text-align:center;margin:0!important}
+
+  /* mobile */
+  .mobile-bar{display:none}
+  .scrim{display:none}
+  @media(max-width:980px){
+    .sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);transition:transform .3s;z-index:50;box-shadow:0 0 60px rgba(0,0,0,.6)}
+    .sidebar.open{transform:translateX(0)}
+    .main{padding:0 20px}
+    .chapter{padding:88px 0 80px}
+    .cards.c2,.cards.c3{grid-template-columns:1fr}
+    .status-grid{grid-template-columns:1fr}
+    .mobile-bar{display:flex;align-items:center;gap:14px;position:fixed;top:0;left:0;right:0;height:58px;background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:40;padding:0 16px}
+    .burger{background:none;border:1px solid var(--border);border-radius:9px;width:40px;height:40px;color:var(--gold);cursor:pointer;font-size:18px;flex-shrink:0}
+    .mobile-bar .mb-logo{font-family:var(--font-disp);font-size:17px;color:var(--text);font-weight:600}
+    .scrim.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:45}
+    .chapter table{display:block;overflow-x:auto;white-space:nowrap}
+    /* Diagrams: hide the horizontal desktop SVG, show the stacked mobile one.
+       No horizontal scroll — each diagram reflows vertically. */
+    .figure{padding:22px 14px 18px}
+    .svg-desktop{display:none!important}
+    .svg-mobile{display:block!important}
+  }
+  @media(max-width:560px){
+    .statline{flex-direction:column}
+    .stat .big{font-size:1.9rem}
+    .pquote{font-size:1.12rem;padding-left:18px}
+    .pquote.big{font-size:1.3rem}
+    h1.ch-title{font-size:1.85rem}
+    .hero-title{font-size:clamp(2.4rem,15vw,3.4rem);letter-spacing:0.02em}
+    .hero-discs{max-width:200px}
+    .hm-item{min-width:0;max-width:none}
+</style>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify={
-      name:'<img src="assets/logo-small.png" alt="Grooves"><span class="sidebar-subtitle">Ecosistemas Creativos</span>',
-      nameLink:'/',
-      repo:false,
-      loadSidebar:true,
-      subMaxLevel:2,
-      auto2top:true,
-      noEmoji:true,
-      routerMode:'hash',
-      search:{placeholder:'Buscar...',noData:'Sin resultados',depth:3},
-      'flexible-alerts':{note:{label:''},tip:{label:''},warning:{label:''},attention:{label:''}},
-      pagination:{previousText:'ANTERIOR',nextText:'SIGUIENTE',crossChapter:true,crossChapterText:true},
-      plugins:[
-        function(hook){
-          var footer='<div class="page-footer"><img src="assets/logo-small.png" alt="Grooves"><p>Grooves &copy; 2026 — Ecosistemas Creativos</p><p>www.grooves.art</p></div>';
-          hook.afterEach(function(html){return html+footer;});
-        }
-      ]
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts@1/dist/docsify-plugin-flexible-alerts.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({startOnLoad:false,theme:'dark',themeVariables:{darkMode:true,background:'#16161a',primaryColor:'#C8A96E',primaryTextColor:'#111',primaryBorderColor:'#8a7548',lineColor:'#555',secondaryColor:'#1a2e1a',tertiaryColor:'#1a1d2e',fontFamily:'Inter,sans-serif',fontSize:'14px'}});
-    window.$docsify.markdown={renderer:{code:function(code,lang){if(lang==='mermaid'){return'<div class="mermaid">'+code+'</div>'}return this.origin.code.apply(this,arguments)}}};
-    window.$docsify.plugins.push(function(hook){hook.doneEach(function(){mermaid.run({querySelector:'.mermaid'})})});
-  </script>
+
+<div class="mobile-bar">
+  <button class="burger" id="burger">☰</button>
+  <span class="mb-logo">Grooves</span>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-head">
+      <a class="sb-logo" onclick="goChapter('manifiesto')">
+        <svg class="sb-mark" viewBox="0 0 48 48" fill="none">
+          <circle class="spin" cx="18" cy="24" r="11" stroke="#ece9e1" stroke-width="2.2"/>
+          <circle cx="18" cy="24" r="3" fill="#ece9e1"/>
+          <circle class="spin" cx="30" cy="24" r="11" stroke="#C8A96E" stroke-width="2.2"/>
+          <circle cx="30" cy="24" r="3" fill="#C8A96E"/>
+        </svg>
+        <span class="sb-logo-text">Grooves</span>
+      </a>
+      <div class="sb-sub" data-i18n="subtitle">White Paper · v3.0</div>
+    </div>
+
+    <div class="sb-lang">
+      <button id="lang-es" class="on" onclick="setLang('es')">ES</button>
+      <button id="lang-en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <nav class="sb-nav" id="sb-nav"><!-- built by JS --></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <article class="chapter" id="chapter"><!-- built by JS --></article>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   White Paper engine — registers chapters, renders, navigation
+   ============================================================ */
+window.GROOVES = { chapters: {}, order: [], lang: 'es' };
+
+/* Each content file calls registerChapter(id, { order, es:{...}, en:{...} }) */
+function registerChapter(id, data){
+  window.GROOVES.chapters[id] = data;
+}
+
+/* Sidebar structure: groups + chapter ids. Labels per lang. */
+const NAV = {
+  es:[
+    { group:'', items:[['portada','Portada']] },
+    { group:'El Ideal',      items:[['manifiesto','Manifiesto'],['problema','El Problema']] },
+    { group:'El Producto',   items:[['solucion','La Solución'],['bound-content','Bound Content'],['como-funciona','Cómo Funciona'],['modelo-economico','Modelo Económico']] },
+    { group:'La Ingeniería', items:[['arquitectura','Arquitectura'],['estado','Estado del Proyecto'],['roadmap','Roadmap']] },
+    { group:'El Futuro',     items:[['vision','Visión'],['glosario','Glosario']] },
+  ],
+  en:[
+    { group:'', items:[['portada','Cover']] },
+    { group:'The Ideal',      items:[['manifiesto','Manifesto'],['problema','The Problem']] },
+    { group:'The Product',    items:[['solucion','The Solution'],['bound-content','Bound Content'],['como-funciona','How It Works'],['modelo-economico','Economics']] },
+    { group:'The Engineering',items:[['arquitectura','Architecture'],['estado','Project Status'],['roadmap','Roadmap']] },
+    { group:'The Future',     items:[['vision','Vision'],['glosario','Glossary']] },
+  ]
+};
+
+/* numbering map (display number per chapter id) */
+const NUM = { portada:'◈', manifiesto:'01', problema:'02', solucion:'03', 'bound-content':'04', 'como-funciona':'05', 'modelo-economico':'06', arquitectura:'07', estado:'08', roadmap:'09', vision:'10', glosario:'★' };
+
+const UI = {
+  es:{ subtitle:'White Paper · v3.0', prev:'Anterior', next:'Siguiente', footer:'Grooves © 2026 · Ecosistemas Creativos<br>Documento Confidencial · www.grooves.art' },
+  en:{ subtitle:'White Paper · v3.0', prev:'Previous', next:'Next', footer:'Grooves © 2026 · Creative Ecosystems<br>Confidential Document · www.grooves.art' }
+};
+
+function flatOrder(){
+  const out=[];
+  NAV[window.GROOVES.lang].forEach(g=>g.items.forEach(it=>out.push(it[0])));
+  return out;
+}
+
+function buildSidebar(){
+  const lang=window.GROOVES.lang;
+  const nav=document.getElementById('sb-nav');
+  nav.innerHTML='';
+  NAV[lang].forEach(group=>{
+    if(group.group){ const g=document.createElement('div'); g.className='sb-group'; g.textContent=group.group; nav.appendChild(g); }
+    else { const sp=document.createElement('div'); sp.style.height='10px'; nav.appendChild(sp); }
+    group.items.forEach(([id,label])=>{
+      const a=document.createElement('a'); a.className='sb-link'; a.dataset.id=id;
+      a.innerHTML='<span class="n">'+(NUM[id]||'')+'</span> '+label;
+      a.onclick=()=>goChapter(id);
+      nav.appendChild(a);
+    });
+  });
+  document.querySelectorAll('[data-i18n="subtitle"]').forEach(e=>e.textContent=UI[lang].subtitle);
+}
+
+function renderChapter(id){
+  const lang=window.GROOVES.lang;
+  const ch=window.GROOVES.chapters[id];
+  const el=document.getElementById('chapter');
+  if(!ch || !ch[lang]){
+    el.innerHTML='<div class="ch-eyebrow"><span class="num">—</span><span class="rule"></span></div><h1 class="ch-title">Próximamente</h1><p class="ch-lead">Este capítulo se está construyendo.</p>';
+    return;
+  }
+  if(id==='portada'){
+    el.innerHTML = ch[lang];
+    el.style.animation='none'; void el.offsetWidth; el.style.animation='';
+    document.querySelectorAll('.sb-link').forEach(a=>a.classList.toggle('active', a.dataset.id===id));
+    window.scrollTo(0,0);
+    return;
+  }
+  const order=flatOrder();
+  const i=order.indexOf(id);
+  const prevId=i>0?order[i-1]:null;
+  const nextId=i<order.length-1?order[i+1]:null;
+  const labelOf=(x)=>{ for(const g of NAV[lang]) for(const it of g.items) if(it[0]===x) return it[1]; return ''; };
+
+  let nav='<nav class="ch-nav">';
+  nav+= prevId ? '<a onclick="goChapter(\''+prevId+'\')"><span class="dir">← '+UI[lang].prev+'</span><span class="ttl">'+labelOf(prevId)+'</span></a>' : '<a class="empty"></a>';
+  nav+= nextId ? '<a class="next" onclick="goChapter(\''+nextId+'\')"><span class="dir">'+UI[lang].next+' →</span><span class="ttl">'+labelOf(nextId)+'</span></a>' : '<a class="empty"></a>';
+  nav+='</nav>';
+
+  el.innerHTML = ch[lang] + nav + '<div class="ch-footer">'+UI[lang].footer+'</div>';
+  el.style.animation='none'; void el.offsetWidth; el.style.animation='';
+  // re-trigger SVG animations
+  el.querySelectorAll('animate, animateTransform').forEach(a=>{ try{a.beginElement&&a.beginElement();}catch(e){} });
+
+  // active state
+  document.querySelectorAll('.sb-link').forEach(a=>a.classList.toggle('active', a.dataset.id===id));
+  document.getElementById('main').scrollTo&&window.scrollTo(0,0);
+}
+
+function goChapter(id){
+  location.hash=id;
+}
+
+function setLang(lang){
+  window.GROOVES.lang=lang;
+  document.documentElement.lang=lang;
+  document.getElementById('lang-es').classList.toggle('on',lang==='es');
+  document.getElementById('lang-en').classList.toggle('on',lang==='en');
+  buildSidebar();
+  const cur=(location.hash||'#portada').slice(1);
+  renderChapter(cur);
+}
+
+function handleRoute(){
+  const id=(location.hash||'#portada').slice(1);
+  renderChapter(id);
+  // close mobile sidebar on navigate
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('scrim').classList.remove('show');
+}
+
+window.addEventListener('hashchange',handleRoute);
+window.addEventListener('DOMContentLoaded',()=>{
+  buildSidebar();
+  handleRoute();
+  document.getElementById('burger').onclick=()=>{
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('scrim').classList.toggle('show');
+  };
+  document.getElementById('scrim').onclick=()=>{
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('scrim').classList.remove('show');
+  };
+});
+</script>
+
+<!-- ============ CHAPTER CONTENT FILES ============ -->
+<script src="contenido/cap-00-portada.js"></script>
+<script src="contenido/cap-01-manifiesto.js"></script>
+<script src="contenido/cap-02-problema.js"></script>
+<script src="contenido/cap-03-solucion.js"></script>
+<script src="contenido/cap-04-bound-content.js"></script>
+<script src="contenido/cap-05-como-funciona.js"></script>
+<script src="contenido/cap-06-modelo-economico.js"></script>
+<script src="contenido/cap-07-arquitectura.js"></script>
+<script src="contenido/cap-08-estado.js"></script>
+<script src="contenido/cap-09-roadmap.js"></script>
+<script src="contenido/cap-10-vision.js"></script>
+<script src="contenido/cap-11-glosario.js"></script>
+<!-- more chapters added per tanda -->
+
+<script>
+  // chapters register synchronously above; ensure first render after they load
+  if(document.readyState!=='loading'){ buildSidebar(); handleRoute(); }
+</script>
 </body>
 </html>
