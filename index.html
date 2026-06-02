@@ -258,7 +258,7 @@
     .mobile-bar{display:flex;align-items:center;gap:14px;position:fixed;top:0;left:0;right:0;height:58px;background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:40;padding:0 16px}
     .burger{background:none;border:1px solid var(--border);border-radius:9px;width:40px;height:40px;color:var(--gold);cursor:pointer;font-size:18px;flex-shrink:0}
     .mobile-bar .mb-logo{font-family:var(--font-disp);font-size:17px;color:var(--text);font-weight:600}
-    .scrim.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:45}
+    .scrim.show{display:block;position:fixed;top:0;right:0;bottom:0;left:var(--sidebar-w);background:rgba(0,0,0,.5);z-index:45}
     .chapter table{display:block;overflow-x:auto;white-space:nowrap}
     /* Diagrams: hide the horizontal desktop SVG, show the stacked mobile one.
        No horizontal scroll — each diagram reflows vertically. */
