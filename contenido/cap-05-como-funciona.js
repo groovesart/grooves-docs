@@ -53,11 +53,12 @@ registerChapter('como-funciona', {
       <li><strong>Revende si lo deseas.</strong> Si un artista explota, tu Pressing se revaloriza. El artista cobra su royalty en cada reventa.</li>
     </ol>
 
-    <h2>Wallet automática</h2>
-    <p>Cuando un usuario crea su cuenta en Grooves con email o redes sociales, la plataforma genera automáticamente una wallet en segundo plano. El usuario no necesita instalar nada, ni entender qué es una seed phrase, ni interactuar con ninguna interfaz de blockchain. Su wallet existe, está segura y funciona, pero es invisible. Así mismo, quien ya tenga una wallet externa —fría o caliente— puede entrar con ella.</p>
+    <h2>Wallet integrada, siempre bajo tu control</h2>
+    <p>Cuando un usuario crea su cuenta en Grooves con email o redes sociales, la plataforma le genera una wallet al instante, sin que tenga que instalar nada ni gestionar una seed phrase. La diferencia clave es que esa wallet es <strong>no-custodial</strong>: las llaves se generan y se resguardan bajo el control exclusivo del usuario (mediante tecnologías como MPC o passkeys del propio dispositivo), de modo que <strong>solo él puede autorizar movimientos</strong>. Grooves nunca tiene las llaves, nunca custodia los fondos y no puede mover, congelar ni acceder a los activos de ningún usuario. La wallet es invisible en la experiencia, pero soberana en el control.</p>
+    <p>Y quien ya tenga su propia wallet externa —MetaMask u otra compatible vía WalletConnect, fría o caliente— puede conectarla y operar directamente. Los dos caminos son no-custodiales: en ambos, las llaves son del usuario, no de Grooves.</p>
 
     <h2>Compra sin pagar gas</h2>
-    <p>En la venta primaria, Grooves absorbe la complejidad de la blockchain con un sistema <em>gasless</em>: el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. La plataforma se encarga de registrar la compra en la blockchain por él, y el costo se descuenta de forma transparente. El fan solo ve el precio del Pressing — nada más.</p>
+    <p>En la venta primaria, Grooves absorbe la complejidad de la blockchain con un sistema <em>gasless</em>: el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. El usuario autoriza la compra firmando desde su propia wallet, y un componente de Grooves (el relayer) la registra en la blockchain cubriendo el gas por él; el costo se descuenta de forma transparente. El fan solo ve el precio del Pressing — nada más.</p>
 
     <h2>Pago con tarjeta y PayPal</h2>
     <p>El fan no necesita comprar USDC por su cuenta. La interfaz integra servicios de conversión de moneda tradicional a digital directamente en la pantalla de compra. El usuario ve un botón que dice <em>"Pagar con tarjeta"</em> o <em>"Pagar con PayPal"</em>, ingresa sus datos, y el servicio convierte automáticamente el dinero y completa la compra. <span class="rm-badge">Roadmap</span></p>
@@ -88,7 +89,7 @@ registerChapter('como-funciona', {
 
     <div class="callout note">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>En ningún momento del proceso el usuario necesita saber qué es una wallet, qué es USDC, ni qué es blockchain. La tecnología es invisible. La experiencia es idéntica a comprar en cualquier tienda online.</p>
+      <p>En ningún momento del proceso el usuario necesita saber qué es una wallet, qué es USDC ni qué es blockchain: la tecnología es invisible y la experiencia es idéntica a comprar en cualquier tienda online. Pero invisible no significa custodiada: aunque el usuario no la vea, la wallet y sus llaves son siempre suyas, nunca de Grooves.</p>
     </div>
   `,
   en: `
@@ -139,11 +140,12 @@ registerChapter('como-funciona', {
       <li><strong>Resell if you wish.</strong> If an artist breaks out, your Pressing appreciates. The artist collects their royalty on every resale.</li>
     </ol>
 
-    <h2>Automatic wallet</h2>
-    <p>When a user creates their Grooves account with email or social login, the platform automatically generates a wallet in the background. The user doesn't need to install anything, understand what a seed phrase is, or interact with any blockchain interface. Their wallet exists, is secure and works — but it's invisible. Likewise, anyone who already has an external wallet — cold or hot — can sign in with it.</p>
+    <h2>Built-in wallet, always under your control</h2>
+    <p>When a user creates their Grooves account with email or social login, the platform generates a wallet for them instantly — with nothing to install and no seed phrase to manage. The key difference: that wallet is <strong>non-custodial</strong>. The keys are generated and secured under the user's exclusive control (through technologies such as MPC or device passkeys), so that <strong>only the user can authorize movements</strong>. Grooves never holds the keys, never takes custody of funds, and cannot move, freeze, or access anyone's assets. The wallet is invisible in the experience, but sovereign in control.</p>
+    <p>And anyone who already has their own external wallet — MetaMask or another compatible one via WalletConnect, cold or hot — can connect it and operate directly. Both paths are non-custodial: in each, the keys belong to the user, not to Grooves.</p>
 
     <h2>Buying without gas</h2>
-    <p>On the primary sale, Grooves absorbs the blockchain's complexity with a <em>gasless</em> system: the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. The platform records the purchase on the blockchain on their behalf, and the cost is deducted transparently. The fan only sees the Pressing's price — nothing else.</p>
+    <p>On the primary sale, Grooves absorbs the blockchain's complexity with a <em>gasless</em> system: the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. The user authorizes the purchase by signing from their own wallet, and a Grooves component (the relayer) records it on the blockchain, covering the gas on their behalf; the cost is deducted transparently. The fan only sees the Pressing's price — nothing else.</p>
 
     <h2>Card and PayPal payments</h2>
     <p>The fan doesn't need to buy USDC themselves. The interface integrates traditional-to-digital currency conversion services right on the purchase screen. The user sees a button that says <em>"Pay with card"</em> or <em>"Pay with PayPal,"</em> enters their details, and the service automatically converts the money and completes the purchase. <span class="rm-badge">Roadmap</span></p>
@@ -174,7 +176,7 @@ registerChapter('como-funciona', {
 
     <div class="callout note">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>At no point in the process does the user need to know what a wallet is, what USDC is, or what blockchain is. The technology is invisible. The experience is identical to buying at any online store.</p>
+      <p>At no point in the process does the user need to know what a wallet is, what USDC is, or what blockchain is: the technology is invisible and the experience is identical to buying at any online store. But invisible doesn't mean custodial: even though the user never sees it, the wallet and its keys are always theirs, never Grooves'.</p>
     </div>
 
   `
