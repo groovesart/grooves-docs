@@ -83,11 +83,95 @@ registerChapter('manifiesto', {
 
     <p>Un artista necesita aproximadamente más de un millón de reproducciones en plataformas digitales para ganar lo equivalente a un salario mínimo mensual.</p>
 
+    <div class="figure">
+      <svg viewBox="0 0 600 210" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="sw-d" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#6b6862"/></pattern>
+          <linearGradient id="coin-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="30" y="40" width="300" height="118" rx="6" fill="none" stroke="#2a2a30" stroke-width="1"/>
+        <rect x="30" y="40" width="0" height="118" rx="6" fill="url(#sw-d)"><animate attributeName="width" values="0;300" dur="1.3s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.3 1"/></rect>
+        <text x="180" y="180" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="11.5">1.000.000 de reproducciones</text>
+        <text x="378" y="112" text-anchor="middle" fill="#6b6862" font-family="'Spline Sans',sans-serif" font-size="30" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.3s" fill="freeze"/>≈</text>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -26;0 5;0 0" keyTimes="0;0.7;1" dur="0.7s" begin="1.5s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.4 1;0.5 0 0.5 1"/>
+          <circle cx="502" cy="99" r="30" fill="#131318" stroke="url(#coin-g)" stroke-width="2.5"/>
+          <circle cx="502" cy="99" r="23" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0.45"/>
+          <text x="502" y="107" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="22" font-weight="700">$</text>
+          <path d="M488 90 a18 18 0 0 1 12 -8" fill="none" stroke="#f0e9d8" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        </g>
+        <text x="502" y="180" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11.5">1 salario mínimo</text>
+      </svg>
+      <svg viewBox="0 0 300 330" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="sw-m" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#6b6862"/></pattern>
+          <linearGradient id="coin-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="24" width="260" height="104" rx="6" fill="none" stroke="#2a2a30" stroke-width="1"/>
+        <rect x="20" y="24" width="0" height="104" rx="6" fill="url(#sw-m)"><animate attributeName="width" values="0;260" dur="1.3s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.3 1"/></rect>
+        <text x="150" y="150" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="11">1.000.000 de reproducciones</text>
+        <text x="150" y="192" text-anchor="middle" fill="#6b6862" font-family="'Spline Sans',sans-serif" font-size="26" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.3s" fill="freeze"/>≈</text>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -24;0 5;0 0" keyTimes="0;0.7;1" dur="0.7s" begin="1.5s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.4 1;0.5 0 0.5 1"/>
+          <circle cx="150" cy="240" r="28" fill="#131318" stroke="url(#coin-gv)" stroke-width="2.5"/>
+          <circle cx="150" cy="240" r="21" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0.45"/>
+          <text x="150" y="248" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="20" font-weight="700">$</text>
+        </g>
+        <text x="150" y="300" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">1 salario mínimo</text>
+      </svg>
+      <div class="figure-cap">Fig. 1.2 — El precio real del streaming: ~1.000.000 de reproducciones ≈ 1 salario mínimo</div>
+    </div>
+
     <h2>Grooves es una idea. Un ideal.</h2>
 
     <p>No somos únicamente una plataforma de streaming. No somos únicamente un marketplace de ecosistemas creativos. <em>Somos una idea. Un ideal.</em></p>
 
     <p>Un ideal que para llegarse a concretar requiere de pedagogía, de creer en nosotros, de creer en el arte como transformación de una sociedad equitativa y remunerada. Somos la idea que cree que el arte recupera su peso, donde la obra creativa se convierte en un objeto que se posee, se transforma, se colecciona, se transfiere y se revaloriza. Donde cada transacción devuelve valor directamente a quien creó la obra, así mismo a las pequeñas disqueras como a los grandes sellos discográficos.</p>
+
+    <div class="figure">
+      <svg viewBox="0 0 600 360" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cyc-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <circle cx="300" cy="180" r="118" fill="none" stroke="#C8A96E" stroke-width="1.3" stroke-dasharray="4 7" opacity="0.45"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.4s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M300 82 L300 146" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M404 180 L340 180" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M300 278 L300 214" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M196 180 L260 180" dur="2.4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="300" cy="180" r="36" fill="#131318" stroke="url(#cyc-g)" stroke-width="2"/>
+        <circle cx="300" cy="180" r="36" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2.6s" repeatCount="indefinite"/><animate attributeName="r" values="36;52;36" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="300" y="190" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="26" font-weight="700">%</text>
+        <text x="300" y="236" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="10.5">Royalty al artista</text>
+        <text x="300" y="251" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">en cada transacción</text>
+        <circle cx="300" cy="62" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="300" cy="62" r="2" fill="#d9bf8a"/>
+        <circle cx="418" cy="180" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="418" cy="180" r="2" fill="#d9bf8a"/>
+        <circle cx="300" cy="298" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="300" cy="298" r="2" fill="#d9bf8a"/>
+        <circle cx="182" cy="180" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="182" cy="180" r="2" fill="#d9bf8a"/>
+        <text x="300" y="44" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Se posee</text>
+        <text x="432" y="184" text-anchor="start" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Se colecciona</text>
+        <text x="300" y="324" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Se transfiere</text>
+        <text x="168" y="184" text-anchor="end" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Se revaloriza</text>
+        <g><animateMotion path="M300 62 A118 118 0 1 1 300 298 A118 118 0 1 1 300 62" dur="11s" repeatCount="indefinite"/><circle cx="-5" cy="0" r="8.5" fill="#131318" stroke="#ece9e1" stroke-width="1.8"/><circle cx="5" cy="0" r="8.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/><circle cx="-5" cy="0" r="2" fill="#ece9e1"/><circle cx="5" cy="0" r="2" fill="#C8A96E"/></g>
+      </svg>
+      <svg viewBox="0 0 300 300" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cyc-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <circle cx="150" cy="150" r="74" fill="none" stroke="#C8A96E" stroke-width="1.3" stroke-dasharray="4 7" opacity="0.45"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.4s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M150 90 L150 128" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M212 150 L176 150" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M150 210 L150 172" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M88 150 L124 150" dur="2.4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="150" cy="150" r="26" fill="#131318" stroke="url(#cyc-gv)" stroke-width="2"/>
+        <circle cx="150" cy="150" r="26" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2.6s" repeatCount="indefinite"/><animate attributeName="r" values="26;40;26" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="150" y="157" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="20" font-weight="700">%</text>
+        <text x="150" y="198" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">% al artista</text>
+        <circle cx="150" cy="76" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="150" cy="76" r="2" fill="#d9bf8a"/>
+        <circle cx="224" cy="150" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="224" cy="150" r="2" fill="#d9bf8a"/>
+        <circle cx="150" cy="224" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="150" cy="224" r="2" fill="#d9bf8a"/>
+        <circle cx="76" cy="150" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="76" cy="150" r="2" fill="#d9bf8a"/>
+        <text x="150" y="60" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Posee</text>
+        <text x="236" y="154" text-anchor="start" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Colecciona</text>
+        <text x="150" y="248" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Transfiere</text>
+        <text x="68" y="154" text-anchor="end" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Revaloriza</text>
+        <g><animateMotion path="M150 76 A74 74 0 1 1 150 224 A74 74 0 1 1 150 76" dur="11s" repeatCount="indefinite"/><circle cx="-4" cy="0" r="6.5" fill="#131318" stroke="#ece9e1" stroke-width="1.6"/><circle cx="4" cy="0" r="6.5" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="-4" cy="0" r="1.6" fill="#ece9e1"/><circle cx="4" cy="0" r="1.6" fill="#C8A96E"/></g>
+      </svg>
+      <div class="figure-cap">Fig. 1.3 — El arte recupera su peso: un activo que circula y se revaloriza</div>
+    </div>
 
     <p>La tecnología blockchain nos permite hacer algo que antes era imposible: crear objetos digitales con las mismas propiedades de un vinilo de edición limitada, escasez verificable, propiedad demostrable, que esa pieza no solo sea la música y arte adherido a él, sino que el poseedor puede tener cualquier cosa a imaginación del artista. La venta de un objeto real (un libro de partituras, un acceso a un concierto, acceso vitalicio a un podcast mientras tenga la pieza en su posesión); tenemos de nuestro lado la encriptación de seguridad bancaria, el almacenamiento descentralizado que no depende de una sola entidad, transferencia directa, acceso instantáneo, distribución global y programabilidad que garantiza que el artista reciba su parte en cada reventa, de manera perpetua, sin intermediarios, todo en la blockchain de manera descentralizada.</p>
 
@@ -116,7 +200,7 @@ registerChapter('manifiesto', {
         <g><text x="0" y="180" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">Generación</text><rect x="0" y="186" width="6" height="18" rx="4" fill="#C8A96E"><animate attributeName="width" values="6;265" dur="0.6s" begin="0.90s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><text x="275" y="200" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="10" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.30s" fill="freeze"/>Revolución</text></g>
         <g><text x="0" y="234" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">La industria cambia</text><rect x="0" y="240" width="6" height="18" rx="4" fill="#C8A96E"><animate attributeName="width" values="6;290" dur="0.6s" begin="1.10s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect></g>
       </svg>
-      <div class="figure-cap">Fig. 1.2 — De la anécdota a la revolución</div>
+      <div class="figure-cap">Fig. 1.4 — De la anécdota a la revolución</div>
     </div>
 
     <div class="callout">
@@ -164,11 +248,95 @@ registerChapter('manifiesto', {
 
     <p>An artist needs roughly more than a million streams on digital platforms to earn the equivalent of a monthly minimum wage.</p>
 
+    <div class="figure">
+      <svg viewBox="0 0 600 210" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="sw-d" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#6b6862"/></pattern>
+          <linearGradient id="coin-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="30" y="40" width="300" height="118" rx="6" fill="none" stroke="#2a2a30" stroke-width="1"/>
+        <rect x="30" y="40" width="0" height="118" rx="6" fill="url(#sw-d)"><animate attributeName="width" values="0;300" dur="1.3s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.3 1"/></rect>
+        <text x="180" y="180" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="11.5">~1,000,000 streams</text>
+        <text x="378" y="112" text-anchor="middle" fill="#6b6862" font-family="'Spline Sans',sans-serif" font-size="30" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.3s" fill="freeze"/>≈</text>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -26;0 5;0 0" keyTimes="0;0.7;1" dur="0.7s" begin="1.5s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.4 1;0.5 0 0.5 1"/>
+          <circle cx="502" cy="99" r="30" fill="#131318" stroke="url(#coin-g)" stroke-width="2.5"/>
+          <circle cx="502" cy="99" r="23" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0.45"/>
+          <text x="502" y="107" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="22" font-weight="700">$</text>
+          <path d="M488 90 a18 18 0 0 1 12 -8" fill="none" stroke="#f0e9d8" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+        </g>
+        <text x="502" y="180" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11.5">1 minimum wage</text>
+      </svg>
+      <svg viewBox="0 0 300 330" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="sw-m" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#6b6862"/></pattern>
+          <linearGradient id="coin-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="24" width="260" height="104" rx="6" fill="none" stroke="#2a2a30" stroke-width="1"/>
+        <rect x="20" y="24" width="0" height="104" rx="6" fill="url(#sw-m)"><animate attributeName="width" values="0;260" dur="1.3s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.3 1"/></rect>
+        <text x="150" y="150" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="11">~1,000,000 streams</text>
+        <text x="150" y="192" text-anchor="middle" fill="#6b6862" font-family="'Spline Sans',sans-serif" font-size="26" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.3s" fill="freeze"/>≈</text>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -24;0 5;0 0" keyTimes="0;0.7;1" dur="0.7s" begin="1.5s" fill="freeze" calcMode="spline" keySplines="0.3 0.7 0.4 1;0.5 0 0.5 1"/>
+          <circle cx="150" cy="240" r="28" fill="#131318" stroke="url(#coin-gv)" stroke-width="2.5"/>
+          <circle cx="150" cy="240" r="21" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0.45"/>
+          <text x="150" y="248" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="20" font-weight="700">$</text>
+        </g>
+        <text x="150" y="300" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">1 minimum wage</text>
+      </svg>
+      <div class="figure-cap">Fig. 1.2 — The real price of streaming: ~1,000,000 streams ≈ one minimum wage</div>
+    </div>
+
     <h2>Grooves is an idea. An ideal.</h2>
 
     <p>We are not only a streaming platform. We are not only a marketplace of creative ecosystems. <em>We are an idea. An ideal.</em></p>
 
     <p>An ideal that, to become real, requires pedagogy, requires believing in us, in art as the transformation toward a fair and fairly-paid society. We are the idea that art regains its weight, where the creative work becomes an object that is owned, transformed, collected, transferred and revalued. Where every transaction returns value directly to whoever created it — to the independent artist as much as to small labels and major record companies.</p>
+
+    <div class="figure">
+      <svg viewBox="0 0 600 360" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cyc-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <circle cx="300" cy="180" r="118" fill="none" stroke="#C8A96E" stroke-width="1.3" stroke-dasharray="4 7" opacity="0.45"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.4s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M300 82 L300 146" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M404 180 L340 180" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M300 278 L300 214" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M196 180 L260 180" dur="2.4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="300" cy="180" r="36" fill="#131318" stroke="url(#cyc-g)" stroke-width="2"/>
+        <circle cx="300" cy="180" r="36" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2.6s" repeatCount="indefinite"/><animate attributeName="r" values="36;52;36" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="300" y="190" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="26" font-weight="700">%</text>
+        <text x="300" y="236" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="10.5">Royalty to the artist</text>
+        <text x="300" y="251" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">on every transaction</text>
+        <circle cx="300" cy="62" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="300" cy="62" r="2" fill="#d9bf8a"/>
+        <circle cx="418" cy="180" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="418" cy="180" r="2" fill="#d9bf8a"/>
+        <circle cx="300" cy="298" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="300" cy="298" r="2" fill="#d9bf8a"/>
+        <circle cx="182" cy="180" r="7" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="182" cy="180" r="2" fill="#d9bf8a"/>
+        <text x="300" y="44" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Owned</text>
+        <text x="432" y="184" text-anchor="start" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Collected</text>
+        <text x="300" y="324" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Transferred</text>
+        <text x="168" y="184" text-anchor="end" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">Revalued</text>
+        <g><animateMotion path="M300 62 A118 118 0 1 1 300 298 A118 118 0 1 1 300 62" dur="11s" repeatCount="indefinite"/><circle cx="-5" cy="0" r="8.5" fill="#131318" stroke="#ece9e1" stroke-width="1.8"/><circle cx="5" cy="0" r="8.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/><circle cx="-5" cy="0" r="2" fill="#ece9e1"/><circle cx="5" cy="0" r="2" fill="#C8A96E"/></g>
+      </svg>
+      <svg viewBox="0 0 300 300" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cyc-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <circle cx="150" cy="150" r="74" fill="none" stroke="#C8A96E" stroke-width="1.3" stroke-dasharray="4 7" opacity="0.45"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.4s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M150 90 L150 128" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M212 150 L176 150" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M150 210 L150 172" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle r="2.8" fill="#C8A96E"><animateMotion path="M88 150 L124 150" dur="2.4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.2;0.75;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="150" cy="150" r="26" fill="#131318" stroke="url(#cyc-gv)" stroke-width="2"/>
+        <circle cx="150" cy="150" r="26" fill="none" stroke="#C8A96E" stroke-width="1" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2.6s" repeatCount="indefinite"/><animate attributeName="r" values="26;40;26" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="150" y="157" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="20" font-weight="700">%</text>
+        <text x="150" y="198" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">% to artist</text>
+        <circle cx="150" cy="76" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="150" cy="76" r="2" fill="#d9bf8a"/>
+        <circle cx="224" cy="150" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="224" cy="150" r="2" fill="#d9bf8a"/>
+        <circle cx="150" cy="224" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="150" cy="224" r="2" fill="#d9bf8a"/>
+        <circle cx="76" cy="150" r="6" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="76" cy="150" r="2" fill="#d9bf8a"/>
+        <text x="150" y="60" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Owned</text>
+        <text x="236" y="154" text-anchor="start" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Collected</text>
+        <text x="150" y="248" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Transferred</text>
+        <text x="68" y="154" text-anchor="end" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="10.5" font-weight="600">Revalued</text>
+        <g><animateMotion path="M150 76 A74 74 0 1 1 150 224 A74 74 0 1 1 150 76" dur="11s" repeatCount="indefinite"/><circle cx="-4" cy="0" r="6.5" fill="#131318" stroke="#ece9e1" stroke-width="1.6"/><circle cx="4" cy="0" r="6.5" fill="#131318" stroke="#C8A96E" stroke-width="1.6"/><circle cx="-4" cy="0" r="1.6" fill="#ece9e1"/><circle cx="4" cy="0" r="1.6" fill="#C8A96E"/></g>
+      </svg>
+      <div class="figure-cap">Fig. 1.3 — Art regains its weight: an asset that circulates and appreciates</div>
+    </div>
 
     <p>Blockchain technology lets us do something that was impossible before: create digital objects with the same properties as a limited-edition vinyl — verifiable scarcity, provable ownership — and where that piece is not only the music and the art attached to it, but where the holder can access anything the artist imagines. The sale of a real object: a book of sheet music, access to a concert, lifetime access to a podcast as long as they hold the piece. On our side we have bank-grade encryption, decentralized storage that doesn't depend on a single entity, direct transfer, instant access, global distribution, and the programmability that guarantees the artist receives their share on every resale, in perpetuity, with no middlemen — all on the blockchain, decentralized.</p>
 
@@ -197,7 +365,7 @@ registerChapter('manifiesto', {
         <g><text x="0" y="180" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">Generation</text><rect x="0" y="186" width="6" height="18" rx="4" fill="#C8A96E"><animate attributeName="width" values="6;265" dur="0.6s" begin="0.90s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><text x="275" y="200" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="10" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.30s" fill="freeze"/>Revolution</text></g>
         <g><text x="0" y="234" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="11">The industry shifts</text><rect x="0" y="240" width="6" height="18" rx="4" fill="#C8A96E"><animate attributeName="width" values="6;290" dur="0.6s" begin="1.10s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect></g>
       </svg>
-      <div class="figure-cap">Fig. 1.2 — From anecdote to revolution</div>
+      <div class="figure-cap">Fig. 1.4 — From anecdote to revolution</div>
     </div>
 
     <div class="callout">
