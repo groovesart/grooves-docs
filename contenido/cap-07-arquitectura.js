@@ -104,10 +104,90 @@ registerChapter('arquitectura', {
     <p>Grooves es <strong>no-custodial</strong>, y no como postura de marketing sino como propiedad de la arquitectura. La plataforma no genera, no almacena y no tiene acceso a ninguna llave privada de usuario. El backend opera con una única llave propia —la del firmante/relayer— cuyas funciones están acotadas a dos: firmar las autorizaciones que los contratos exigen y pagar el gas al retransmitir transacciones. Esa llave jamás puede mover los activos de un usuario.</p>
     <p>El reparto de responsabilidades es estricto y verificable on-chain:</p>
     <ul>
-      <li><strong>El usuario firma sus propios activos.</strong> Comprar, crear o revender exige una firma desde su wallet —un permit EIP-2612 en la compra; su propia transacción en la creación—. Sin esa firma, nada se mueve.</li>
-      <li><strong>El backend solo firma autorizaciones.</strong> Su firma funciona como un sello que habilita o bloquea una operación según las reglas de la plataforma, pero no transfiere ni fondos ni Pressings. Es un rol de portero, no de custodio.</li>
-      <li><strong>Los contratos honran ambas firmas.</strong> En una compra, el USDC del comprador se mueve únicamente porque él firmó el permit que lo autoriza; el contrato no tiene forma de tomarlo de otro modo.</li>
+      <li><strong>Tú firmas tus propios activos.</strong> En una compra, lo único que firmas —y lo único EIP-712 que firmas— es un <em>permit</em> EIP-2612: la autorización para que tu USDC, y solo el tuyo, se mueva en esa operación. Al crear, firmas directamente tu propia transacción. Sin tu firma, nada se mueve.</li>
+      <li><strong>El backend firma la autorización del mint.</strong> Su firma es un <em>voucher</em> que habilita la creación del Pressing según las reglas de la plataforma: un sello que permite o bloquea, pero que no transfiere ni fondos ni Pressings. Es un rol de portero, no de custodio.</li>
+      <li><strong>El relayer envía la transacción y paga el gas.</strong> Lleva ambas firmas a la blockchain en tu nombre y cubre la comisión de red, sin tocar jamás tus activos.</li>
+      <li><strong>El contrato verifica las dos firmas on-chain.</strong> Comprueba tu permit y la autorización del backend antes de actuar; tu USDC se mueve únicamente porque tú lo firmaste, y el Pressing queda registrado a tu nombre.</li>
     </ul>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 200" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cu-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <text x="280" y="20" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Cruza la firma — la llave se queda en tu wallet</text>
+        <g>
+          <rect x="22" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#4a6fa5" stroke-width="1.4"/>
+          <text x="91" y="69" text-anchor="middle" fill="#cdd9ee" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Tu wallet</text>
+          <text x="91" y="90" text-anchor="middle" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9.5">Firmas el permit</text>
+          <text x="91" y="107" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9.5">EIP-2612</text>
+        </g>
+        <g>
+          <rect x="211" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="280" y="67" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Relayer de Grooves</text>
+          <text x="280" y="88" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">firma la autorización</text>
+          <text x="280" y="104" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">envía la tx · paga gas</text>
+        </g>
+        <g>
+          <rect x="400" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="469" y="69" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Tu Pressing</text>
+          <text x="469" y="92" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9.5">llega a tu wallet</text>
+        </g>
+        <line x1="160" y1="82" x2="211" y2="82" stroke="#2a2a30" stroke-width="2"/>
+        <line x1="160" y1="82" x2="211" y2="82" stroke="url(#cu-g)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M204 78 l6 4 l-6 4" fill="none" stroke="#C8A96E" stroke-width="1.4"/>
+        <text x="185" y="73" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="8.5">firma</text>
+        <circle r="3.5" fill="#d9bf8a"><animateMotion path="M160 82 L206 82" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <line x1="349" y1="82" x2="400" y2="82" stroke="#2a2a30" stroke-width="2"/>
+        <line x1="349" y1="82" x2="400" y2="82" stroke="url(#cu-g)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M393 78 l6 4 l-6 4" fill="none" stroke="#4a8c5c" stroke-width="1.4"/>
+        <circle r="3.5" fill="#7fc99a"><animateMotion path="M349 82 L395 82" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <g transform="translate(34,148)">
+          <circle cx="0" cy="0" r="5" fill="none" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="4" y1="0" x2="15" y2="0" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="11" y1="0" x2="11" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="15" y1="0" x2="15" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          <animate attributeName="opacity" values="0.55;1;0.55" dur="2.4s" repeatCount="indefinite"/>
+        </g>
+        <text x="56" y="152" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9">tu llave se queda</text>
+        <text x="280" y="182" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">On-chain se verifican ambas firmas · tu USDC solo se mueve por tu permit</text>
+      </svg>
+      <svg viewBox="0 0 300 400" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cu-gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <text x="150" y="18" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Cruza la firma, no la llave</text>
+        <g>
+          <rect x="30" y="34" width="240" height="76" rx="12" fill="#131318" stroke="#4a6fa5" stroke-width="1.4"/>
+          <text x="150" y="58" text-anchor="middle" fill="#cdd9ee" font-family="'Spline Sans',sans-serif" font-size="14" font-weight="600">Tu wallet</text>
+          <text x="150" y="80" text-anchor="middle" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="10">Firmas el permit · EIP-2612</text>
+          <g transform="translate(98,96)">
+            <circle cx="0" cy="0" r="5" fill="none" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="4" y1="0" x2="14" y2="0" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="11" y1="0" x2="11" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="14" y1="0" x2="14" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          </g>
+          <text x="116" y="100" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9.5">la llave se queda</text>
+        </g>
+        <line x1="150" y1="110" x2="150" y2="146" stroke="url(#cu-gv)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M146 140 l4 6 l4 -6" fill="none" stroke="#C8A96E" stroke-width="1.4"/>
+        <circle r="3.5" fill="#d9bf8a"><animateMotion path="M150 110 L150 142" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <text x="166" y="132" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9">firma</text>
+        <g>
+          <rect x="30" y="148" width="240" height="76" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="150" y="174" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Relayer de Grooves</text>
+          <text x="150" y="195" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">firma la autorización</text>
+          <text x="150" y="212" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">envía la tx · paga el gas</text>
+        </g>
+        <line x1="150" y1="224" x2="150" y2="260" stroke="url(#cu-gv)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M146 254 l4 6 l4 -6" fill="none" stroke="#4a8c5c" stroke-width="1.4"/>
+        <circle r="3.5" fill="#7fc99a"><animateMotion path="M150 224 L150 256" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="30" y="262" width="240" height="76" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="150" y="294" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="14" font-weight="600">Tu Pressing</text>
+          <text x="150" y="316" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="10">llega a tu wallet</text>
+        </g>
+        <text x="150" y="364" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="9">On-chain se verifican ambas firmas.</text>
+        <text x="150" y="380" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="9">Tu USDC solo se mueve por tu permit.</text>
+      </svg>
+      <div class="figure-cap">Fig. 7.2 — Compra no-custodia: cruza la firma, no la llave</div>
+    </div>
     <p>A nivel de datos, el registro de cada usuario guarda solo su dirección pública —nunca una llave privada, una frase semilla ni una llave cifrada—. No existe en ningún punto del sistema un lugar donde Grooves pudiera custodiar la llave de un usuario, aunque quisiera.</p>
 
     <div class="callout">
@@ -116,6 +196,97 @@ registerChapter('arquitectura', {
     </div>
 
     <p><strong>La wallet integrada conservará esta propiedad. <span class="rm-badge">Roadmap</span></strong> La wallet sin fricción para usuarios nuevos —generada a partir de su cuenta, sin instalar nada ni gestionar una semilla— preservará exactamente este modelo. La llave se generará y se resguardará bajo el control exclusivo del usuario mediante cómputo multipartito (MPC) o passkeys del propio dispositivo: la llave se divide en partes y ninguna entidad —ni Grooves ni el proveedor de la tecnología— llega a tener la llave completa. Las partes solo se combinan, en el dispositivo del usuario y con su autorización, en el instante de firmar. Auto-custodia sin fricción: invisible en la experiencia, soberana en el control.</p>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 300" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ks-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <rect x="468" y="10" width="80" height="20" rx="10" fill="rgba(200,169,110,0.10)" stroke="rgba(200,169,110,0.30)"/>
+        <text x="508" y="24" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1">ROADMAP</text>
+        <text x="22" y="24" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Tu llave sigue siendo tuya</text>
+        <g transform="translate(280,40)">
+          <circle cx="0" cy="0" r="7" fill="none" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="7" x2="0" y2="22" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="15" x2="6" y2="15" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="20" x2="5" y2="20" stroke="#d9bf8a" stroke-width="2"/>
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+        </g>
+        <text x="280" y="86" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Tu llave</text>
+        <line x1="280" y1="66" x2="100" y2="112" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="280" y1="66" x2="460" y2="112" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="280" y1="68" x2="280" y2="108" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g stroke="#c0563f" stroke-width="1.6"><line x1="275" y1="93" x2="285" y2="103"/><line x1="285" y1="93" x2="275" y2="103"/></g>
+        <circle r="3.2" fill="#9fd9b4"><animateMotion path="M280 66 L100 112" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <circle r="3.2" fill="#9fd9b4"><animateMotion path="M280 66 L460 112" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="20" y="112" width="160" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="100" y="137" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Pieza A</text>
+          <text x="100" y="156" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">vive en tu dispositivo</text>
+        </g>
+        <g>
+          <rect x="210" y="112" width="140" height="58" rx="12" fill="none" stroke="#5a5852" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="280" y="137" text-anchor="middle" fill="#8a877f" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Grooves</text>
+          <text x="280" y="156" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">0 piezas</text>
+        </g>
+        <g>
+          <rect x="380" y="112" width="160" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="460" y="137" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Pieza B</text>
+          <text x="460" y="156" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">tu resguardo</text>
+        </g>
+        <line x1="100" y1="170" x2="230" y2="212" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="460" y1="170" x2="330" y2="212" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <circle r="3.2" fill="#d9bf8a"><animateMotion path="M100 170 L230 212" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <circle r="3.2" fill="#d9bf8a"><animateMotion path="M460 170 L330 212" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="175" y="212" width="210" height="58" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="280" y="237" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="11.5" font-weight="600">Se combinan en tu dispositivo</text>
+          <text x="280" y="256" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">con tu permiso → firma</text>
+        </g>
+        <text x="280" y="290" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">Ninguna parte tiene la llave entera; se combinan solo en tu dispositivo</text>
+      </svg>
+      <svg viewBox="0 0 300 390" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ks-gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <rect x="212" y="10" width="78" height="20" rx="10" fill="rgba(200,169,110,0.10)" stroke="rgba(200,169,110,0.30)"/>
+        <text x="251" y="24" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1">ROADMAP</text>
+        <text x="12" y="24" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Tu llave sigue siendo tuya</text>
+        <g transform="translate(150,44)">
+          <circle cx="0" cy="0" r="7" fill="none" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="7" x2="0" y2="22" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="15" x2="6" y2="15" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="20" x2="5" y2="20" stroke="#d9bf8a" stroke-width="2"/>
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+        </g>
+        <text x="150" y="90" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Tu llave</text>
+        <line x1="150" y1="70" x2="78" y2="104" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="150" y1="70" x2="222" y2="104" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="150" y1="98" x2="150" y2="190" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g stroke="#c0563f" stroke-width="1.6"><line x1="145" y1="135" x2="155" y2="145"/><line x1="155" y1="135" x2="145" y2="145"/></g>
+        <g>
+          <rect x="18" y="104" width="120" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="78" y="129" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Pieza A</text>
+          <text x="78" y="148" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9">tu dispositivo</text>
+        </g>
+        <g>
+          <rect x="162" y="104" width="120" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="222" y="129" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Pieza B</text>
+          <text x="222" y="148" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9">tu resguardo</text>
+        </g>
+        <g>
+          <rect x="75" y="190" width="150" height="52" rx="12" fill="none" stroke="#5a5852" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="150" y="214" text-anchor="middle" fill="#8a877f" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Grooves</text>
+          <text x="150" y="231" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">0 piezas</text>
+        </g>
+        <line x1="78" y1="162" x2="52" y2="282" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="222" y1="162" x2="248" y2="282" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <g>
+          <rect x="40" y="282" width="220" height="58" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="150" y="307" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="11.5" font-weight="600">Se combinan en tu dispositivo</text>
+          <text x="150" y="326" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">con tu permiso → firma</text>
+        </g>
+        <text x="150" y="362" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">Ninguna parte tiene la llave entera.</text>
+        <text x="150" y="378" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">Se combinan solo en tu dispositivo.</text>
+      </svg>
+      <div class="figure-cap">Fig. 7.3 — Roadmap · Tu llave se reparte en piezas y sigue siendo tuya</div>
+    </div>
 
     <h2>Almacenamiento de tres niveles</h2>
     <p>Grooves separa deliberadamente dónde vive cada cosa, según deba ser pública o privada:</p>
@@ -238,10 +409,90 @@ registerChapter('arquitectura', {
     <p>Grooves is <strong>non-custodial</strong> — not as a marketing stance but as a property of the architecture. The platform does not generate, store, or have access to any user's private key. The backend operates with a single key of its own — the signer/relayer key — whose functions are limited to two: signing the authorizations the contracts require, and paying gas when relaying transactions. That key can never move a user's assets.</p>
     <p>The division of responsibilities is strict and verifiable on-chain:</p>
     <ul>
-      <li><strong>The user signs their own assets.</strong> Buying, creating, or reselling requires a signature from their wallet — an EIP-2612 permit on a purchase; their own transaction on a creation. Without that signature, nothing moves.</li>
-      <li><strong>The backend only signs authorizations.</strong> Its signature acts as a seal that enables or blocks an operation according to the platform's rules, but transfers neither funds nor Pressings. It is a gatekeeper role, not a custodian.</li>
-      <li><strong>The contracts honor both signatures.</strong> On a purchase, the buyer's USDC moves only because they signed the permit authorizing it; the contract has no way to take it otherwise.</li>
+      <li><strong>You sign your own assets.</strong> On a purchase, the only thing you sign — and the only EIP-712 message you sign — is an EIP-2612 <em>permit</em>: authorization for your USDC, and only yours, to move in that operation. On a creation, you sign your own transaction directly. Without your signature, nothing moves.</li>
+      <li><strong>The backend signs the mint authorization.</strong> Its signature is a <em>voucher</em> that enables creating the Pressing under the platform's rules: a seal that allows or blocks, but transfers neither funds nor Pressings. A gatekeeper role, not a custodian.</li>
+      <li><strong>The relayer sends the transaction and pays the gas.</strong> It carries both signatures to the blockchain on your behalf and covers the network fee, without ever touching your assets.</li>
+      <li><strong>The contract verifies both signatures on-chain.</strong> It checks your permit and the backend's authorization before acting; your USDC moves only because you signed it, and the Pressing is recorded under your name.</li>
     </ul>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 200" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cu-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <text x="280" y="20" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">The signature travels — the key stays in your wallet</text>
+        <g>
+          <rect x="22" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#4a6fa5" stroke-width="1.4"/>
+          <text x="91" y="69" text-anchor="middle" fill="#cdd9ee" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Your wallet</text>
+          <text x="91" y="90" text-anchor="middle" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9.5">You sign the permit</text>
+          <text x="91" y="107" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9.5">EIP-2612</text>
+        </g>
+        <g>
+          <rect x="211" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="280" y="67" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Grooves relayer</text>
+          <text x="280" y="88" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">signs the authorization</text>
+          <text x="280" y="104" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">sends the tx · pays gas</text>
+        </g>
+        <g>
+          <rect x="400" y="42" width="138" height="80" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="469" y="69" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Your Pressing</text>
+          <text x="469" y="92" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9.5">lands in your wallet</text>
+        </g>
+        <line x1="160" y1="82" x2="211" y2="82" stroke="#2a2a30" stroke-width="2"/>
+        <line x1="160" y1="82" x2="211" y2="82" stroke="url(#cu-g)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M204 78 l6 4 l-6 4" fill="none" stroke="#C8A96E" stroke-width="1.4"/>
+        <text x="185" y="73" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="8.5">signature</text>
+        <circle r="3.5" fill="#d9bf8a"><animateMotion path="M160 82 L206 82" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <line x1="349" y1="82" x2="400" y2="82" stroke="#2a2a30" stroke-width="2"/>
+        <line x1="349" y1="82" x2="400" y2="82" stroke="url(#cu-g)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M393 78 l6 4 l-6 4" fill="none" stroke="#4a8c5c" stroke-width="1.4"/>
+        <circle r="3.5" fill="#7fc99a"><animateMotion path="M349 82 L395 82" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <g transform="translate(34,148)">
+          <circle cx="0" cy="0" r="5" fill="none" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="4" y1="0" x2="15" y2="0" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="11" y1="0" x2="11" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          <line x1="15" y1="0" x2="15" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          <animate attributeName="opacity" values="0.55;1;0.55" dur="2.4s" repeatCount="indefinite"/>
+        </g>
+        <text x="56" y="152" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9">your key stays</text>
+        <text x="280" y="182" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">On-chain both signatures are verified · your USDC only moves by your permit</text>
+      </svg>
+      <svg viewBox="0 0 300 400" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cu-gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <text x="150" y="18" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">The signature travels, not the key</text>
+        <g>
+          <rect x="30" y="34" width="240" height="76" rx="12" fill="#131318" stroke="#4a6fa5" stroke-width="1.4"/>
+          <text x="150" y="58" text-anchor="middle" fill="#cdd9ee" font-family="'Spline Sans',sans-serif" font-size="14" font-weight="600">Your wallet</text>
+          <text x="150" y="80" text-anchor="middle" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="10">You sign the permit · EIP-2612</text>
+          <g transform="translate(98,96)">
+            <circle cx="0" cy="0" r="5" fill="none" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="4" y1="0" x2="14" y2="0" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="11" y1="0" x2="11" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+            <line x1="14" y1="0" x2="14" y2="4" stroke="#4a6fa5" stroke-width="1.6"/>
+          </g>
+          <text x="116" y="100" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9.5">the key stays</text>
+        </g>
+        <line x1="150" y1="110" x2="150" y2="146" stroke="url(#cu-gv)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M146 140 l4 6 l4 -6" fill="none" stroke="#C8A96E" stroke-width="1.4"/>
+        <circle r="3.5" fill="#d9bf8a"><animateMotion path="M150 110 L150 142" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <text x="166" y="132" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9">signature</text>
+        <g>
+          <rect x="30" y="148" width="240" height="76" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="150" y="174" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Grooves relayer</text>
+          <text x="150" y="195" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">signs the authorization</text>
+          <text x="150" y="212" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">sends the tx · pays the gas</text>
+        </g>
+        <line x1="150" y1="224" x2="150" y2="260" stroke="url(#cu-gv)" stroke-width="2" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></line>
+        <path d="M146 254 l4 6 l4 -6" fill="none" stroke="#4a8c5c" stroke-width="1.4"/>
+        <circle r="3.5" fill="#7fc99a"><animateMotion path="M150 224 L150 256" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="30" y="262" width="240" height="76" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="150" y="294" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="14" font-weight="600">Your Pressing</text>
+          <text x="150" y="316" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="10">lands in your wallet</text>
+        </g>
+        <text x="150" y="364" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="9">On-chain both signatures are verified.</text>
+        <text x="150" y="380" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="9">Your USDC only moves by your permit.</text>
+      </svg>
+      <div class="figure-cap">Fig. 7.2 — Non-custodial purchase: the signature travels, not the key</div>
+    </div>
     <p>At the data level, each user's record stores only their public address — never a private key, a seed phrase, or an encrypted key. There is no point anywhere in the system where Grooves could take custody of a user's key, even if it wanted to.</p>
 
     <div class="callout">
@@ -250,6 +501,97 @@ registerChapter('arquitectura', {
     </div>
 
     <p><strong>The built-in wallet will preserve this property. <span class="rm-badge">Roadmap</span></strong> The frictionless wallet for new users — generated from their account, with nothing to install and no seed to manage — will preserve exactly this model. The key will be generated and secured under the user's exclusive control through multi-party computation (MPC) or device passkeys: the key is split into parts, and no single entity — neither Grooves nor the technology provider — ever holds the complete key. The parts combine only on the user's device, with their authorization, at the moment of signing. Frictionless self-custody: invisible in the experience, sovereign in control.</p>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 300" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ks-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <rect x="468" y="10" width="80" height="20" rx="10" fill="rgba(200,169,110,0.10)" stroke="rgba(200,169,110,0.30)"/>
+        <text x="508" y="24" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1">ROADMAP</text>
+        <text x="22" y="24" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Your key stays yours</text>
+        <g transform="translate(280,40)">
+          <circle cx="0" cy="0" r="7" fill="none" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="7" x2="0" y2="22" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="15" x2="6" y2="15" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="20" x2="5" y2="20" stroke="#d9bf8a" stroke-width="2"/>
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+        </g>
+        <text x="280" y="86" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Your key</text>
+        <line x1="280" y1="66" x2="100" y2="112" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="280" y1="66" x2="460" y2="112" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="280" y1="68" x2="280" y2="108" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g stroke="#c0563f" stroke-width="1.6"><line x1="275" y1="93" x2="285" y2="103"/><line x1="285" y1="93" x2="275" y2="103"/></g>
+        <circle r="3.2" fill="#9fd9b4"><animateMotion path="M280 66 L100 112" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <circle r="3.2" fill="#9fd9b4"><animateMotion path="M280 66 L460 112" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="20" y="112" width="160" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="100" y="137" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Piece A</text>
+          <text x="100" y="156" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">lives on your device</text>
+        </g>
+        <g>
+          <rect x="210" y="112" width="140" height="58" rx="12" fill="none" stroke="#5a5852" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="280" y="137" text-anchor="middle" fill="#8a877f" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Grooves</text>
+          <text x="280" y="156" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">0 pieces</text>
+        </g>
+        <g>
+          <rect x="380" y="112" width="160" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="460" y="137" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Piece B</text>
+          <text x="460" y="156" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">your backup</text>
+        </g>
+        <line x1="100" y1="170" x2="230" y2="212" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="460" y1="170" x2="330" y2="212" stroke="url(#ks-g)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <circle r="3.2" fill="#d9bf8a"><animateMotion path="M100 170 L230 212" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <circle r="3.2" fill="#d9bf8a"><animateMotion path="M460 170 L330 212" dur="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.9s" repeatCount="indefinite"/></circle>
+        <g>
+          <rect x="175" y="212" width="210" height="58" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="280" y="237" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="11.5" font-weight="600">They combine on your device</text>
+          <text x="280" y="256" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">with your permission → sign</text>
+        </g>
+        <text x="280" y="290" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">No part holds the whole key; they combine only on your device</text>
+      </svg>
+      <svg viewBox="0 0 300 390" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ks-gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
+        <rect x="212" y="10" width="78" height="20" rx="10" fill="rgba(200,169,110,0.10)" stroke="rgba(200,169,110,0.30)"/>
+        <text x="251" y="24" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1">ROADMAP</text>
+        <text x="12" y="24" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Your key stays yours</text>
+        <g transform="translate(150,44)">
+          <circle cx="0" cy="0" r="7" fill="none" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="7" x2="0" y2="22" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="15" x2="6" y2="15" stroke="#d9bf8a" stroke-width="2"/>
+          <line x1="0" y1="20" x2="5" y2="20" stroke="#d9bf8a" stroke-width="2"/>
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+        </g>
+        <text x="150" y="90" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Your key</text>
+        <line x1="150" y1="70" x2="78" y2="104" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="150" y1="70" x2="222" y2="104" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="150" y1="98" x2="150" y2="190" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g stroke="#c0563f" stroke-width="1.6"><line x1="145" y1="135" x2="155" y2="145"/><line x1="155" y1="135" x2="145" y2="145"/></g>
+        <g>
+          <rect x="18" y="104" width="120" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="78" y="129" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Piece A</text>
+          <text x="78" y="148" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9">your device</text>
+        </g>
+        <g>
+          <rect x="162" y="104" width="120" height="58" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
+          <text x="222" y="129" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Piece B</text>
+          <text x="222" y="148" text-anchor="middle" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="9">your backup</text>
+        </g>
+        <g>
+          <rect x="75" y="190" width="150" height="52" rx="12" fill="none" stroke="#5a5852" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="150" y="214" text-anchor="middle" fill="#8a877f" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">Grooves</text>
+          <text x="150" y="231" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">0 pieces</text>
+        </g>
+        <line x1="78" y1="162" x2="52" y2="282" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <line x1="222" y1="162" x2="248" y2="282" stroke="url(#ks-gv)" stroke-width="1.6" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="22;0" dur="1.1s" repeatCount="indefinite"/></line>
+        <g>
+          <rect x="40" y="282" width="220" height="58" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
+          <text x="150" y="307" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="11.5" font-weight="600">They combine on your device</text>
+          <text x="150" y="326" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">with your permission → sign</text>
+        </g>
+        <text x="150" y="362" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">No part holds the whole key.</text>
+        <text x="150" y="378" text-anchor="middle" fill="#6b6862" font-family="'JetBrains Mono',monospace" font-size="8.5">They combine only on your device.</text>
+      </svg>
+      <div class="figure-cap">Fig. 7.3 — Roadmap · Your key is split into pieces and stays yours</div>
+    </div>
 
     <h2>Three-tier storage</h2>
     <p>Grooves deliberately separates where each thing lives, depending on whether it must be public or private:</p>
