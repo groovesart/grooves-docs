@@ -62,6 +62,11 @@ registerChapter('estado', {
       </div>
       <div class="st-card dev">
         <div class="st-head"><span class="st-dot"></span> Roadmap</div>
+        <h4>Wallet integrada no-custodial</h4>
+        <p>Creación automática de una wallet auto-custodia para quien llega sin wallet, con la llave siempre bajo su control (MPC / passkeys).</p>
+      </div>
+      <div class="st-card dev">
+        <div class="st-head"><span class="st-dot"></span> Roadmap</div>
         <h4>Pago con tarjeta / PayPal</h4>
         <p>Conversión de moneda tradicional a USDC integrada en la compra, vía proveedores regulados.</p>
       </div>
@@ -124,6 +129,7 @@ registerChapter('estado', {
 
     <div class="status-grid">
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Authenticity Engine</h4><p>Copyright verification via acoustic fingerprinting and visual similarity when creating the Pressing.</p></div>
+      <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Non-custodial built-in wallet</h4><p>Automatic creation of a self-custodial wallet for those who arrive without one, with the key always under their control (MPC / passkeys).</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Card / PayPal payment</h4><p>Traditional-to-USDC currency conversion integrated into checkout, via regulated providers.</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Multi-chain</h4><p>Support for additional networks and a unified user library across all of them.</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>QR tickets</h4><p>The Pressing as a physical ticket: on-chain validation at event doors via scanning.</p></div>

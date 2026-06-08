@@ -100,6 +100,23 @@ registerChapter('arquitectura', {
     <h2>Compra sin gas: el relayer</h2>
     <p>En la venta primaria, el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. Un componente del backend —el <em>relayer</em>— registra la operación en la blockchain en nombre del usuario, y el costo se descuenta de forma transparente del pago. Esto elimina la barrera más grande para un usuario nuevo: tener que conseguir "gas" antes de poder comprar.</p>
 
+    <h2>Custodia y wallets: las llaves son del usuario</h2>
+    <p>Grooves es <strong>no-custodial</strong>, y no como postura de marketing sino como propiedad de la arquitectura. La plataforma no genera, no almacena y no tiene acceso a ninguna llave privada de usuario. El backend opera con una única llave propia —la del firmante/relayer— cuyas funciones están acotadas a dos: firmar las autorizaciones que los contratos exigen y pagar el gas al retransmitir transacciones. Esa llave jamás puede mover los activos de un usuario.</p>
+    <p>El reparto de responsabilidades es estricto y verificable on-chain:</p>
+    <ul>
+      <li><strong>El usuario firma sus propios activos.</strong> Comprar, crear o revender exige una firma desde su wallet —un permit EIP-2612 en la compra; su propia transacción en la creación—. Sin esa firma, nada se mueve.</li>
+      <li><strong>El backend solo firma autorizaciones.</strong> Su firma funciona como un sello que habilita o bloquea una operación según las reglas de la plataforma, pero no transfiere ni fondos ni Pressings. Es un rol de portero, no de custodio.</li>
+      <li><strong>Los contratos honran ambas firmas.</strong> En una compra, el USDC del comprador se mueve únicamente porque él firmó el permit que lo autoriza; el contrato no tiene forma de tomarlo de otro modo.</li>
+    </ul>
+    <p>A nivel de datos, el registro de cada usuario guarda solo su dirección pública —nunca una llave privada, una frase semilla ni una llave cifrada—. No existe en ningún punto del sistema un lugar donde Grooves pudiera custodiar la llave de un usuario, aunque quisiera.</p>
+
+    <div class="callout">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+      <p><strong>No-custodial, sin asteriscos.</strong> Grooves nunca tiene las llaves, nunca custodia los fondos y no puede mover, congelar ni acceder a los activos de ningún usuario. La propiedad vive en la wallet del usuario; la plataforma solo facilita y atestigua.</p>
+    </div>
+
+    <p><strong>La wallet integrada conservará esta propiedad. <span class="rm-badge">Roadmap</span></strong> La wallet sin fricción para usuarios nuevos —generada a partir de su cuenta, sin instalar nada ni gestionar una semilla— preservará exactamente este modelo. La llave se generará y se resguardará bajo el control exclusivo del usuario mediante cómputo multipartito (MPC) o passkeys del propio dispositivo: la llave se divide en partes y ninguna entidad —ni Grooves ni el proveedor de la tecnología— llega a tener la llave completa. Las partes solo se combinan, en el dispositivo del usuario y con su autorización, en el instante de firmar. Auto-custodia sin fricción: invisible en la experiencia, soberana en el control.</p>
+
     <h2>Almacenamiento de tres niveles</h2>
     <p>Grooves separa deliberadamente dónde vive cada cosa, según deba ser pública o privada:</p>
 
@@ -216,6 +233,23 @@ registerChapter('arquitectura', {
 
     <h2>Buying without gas: the relayer</h2>
     <p>On the primary sale, the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. A backend component — the <em>relayer</em> — records the operation on the blockchain on the user's behalf, and the cost is deducted transparently from the payment. This removes the biggest barrier for a new user: having to obtain "gas" before they can buy.</p>
+
+    <h2>Custody and wallets: the keys belong to the user</h2>
+    <p>Grooves is <strong>non-custodial</strong> — not as a marketing stance but as a property of the architecture. The platform does not generate, store, or have access to any user's private key. The backend operates with a single key of its own — the signer/relayer key — whose functions are limited to two: signing the authorizations the contracts require, and paying gas when relaying transactions. That key can never move a user's assets.</p>
+    <p>The division of responsibilities is strict and verifiable on-chain:</p>
+    <ul>
+      <li><strong>The user signs their own assets.</strong> Buying, creating, or reselling requires a signature from their wallet — an EIP-2612 permit on a purchase; their own transaction on a creation. Without that signature, nothing moves.</li>
+      <li><strong>The backend only signs authorizations.</strong> Its signature acts as a seal that enables or blocks an operation according to the platform's rules, but transfers neither funds nor Pressings. It is a gatekeeper role, not a custodian.</li>
+      <li><strong>The contracts honor both signatures.</strong> On a purchase, the buyer's USDC moves only because they signed the permit authorizing it; the contract has no way to take it otherwise.</li>
+    </ul>
+    <p>At the data level, each user's record stores only their public address — never a private key, a seed phrase, or an encrypted key. There is no point anywhere in the system where Grooves could take custody of a user's key, even if it wanted to.</p>
+
+    <div class="callout">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+      <p><strong>Non-custodial, no asterisks.</strong> Grooves never holds the keys, never takes custody of funds, and cannot move, freeze, or access anyone's assets. Ownership lives in the user's wallet; the platform only facilitates and attests.</p>
+    </div>
+
+    <p><strong>The built-in wallet will preserve this property. <span class="rm-badge">Roadmap</span></strong> The frictionless wallet for new users — generated from their account, with nothing to install and no seed to manage — will preserve exactly this model. The key will be generated and secured under the user's exclusive control through multi-party computation (MPC) or device passkeys: the key is split into parts, and no single entity — neither Grooves nor the technology provider — ever holds the complete key. The parts combine only on the user's device, with their authorization, at the moment of signing. Frictionless self-custody: invisible in the experience, sovereign in control.</p>
 
     <h2>Three-tier storage</h2>
     <p>Grooves deliberately separates where each thing lives, depending on whether it must be public or private:</p>

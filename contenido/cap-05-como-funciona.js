@@ -53,9 +53,14 @@ registerChapter('como-funciona', {
       <li><strong>Revende si lo deseas.</strong> Si un artista explota, tu Pressing se revaloriza. El artista cobra su royalty en cada reventa.</li>
     </ol>
 
-    <h2>Wallet integrada, siempre bajo tu control</h2>
-    <p>Cuando un usuario crea su cuenta en Grooves con email o redes sociales, la plataforma le genera una wallet al instante, sin que tenga que instalar nada ni gestionar una seed phrase. La diferencia clave es que esa wallet es <strong>no-custodial</strong>: las llaves se generan y se resguardan bajo el control exclusivo del usuario (mediante tecnologías como MPC o passkeys del propio dispositivo), de modo que <strong>solo él puede autorizar movimientos</strong>. Grooves nunca tiene las llaves, nunca custodia los fondos y no puede mover, congelar ni acceder a los activos de ningún usuario. La wallet es invisible en la experiencia, pero soberana en el control.</p>
-    <p>Y quien ya tenga su propia wallet externa —MetaMask u otra compatible vía WalletConnect, fría o caliente— puede conectarla y operar directamente. Los dos caminos son no-custodiales: en ambos, las llaves son del usuario, no de Grooves.</p>
+    <h2>Tu wallet, siempre bajo tu control</h2>
+    <p>Grooves es <strong>no-custodial</strong> por diseño: las llaves que controlan los activos de un usuario son siempre suyas, y solo suyas. La plataforma no genera, no guarda y no tiene acceso a ninguna llave privada de usuario, y no puede mover, congelar ni tocar los fondos o los Pressings de nadie. Toda transferencia de valor la autoriza el usuario, firmando desde su propia wallet; lo único que Grooves firma con su llave operativa son autorizaciones internas, nunca los activos del usuario.</p>
+    <p>Hay dos formas de tener esa wallet, y las dos son no-custodiales:</p>
+    <ul>
+      <li><strong>Conectar una wallet externa.</strong> Quien ya tiene la suya —MetaMask u otra compatible vía WalletConnect, fría o caliente— la conecta y opera directamente. Las llaves nunca salen de su dispositivo.</li>
+      <li><strong>Wallet integrada, sin fricción. <span class="rm-badge">Roadmap</span></strong> Para quien llega sin wallet, la plataforma generará una al instante a partir de su cuenta —email o redes—, sin instalar nada ni gestionar una seed phrase. Será no-custodial igual: las llaves se generan y se resguardan bajo el control exclusivo del usuario, mediante tecnologías como MPC o passkeys del propio dispositivo, de modo que solo él puede autorizar movimientos. Invisible en la experiencia, soberana en el control.</li>
+    </ul>
+    <p>En ambos caminos la regla es la misma e innegociable: las llaves son del usuario, no de Grooves.</p>
 
     <h2>Compra sin pagar gas</h2>
     <p>En la venta primaria, Grooves absorbe la complejidad de la blockchain con un sistema <em>gasless</em>: el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. El usuario autoriza la compra firmando desde su propia wallet, y un componente de Grooves (el relayer) la registra en la blockchain cubriendo el gas por él; el costo se descuenta de forma transparente. El fan solo ve el precio del Pressing — nada más.</p>
@@ -140,9 +145,14 @@ registerChapter('como-funciona', {
       <li><strong>Resell if you wish.</strong> If an artist breaks out, your Pressing appreciates. The artist collects their royalty on every resale.</li>
     </ol>
 
-    <h2>Built-in wallet, always under your control</h2>
-    <p>When a user creates their Grooves account with email or social login, the platform generates a wallet for them instantly — with nothing to install and no seed phrase to manage. The key difference: that wallet is <strong>non-custodial</strong>. The keys are generated and secured under the user's exclusive control (through technologies such as MPC or device passkeys), so that <strong>only the user can authorize movements</strong>. Grooves never holds the keys, never takes custody of funds, and cannot move, freeze, or access anyone's assets. The wallet is invisible in the experience, but sovereign in control.</p>
-    <p>And anyone who already has their own external wallet — MetaMask or another compatible one via WalletConnect, cold or hot — can connect it and operate directly. Both paths are non-custodial: in each, the keys belong to the user, not to Grooves.</p>
+    <h2>Your wallet, always under your control</h2>
+    <p>Grooves is <strong>non-custodial</strong> by design: the keys that control a user's assets are always theirs, and theirs alone. The platform does not generate, store, or have access to any user's private key, and it cannot move, freeze, or touch anyone's funds or Pressings. Every transfer of value is authorized by the user, signing from their own wallet; the only thing Grooves signs with its operational key are internal authorizations, never the user's assets.</p>
+    <p>There are two ways to hold that wallet, and both are non-custodial:</p>
+    <ul>
+      <li><strong>Connect an external wallet.</strong> Anyone who already has one — MetaMask or another compatible via WalletConnect, cold or hot — connects it and operates directly. The keys never leave their device.</li>
+      <li><strong>Built-in wallet, frictionless. <span class="rm-badge">Roadmap</span></strong> For those who arrive without a wallet, the platform will generate one instantly from their account — email or social — with nothing to install and no seed phrase to manage. It will be non-custodial all the same: the keys are generated and secured under the user's exclusive control, through technologies such as MPC or device passkeys, so that only the user can authorize movements. Invisible in the experience, sovereign in control.</li>
+    </ul>
+    <p>On both paths the rule is the same and non-negotiable: the keys belong to the user, not to Grooves.</p>
 
     <h2>Buying without gas</h2>
     <p>On the primary sale, Grooves absorbs the blockchain's complexity with a <em>gasless</em> system: the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. The user authorizes the purchase by signing from their own wallet, and a Grooves component (the relayer) records it on the blockchain, covering the gas on their behalf; the cost is deducted transparently. The fan only sees the Pressing's price — nothing else.</p>
