@@ -23,9 +23,9 @@ registerChapter('manifiesto', {
       </svg>
     </div>
 
-    <h2>Hubo un tiempo en que poseer música <em>significaba algo</em></h2>
+    <h2>Hubo un tiempo en que escuchar música <em>significaba algo</em></h2>
 
-    <p>Significaba abrir un disco por primera vez, leer las notas del compositor, estudiar el arte de la portada, sentir el peso del vinilo entre las manos. El objeto era inseparable de la experiencia. El artista firmaba cada edición sabiendo que su obra viviría en estantes, en colecciones, en las manos de personas que la valoraban lo suficiente como para apreciarla y apoyarla teniéndola como un activo.</p>
+    <p>Significaba abrir un disco por primera vez, leer las notas del compositor, estudiar el arte de la portada, sentir el peso del vinilo/cd/cassette entre las manos. El objeto era inseparable de la experiencia. El artista firmaba cada edición sabiendo que su obra viviría en estantes, en colecciones, en las manos de personas que la valoraban lo suficiente como para apreciarla y apoyarla teniéndola como un activo, pero sobre todo la obra era un objeto transable: la creación tenía valor real, no era un alquiler.</p>
 
     <p>La revolución digital prometió democratizar el acceso al arte. Cumplió esa promesa, pero a un costo que nadie calculó: el arte dejó de tener dueño, dejó de ser valorado y se convirtió en un objeto de consumo alquilado en este mundo de los pagos por mensualidades.</p>
 
@@ -240,9 +240,9 @@ registerChapter('manifiesto', {
       </svg>
     </div>
 
-    <h2>There was a time when owning music <em>meant something</em></h2>
+    <h2>There was a time when listening to music <em>meant something</em></h2>
 
-    <p>It meant opening a record for the first time, reading the composer's notes, studying the cover art, feeling the weight of vinyl in your hands. The object was inseparable from the experience. The artist signed each edition knowing their work would live on shelves, in collections, in the hands of people who valued it enough to appreciate and support it by holding it as an asset.</p>
+    <p>It meant opening a record for the first time, reading the composer's notes, studying the cover art, feeling the weight of the vinyl/CD/cassette in your hands. The object was inseparable from the experience. The artist signed each edition knowing their work would live on shelves, in collections, in the hands of people who valued it enough to appreciate and support it by holding it as an asset — but above all, the work was a tradable object: creation had real value, it wasn't a rental.</p>
 
     <p>The digital revolution promised to democratize access to art. It kept that promise, but at a cost no one calculated: art stopped having an owner, stopped being valued, and became a consumption object rented in this world of monthly subscriptions.</p>
 
