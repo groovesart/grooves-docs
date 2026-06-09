@@ -36,11 +36,6 @@ registerChapter('portada', {
         <p class="hero-lead" style="text-align:center">Grooves son <strong>ecosistemas creativos</strong>. Un ideal hacia la revolución de la industria musical y creativa. La música se transforma en un <strong>objeto de valor transable</strong>, con propiedades no solo audibles, sino infinitas de acuerdo al artista y a lo que la obra busque.</p>
         <div class="hero-cta">
           <a class="hero-btn" onclick="goChapter('manifiesto')">Comenzar a leer →</a>
-          <a class="hero-btn ghost" onclick="goChapter('solucion')">Qué es un Pressing</a>
-        </div>
-        <div class="hero-meta">
-          <div class="hm-item"><span class="hm-k">Operativo</span><span class="hm-v">Mercado secundario · Bound Content · Royalties</span></div>
-          <div class="hm-item"><span class="hm-k">Moneda</span><span class="hm-v">USDC · dinero real, sin especulación</span></div>
         </div>
       </div>
     </div>
@@ -69,11 +64,6 @@ registerChapter('portada', {
         <p class="hero-lead" style="text-align:center">Grooves is <strong>creative ecosystems</strong>. An ideal toward a revolution in the music and creative industries. Music becomes a <strong>tradable object of value</strong>, with properties that are not only audible but infinite, shaped by the artist and what each work seeks.</p>
         <div class="hero-cta">
           <a class="hero-btn" onclick="goChapter('manifiesto')">Start reading →</a>
-          <a class="hero-btn ghost" onclick="goChapter('solucion')">What is a Pressing</a>
-        </div>
-        <div class="hero-meta">
-          <div class="hm-item"><span class="hm-k">Live</span><span class="hm-v">Secondary market · Bound Content · Royalties</span></div>
-          <div class="hm-item"><span class="hm-k">Currency</span><span class="hm-v">USDC · real money, no speculation</span></div>
         </div>
       </div>
     </div>
