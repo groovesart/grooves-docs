@@ -33,7 +33,7 @@ registerChapter('portada', {
         <div class="hero-kicker">White Paper · v3.0 · 2026</div>
         <h1 class="hero-title">GROOVES</h1>
         <p class="hero-tagline" style="text-align:center">Ecosistemas Creativos</p>
-        <p class="hero-lead" style="text-align:center">Grooves son <strong>ecosistemas creativos</strong>. Un ideal hacia la revolución de la industria musical y creativa. La música se transforma en un <strong>objeto de valor transable</strong>, con propiedades no solo audibles, sino infinitas — de acuerdo al artista y a lo que la obra busque.</p>
+        <p class="hero-lead" style="text-align:center">Grooves son <strong>ecosistemas creativos</strong>. Un ideal hacia la revolución de la industria musical y creativa. La música se transforma en un <strong>objeto de valor transable</strong>, con propiedades no solo audibles, sino infinitas de acuerdo al artista y a lo que la obra busque.</p>
         <div class="hero-cta">
           <a class="hero-btn" onclick="goChapter('manifiesto')">Comenzar a leer →</a>
           <a class="hero-btn ghost" onclick="goChapter('solucion')">Qué es un Pressing</a>
@@ -66,7 +66,7 @@ registerChapter('portada', {
         <div class="hero-kicker">White Paper · v3.0 · 2026</div>
         <h1 class="hero-title">GROOVES</h1>
         <p class="hero-tagline" style="text-align:center">Creative Ecosystems</p>
-        <p class="hero-lead" style="text-align:center">Grooves is <strong>creative ecosystems</strong>. An ideal toward a revolution in the music and creative industries. Music becomes a <strong>tradable object of value</strong>, with properties that are not only audible but infinite — shaped by the artist and what each work seeks.</p>
+        <p class="hero-lead" style="text-align:center">Grooves is <strong>creative ecosystems</strong>. An ideal toward a revolution in the music and creative industries. Music becomes a <strong>tradable object of value</strong>, with properties that are not only audible but infinite, shaped by the artist and what each work seeks.</p>
         <div class="hero-cta">
           <a class="hero-btn" onclick="goChapter('manifiesto')">Start reading →</a>
           <a class="hero-btn ghost" onclick="goChapter('solucion')">What is a Pressing</a>
