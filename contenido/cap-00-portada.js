@@ -6,6 +6,14 @@
 registerChapter('portada', {
   order: 0,
   es: `
+    <style>
+      .cta-enter{position:relative;display:inline-flex;align-items:center;gap:14px;font-family:'Spline Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#C8A96E;text-decoration:none;cursor:pointer;padding:16px 32px;border:1px solid rgba(200,169,110,0.45);border-radius:3px;overflow:hidden;isolation:isolate;transition:color .4s ease,border-color .4s ease,box-shadow .4s ease}
+      .cta-enter::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#d9bf8a,#C8A96E);transform:translateX(-101%);transition:transform .45s cubic-bezier(.4,0,.2,1)}
+      .cta-enter:hover{color:#15110a;border-color:#C8A96E;box-shadow:0 12px 34px rgba(200,169,110,0.18)}
+      .cta-enter:hover::before{transform:translateX(0)}
+      .cta-enter .cta-arrow{transition:transform .4s ease;font-family:'JetBrains Mono',monospace}
+      .cta-enter:hover .cta-arrow{transform:translateX(6px)}
+    </style>
     <div class="hero">
       <div class="hero-stage">
         <svg class="hero-discs" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" aria-label="Grooves">
@@ -35,12 +43,20 @@ registerChapter('portada', {
         <p class="hero-tagline" style="text-align:center">Ecosistemas Creativos</p>
         <p class="hero-lead" style="text-align:center">Grooves son <strong>ecosistemas creativos</strong>. Un ideal hacia la revolución de la industria musical y creativa. La música se transforma en un <strong>objeto de valor transable</strong>, con propiedades no solo audibles, sino infinitas de acuerdo al artista y a lo que la obra busque.</p>
         <div class="hero-cta">
-          <a class="hero-btn" onclick="goChapter('manifiesto')">Comenzar a leer →</a>
+          <a class="cta-enter" onclick="goChapter('manifiesto')"><span>Comenzar a leer</span><span class="cta-arrow">→</span></a>
         </div>
       </div>
     </div>
   `,
   en: `
+    <style>
+      .cta-enter{position:relative;display:inline-flex;align-items:center;gap:14px;font-family:'Spline Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#C8A96E;text-decoration:none;cursor:pointer;padding:16px 32px;border:1px solid rgba(200,169,110,0.45);border-radius:3px;overflow:hidden;isolation:isolate;transition:color .4s ease,border-color .4s ease,box-shadow .4s ease}
+      .cta-enter::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#d9bf8a,#C8A96E);transform:translateX(-101%);transition:transform .45s cubic-bezier(.4,0,.2,1)}
+      .cta-enter:hover{color:#15110a;border-color:#C8A96E;box-shadow:0 12px 34px rgba(200,169,110,0.18)}
+      .cta-enter:hover::before{transform:translateX(0)}
+      .cta-enter .cta-arrow{transition:transform .4s ease;font-family:'JetBrains Mono',monospace}
+      .cta-enter:hover .cta-arrow{transform:translateX(6px)}
+    </style>
     <div class="hero">
       <div class="hero-stage">
         <svg class="hero-discs" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" aria-label="Grooves">
@@ -63,7 +79,7 @@ registerChapter('portada', {
         <p class="hero-tagline" style="text-align:center">Creative Ecosystems</p>
         <p class="hero-lead" style="text-align:center">Grooves is <strong>creative ecosystems</strong>. An ideal toward a revolution in the music and creative industries. Music becomes a <strong>tradable object of value</strong>, with properties that are not only audible but infinite, shaped by the artist and what each work seeks.</p>
         <div class="hero-cta">
-          <a class="hero-btn" onclick="goChapter('manifiesto')">Start reading →</a>
+          <a class="cta-enter" onclick="goChapter('manifiesto')"><span>Start reading</span><span class="cta-arrow">→</span></a>
         </div>
       </div>
     </div>
