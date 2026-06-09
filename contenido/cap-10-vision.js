@@ -69,6 +69,12 @@ registerChapter('vision', {
 
     <p>No buscamos reemplazar de un día para otro lo que existe. Buscamos demostrar que hay otra forma posible: una donde el arte se posee de verdad, donde el valor fluye hacia quien lo crea, y donde la relación entre un artista y quienes lo apoyan no pasa por un intermediario que decide cuánto vale cada reproducción. Esa idea ya no es teoría — es código que funciona, y crece con cada artista que decide creer en ella.</p>
 
+    <h2>Grooves solo funciona si creemos en la idea</h2>
+
+    <p>No se trata de pedirle al artista que retire su música de las plataformas de streaming de la noche a la mañana. Se trata de algo más profundo: comprender una idea, el concepto. Un artista sube su álbum a Grooves como un Pressing. Sus fans lo adquieren, lo poseen, acceden a su mundo creativo, esto puede ser muchas cosas, a la imaginación del artista, es un activo, comprender que se adquiere un activo que es valorado.</p>
+
+    <p>Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos además de creer, compremos música, compremos los activos, los compartamos, los revendamos. Que lleguemos a casa de un amigo y podamos decir "mira los discos que compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue apoyado y adquirido. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología, parte de nosotros mismos.</p>
+
     <div class="vision-close">
       <div class="vc-mark">
         <svg viewBox="0 0 48 48" fill="none">
@@ -145,6 +151,12 @@ registerChapter('vision', {
     <p class="pquote big">The creative ecosystem belongs to everyone, managed fairly and programmably by the artist.</p>
 
     <p>We don't seek to replace what exists overnight. We seek to prove there is another possible way: one where art is truly owned, where value flows to whoever creates it, and where the relationship between an artist and those who support them doesn't pass through a middleman deciding how much each play is worth. That idea is no longer theory — it's code that works, and it grows with every artist who decides to believe in it.</p>
+
+    <h2>Grooves only works if we believe in the idea</h2>
+
+    <p>It is not about asking the artist to pull their music from streaming platforms overnight. It is about something deeper: understanding an idea, the concept. An artist uploads their album to Grooves as a Pressing. Their fans acquire it, own it, access their creative world — which can be many things, up to the artist's imagination. It's an asset; understanding that you are acquiring an asset that is valued.</p>
+
+    <p>But this idea will only take effect, will only become something real, the moment we ourselves — beyond believing — buy music, buy the assets, share them, resell them. When we arrive at a friend's house and can say "look at the records I bought," connect to the Bluetooth and play them. Whether classics or new discoveries. When we believe in that immutable idea of playing something that was supported and acquired. It's a shift in mindset. An ideal that doesn't start from a platform, a company or a technology — it starts from ourselves.</p>
 
     <div class="vision-close">
       <div class="vc-mark">

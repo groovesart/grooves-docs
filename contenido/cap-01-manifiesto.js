@@ -92,7 +92,7 @@ registerChapter('manifiesto', {
 
     <p class="pquote">El streaming convirtió la música en agua corriente: siempre disponible, infinitamente reemplazable, imposible de poseer, le quitó el valor a la creación, su transabilidad.</p>
 
-    <p>Ese cambio en la industria fue nefasto para el creador, no prevé el esfuerzo que hay detrás de una creación. Todo el equipo y trabajo humano, el talento que en gran medida genera evolución humana, evolución que se está perdiendo con la automatización de procesos en el aprendizaje.</p>
+    <p>Ese cambio en la industria puede ser nefasto para el creador, no prevé en gran medida el esfuerzo que hay detrás de una creación. Todo el equipo y trabajo humano, el talento que en gran medida genera evolución humana, evolución que se está perdiendo con la automatización de procesos en el aprendizaje. Lo peor: el creador es el último eslabón de la cadena en el pago y las regalías.</p>
 
     <p>Un artista necesita aproximadamente más de un millón de reproducciones en plataformas digitales para ganar lo equivalente a un salario mínimo mensual.</p>
 
@@ -190,12 +190,6 @@ registerChapter('manifiesto', {
 
     <p>Grooves es una idea. Una idea contada más de mil veces se transforma en una revolución. Grooves es revolución, es defender una idea del arte como activo transable, como algo que se puede apreciar con el tiempo y que merece el respeto que lleva a una sociedad a mantenerse en el tiempo y a seguir evolucionando.</p>
 
-    <h2>Grooves solo funciona si creemos en la idea</h2>
-
-    <p>No se trata de pedirle al artista que retire su música de las plataformas de streaming de la noche a la mañana. Se trata de algo más profundo: comprender una idea, el concepto. Un artista sube su álbum a Grooves como un Pressing. Sus fans lo adquieren, lo poseen, acceden a su mundo creativo, esto puede ser muchas cosas, a la imaginación del artista, es un activo, comprender que se adquiere un activo que es valorado.</p>
-
-    <p>Pero esta idea solo tendrá efecto, solo se transformará en algo real, en el momento en que nosotros mismos además de creer, compremos música, compremos los activos, los compartamos, los revendamos. Que lleguemos a casa de un amigo y podamos decir "mira los discos que compré", conectarnos al Bluetooth y ponerlos a sonar. Así sean clásicos, así sean descubrimientos nuevos. Que creamos en esa idea inmutable de reproducir algo que fue apoyado y adquirido. Es un cambio de mentalidad. Un ideal que no parte de una plataforma, ni de una empresa, ni de una tecnología, parte de nosotros mismos.</p>
-
     <div class="figure reflow">
       <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" class="bars-svg svg-desktop">
         <defs><linearGradient id="m-grow" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a3a42"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
@@ -204,6 +198,8 @@ registerChapter('manifiesto', {
         <g><rect x="296" y="118" width="60" height="2" rx="2" fill="url(#m-grow)"><animate attributeName="height" values="2;64" dur="0.55s" begin="0.74s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;54" dur="0.55s" begin="0.74s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><text x="326" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">1.000</text><text x="326" y="42" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.04s" fill="freeze"/>Tendencia</text></g>
         <g><rect x="424" y="118" width="60" height="2" rx="2" fill="#C8A96E"><animate attributeName="height" values="2;84" dur="0.55s" begin="0.96s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;34" dur="0.55s" begin="0.96s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><circle cx="454" cy="26" r="3" fill="#C8A96E" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1.51s" repeatCount="indefinite"/></circle><text x="454" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">Generación</text><text x="454" y="22" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.26s" fill="freeze"/>Revolución</text></g>
         <g><rect x="552" y="118" width="60" height="2" rx="2" fill="#C8A96E"><animate attributeName="height" values="2;104" dur="0.55s" begin="1.18s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;14" dur="0.55s" begin="1.18s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><circle cx="582" cy="6" r="3" fill="#C8A96E" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1.73s" repeatCount="indefinite"/></circle><text x="582" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">La industria cambia</text><text x="582" y="2" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.48s" fill="freeze"/></text></g>
+      
+        <path d="M70 94 L198 74 L326 54 L454 34 L582 14" fill="none" stroke="#d9bf8a" stroke-width="2" stroke-dasharray="540" stroke-dashoffset="540" opacity="0.85"><animate attributeName="stroke-dashoffset" values="540;0" dur="1s" begin="1.85s" fill="freeze"/></path><path d="M576 20 l6 -7 l6 7" fill="none" stroke="#d9bf8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.85s" fill="freeze"/></path>
       </svg>
       <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" class="svg-mobile">
         <defs><linearGradient id="m-grow-h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3a42"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
@@ -270,7 +266,7 @@ registerChapter('manifiesto', {
 
     <p class="pquote">Streaming turned music into running water: always available, infinitely replaceable, impossible to own — stripping creation of its value, of its tradability.</p>
 
-    <p>That shift in the industry was disastrous for the creator. It doesn't account for the effort behind a creation: the whole team and human labor, the talent that to a great extent drives human evolution — evolution that is being lost to the automation of learning processes.</p>
+    <p>That shift in the industry can be disastrous for the creator. It largely fails to account for the effort behind a creation: the whole team and human labor, the talent that to a great extent drives human evolution — evolution that is being lost to the automation of learning processes. Worst of all: the creator is the last link in the chain to get paid and to receive royalties.</p>
 
     <p>An artist needs roughly more than a million streams on digital platforms to earn the equivalent of a monthly minimum wage.</p>
 
@@ -368,12 +364,6 @@ registerChapter('manifiesto', {
 
     <p>Grooves is an idea. An idea told more than a thousand times becomes a revolution. Grooves is revolution: defending an idea of art as a tradable asset, as something that can appreciate over time and that deserves the respect that keeps a society standing and evolving.</p>
 
-    <h2>Grooves only works if we believe in the idea</h2>
-
-    <p>It is not about asking the artist to pull their music from streaming platforms overnight. It is about something deeper: understanding an idea, the concept. An artist uploads their album to Grooves as a Pressing. Their fans acquire it, own it, access their creative world — which can be many things, up to the artist's imagination. It's an asset; understanding that you are acquiring an asset that is valued.</p>
-
-    <p>But this idea will only take effect, will only become something real, the moment we ourselves — beyond believing — buy music, buy the assets, share them, resell them. When we arrive at a friend's house and can say "look at the records I bought," connect to the Bluetooth and play them. Whether classics or new discoveries. When we believe in that immutable idea of playing something that was supported and acquired. It's a shift in mindset. An ideal that doesn't start from a platform, a company or a technology — it starts from ourselves.</p>
-
     <div class="figure reflow">
       <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" class="bars-svg svg-desktop">
         <defs><linearGradient id="m-grow-en" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a3a42"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
@@ -382,6 +372,8 @@ registerChapter('manifiesto', {
         <g><rect x="296" y="118" width="60" height="2" rx="2" fill="url(#m-grow-en)"><animate attributeName="height" values="2;64" dur="0.55s" begin="0.74s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;54" dur="0.55s" begin="0.74s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><text x="326" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">1,000</text><text x="326" y="42" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.04s" fill="freeze"/>Trend</text></g>
         <g><rect x="424" y="118" width="60" height="2" rx="2" fill="#C8A96E"><animate attributeName="height" values="2;84" dur="0.55s" begin="0.96s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;34" dur="0.55s" begin="0.96s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><circle cx="454" cy="26" r="3" fill="#C8A96E" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1.51s" repeatCount="indefinite"/></circle><text x="454" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">Generation</text><text x="454" y="22" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.26s" fill="freeze"/>Revolution</text></g>
         <g><rect x="552" y="118" width="60" height="2" rx="2" fill="#C8A96E"><animate attributeName="height" values="2;104" dur="0.55s" begin="1.18s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/><animate attributeName="y" values="118;14" dur="0.55s" begin="1.18s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1"/></rect><circle cx="582" cy="6" r="3" fill="#C8A96E" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1.73s" repeatCount="indefinite"/></circle><text x="582" y="135" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9.5">The industry shifts</text><text x="582" y="2" text-anchor="middle" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="9" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.48s" fill="freeze"/></text></g>
+      
+        <path d="M70 94 L198 74 L326 54 L454 34 L582 14" fill="none" stroke="#d9bf8a" stroke-width="2" stroke-dasharray="540" stroke-dashoffset="540" opacity="0.85"><animate attributeName="stroke-dashoffset" values="540;0" dur="1s" begin="1.85s" fill="freeze"/></path><path d="M576 20 l6 -7 l6 7" fill="none" stroke="#d9bf8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.85s" fill="freeze"/></path>
       </svg>
       <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" class="svg-mobile">
         <defs><linearGradient id="m-grow-enh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3a42"/><stop offset="1" stop-color="#C8A96E"/></linearGradient></defs>
