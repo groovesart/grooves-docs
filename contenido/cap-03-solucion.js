@@ -202,7 +202,7 @@ registerChapter('solucion', {
 
     <h2>El flujo del artista independiente</h2>
 
-    <p>El proceso de publicación está diseñado para que el artista no necesite saber de blockchain:</p>
+    <p>El proceso de publicación está diseñado para que el artista no tenga que lidiar con la complejidad técnica de la blockchain:</p>
 
     <div class="figure">
       <svg viewBox="0 0 600 132" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +234,7 @@ registerChapter('solucion', {
     </div>
 
     <ol>
-      <li><strong>Crea tu cuenta en Grooves.</strong> Conecta tu wallet o crea una dentro de la plataforma.</li>
+      <li><strong>Crea tu cuenta en Grooves.</strong> Conecta tu propia wallet con un clic.</li>
       <li><strong>Sube tu obra al Pressing Studio.</strong> Audio, arte, metadata y define tus derechos de acceso.</li>
       <li><strong>Análisis de autenticidad.</strong> <span class="inline-roadmap">El Authenticity Engine verifica que no se infringen derechos de autor.</span> <span class="rm-badge">Roadmap</span></li>
       <li><strong>Configura tu Edition.</strong> Sealed u Open, precio, porcentajes de royalties, contenido vinculado.</li>
@@ -444,7 +444,7 @@ registerChapter('solucion', {
 
     <h2>The independent artist's flow</h2>
 
-    <p>The publishing process is designed so the artist doesn't need to know anything about blockchain:</p>
+    <p>The publishing process is designed so the artist doesn't have to deal with blockchain's technical complexity:</p>
 
     <div class="figure">
       <svg viewBox="0 0 600 132" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +476,7 @@ registerChapter('solucion', {
     </div>
 
     <ol>
-      <li><strong>Create your Grooves account.</strong> Connect your wallet or create one inside the platform.</li>
+      <li><strong>Create your Grooves account.</strong> Connect your own wallet in one click.</li>
       <li><strong>Upload your work to the Pressing Studio.</strong> Audio, art, metadata, and define your access rights.</li>
       <li><strong>Authenticity analysis.</strong> <span class="inline-roadmap">The Authenticity Engine verifies no copyright is infringed.</span> <span class="rm-badge">Roadmap</span></li>
       <li><strong>Configure your Edition.</strong> Sealed or Open, price, royalty percentages, bound content.</li>

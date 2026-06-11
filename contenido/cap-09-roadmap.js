@@ -58,7 +58,7 @@ registerChapter('roadmap', {
     <h2>Fase 2 — Expansión</h2>
     <ul>
       <li>Authenticity Engine (verificación de copyright automática).</li>
-      <li>Pago con tarjeta y PayPal integrado.</li>
+      <li>Pago con tarjeta y PayPal; el importe llega como USDC a tu wallet conectada.</li>
       <li>Soporte multi-chain y biblioteca unificada.</li>
       <li>App móvil nativa (iOS + Android).</li>
       <li>Herramientas para sellos discográficos y programa de embajadores.</li>
@@ -133,7 +133,7 @@ registerChapter('roadmap', {
     <h2>Phase 2 — Expansion</h2>
     <ul>
       <li>Authenticity Engine (automatic copyright verification).</li>
-      <li>Integrated card and PayPal payments.</li>
+      <li>Card and PayPal payments; the amount arrives as USDC in your connected wallet.</li>
       <li>Multi-chain support and unified library.</li>
       <li>Native mobile app (iOS + Android).</li>
       <li>Tools for record labels and an ambassador program.</li>

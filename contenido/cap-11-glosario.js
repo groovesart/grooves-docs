@@ -24,6 +24,7 @@ registerChapter('glosario', {
         <tr><td><strong>Pressing Studio</strong></td><td>Mint Studio</td><td>La interfaz donde el artista sube, configura y crea su obra.</td></tr>
         <tr><td><strong>Bound Content</strong></td><td>Token-gated content</td><td>Todo el material y los accesos exclusivos vinculados al Pressing: archivos descargables y llaves a experiencias.</td></tr>
         <tr><td><strong>USDC</strong></td><td>Dólar digital</td><td>Stablecoin respaldado 1:1 por el dólar. Moneda única de operación en Grooves.</td></tr>
+        <tr><td><strong>Wallet</strong></td><td>Billetera digital</td><td>Aplicación donde viven las llaves y los activos del usuario. En Grooves es siempre suya: se conecta con un clic, y la plataforma nunca la genera ni la custodia.</td></tr>
         <tr><td><strong>Revenue Splits</strong></td><td>Reparto de ingresos</td><td>Distribución automática de pagos entre artista, productores y colaboradores, vía smart contract.</td></tr>
         <tr><td><strong>Royalty</strong></td><td>Regalía</td><td>Porcentaje (5–15%) que el artista recibe automáticamente en cada reventa de su Pressing.</td></tr>
         <tr><td><strong>EIP-2981</strong></td><td>Estándar de royalties</td><td>Protocolo que garantiza el pago automático de royalties en cada transacción on-chain.</td></tr>
@@ -33,7 +34,7 @@ registerChapter('glosario', {
         <tr><td><strong>KYC</strong></td><td>Verificación de identidad</td><td>Proceso por el que un usuario confirma su identidad para poder crear Pressings.</td></tr>
         <tr><td><strong>Authenticity Engine</strong> <span class="rm-badge">Roadmap</span></td><td>Content ID</td><td>Motor de verificación de copyright que analizará audio y arte antes de la creación. En desarrollo.</td></tr>
         <tr><td><strong>Referral</strong> <span class="rm-badge">Roadmap</span></td><td>Sistema de referidos</td><td>Comisión para quien refiere a un comprador mediante su enlace. En desarrollo.</td></tr>
-        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Pasarela de pago</td><td>Servicio que convertirá dinero de tarjeta o PayPal a USDC automáticamente. En desarrollo.</td></tr>
+        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Pasarela de pago</td><td>Servicio que convertirá dinero de tarjeta o PayPal a USDC en la wallet conectada del usuario, automáticamente. En desarrollo.</td></tr>
       </tbody>
     </table>
 
@@ -62,6 +63,7 @@ registerChapter('glosario', {
         <tr><td><strong>Pressing Studio</strong></td><td>Mint Studio</td><td>The interface where the artist uploads, configures and creates their work.</td></tr>
         <tr><td><strong>Bound Content</strong></td><td>Token-gated content</td><td>All the exclusive material and access bound to the Pressing: downloadable files and keys to experiences.</td></tr>
         <tr><td><strong>USDC</strong></td><td>Digital dollar</td><td>A stablecoin backed 1:1 by the US dollar. The sole operating currency on Grooves.</td></tr>
+        <tr><td><strong>Wallet</strong></td><td>Digital wallet</td><td>The app where a user's keys and assets live. On Grooves it's always theirs: connected in one click, and the platform never generates or custodies it.</td></tr>
         <tr><td><strong>Revenue Splits</strong></td><td>Revenue sharing</td><td>Automatic distribution of payments among artist, producers and collaborators, via smart contract.</td></tr>
         <tr><td><strong>Royalty</strong></td><td>Royalty</td><td>A percentage (5–15%) the artist automatically receives on every resale of their Pressing.</td></tr>
         <tr><td><strong>EIP-2981</strong></td><td>Royalty standard</td><td>A protocol guaranteeing automatic royalty payment on every on-chain transaction.</td></tr>
@@ -71,7 +73,7 @@ registerChapter('glosario', {
         <tr><td><strong>KYC</strong></td><td>Identity verification</td><td>The process by which a user confirms their identity in order to create Pressings.</td></tr>
         <tr><td><strong>Authenticity Engine</strong> <span class="rm-badge">Roadmap</span></td><td>Content ID</td><td>A copyright-verification engine that will analyze audio and art before creation. In development.</td></tr>
         <tr><td><strong>Referral</strong> <span class="rm-badge">Roadmap</span></td><td>Referral system</td><td>A commission for whoever refers a buyer through their link. In development.</td></tr>
-        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Payment gateway</td><td>A service that will convert card or PayPal money to USDC automatically. In development.</td></tr>
+        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Payment gateway</td><td>A service that will convert card or PayPal money to USDC in the user's connected wallet, automatically. In development.</td></tr>
       </tbody>
     </table>
 
