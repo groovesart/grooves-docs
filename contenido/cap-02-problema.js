@@ -83,10 +83,10 @@ registerChapter('problema', {
     <table>
       <thead><tr><th></th><th>Streaming (hoy)</th><th>Grooves (propiedad)</th></tr></thead>
       <tbody>
-        <tr><td><strong>Inversión 10 años</strong></td><td>$1.320</td><td>~$150 (10 <em>Pressings</em>)</td></tr>
-        <tr><td><strong>¿Qué posee?</strong></td><td>Nada</td><td>10 obras revendibles</td></tr>
-        <tr><td><strong>Si cancela</strong></td><td>Pierde todo</td><td>Conserva todo</td></tr>
-        <tr><td><strong>Si el artista crece</strong></td><td>Nada cambia</td><td>Sus <em>Pressings</em> se revalorizan y los puede revender más caros; hay transabilidad</td></tr>
+        <tr><td data-label=""><strong>Inversión 10 años</strong></td><td data-label="Streaming (hoy)">$1.320</td><td data-label="Grooves (propiedad)">~$150 (10 <em>Pressings</em>)</td></tr>
+        <tr><td data-label=""><strong>¿Qué posee?</strong></td><td data-label="Streaming (hoy)">Nada</td><td data-label="Grooves (propiedad)">10 obras revendibles</td></tr>
+        <tr><td data-label=""><strong>Si cancela</strong></td><td data-label="Streaming (hoy)">Pierde todo</td><td data-label="Grooves (propiedad)">Conserva todo</td></tr>
+        <tr><td data-label=""><strong>Si el artista crece</strong></td><td data-label="Streaming (hoy)">Nada cambia</td><td data-label="Grooves (propiedad)">Sus <em>Pressings</em> se revalorizan y los puede revender más caros; hay transabilidad</td></tr>
       </tbody>
     </table>
 
@@ -235,10 +235,10 @@ registerChapter('problema', {
     <table>
       <thead><tr><th></th><th>Streaming (today)</th><th>Grooves (ownership)</th></tr></thead>
       <tbody>
-        <tr><td><strong>10-year investment</strong></td><td>$1,320</td><td>~$150 (10 Pressings)</td></tr>
-        <tr><td><strong>What do you own?</strong></td><td>Nothing</td><td>10 resellable works</td></tr>
-        <tr><td><strong>If you cancel</strong></td><td>Lose everything</td><td>Keep everything</td></tr>
-        <tr><td><strong>If the artist grows</strong></td><td>Nothing changes</td><td>Your Pressings appreciate and can be resold higher; there is tradability</td></tr>
+        <tr><td data-label=""><strong>10-year investment</strong></td><td data-label="Streaming (today)">$1,320</td><td data-label="Grooves (ownership)">~$150 (10 Pressings)</td></tr>
+        <tr><td data-label=""><strong>What do you own?</strong></td><td data-label="Streaming (today)">Nothing</td><td data-label="Grooves (ownership)">10 resellable works</td></tr>
+        <tr><td data-label=""><strong>If you cancel</strong></td><td data-label="Streaming (today)">Lose everything</td><td data-label="Grooves (ownership)">Keep everything</td></tr>
+        <tr><td data-label=""><strong>If the artist grows</strong></td><td data-label="Streaming (today)">Nothing changes</td><td data-label="Grooves (ownership)">Your Pressings appreciate and can be resold higher; there is tradability</td></tr>
       </tbody>
     </table>
 

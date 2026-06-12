@@ -275,6 +275,19 @@
     .hero-title{font-size:clamp(2.4rem,15vw,3.4rem);letter-spacing:0.02em}
     .hero-discs{max-width:200px}
     .hm-item{min-width:0;max-width:none}
+
+    /* Tablas legibles en movil: cada fila se apila como tarjeta (sin scroll horizontal) */
+    .chapter table{display:block;border:none;border-radius:0;overflow:visible;white-space:normal;margin:22px 0;font-size:0.95rem}
+    .chapter thead{display:none}
+    .chapter tbody{display:block}
+    .chapter tbody tr{display:block;margin:0 0 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface);padding:5px 0 9px}
+    .chapter tbody tr:hover{background:var(--surface)}
+    .chapter tbody td{display:block;border:none;padding:7px 16px;white-space:normal;color:#c9c6bd;line-height:1.55}
+    .chapter tbody td::before{content:attr(data-label);display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.09em;text-transform:uppercase;color:var(--gold);opacity:0.85;margin-bottom:2px}
+    .chapter tbody td:first-child{padding-top:11px;color:var(--text);font-weight:600;font-size:1.04rem}
+    .chapter tbody td:first-child::before{display:none}
+    .chapter tbody td:first-child strong{color:var(--text)}
+  }
 </style>
 </head>
 <body>

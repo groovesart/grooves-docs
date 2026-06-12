@@ -64,10 +64,10 @@ registerChapter('arquitectura', {
     <table>
       <thead><tr><th>Capa</th><th>Tecnología</th><th>Función</th></tr></thead>
       <tbody>
-        <tr><td><strong>Frontend</strong></td><td>React (web + móvil)</td><td>Marketplace, player, Pressing Studio</td></tr>
-        <tr><td><strong>Backend</strong></td><td>Node.js · Fastify · Prisma</td><td>Lógica de negocio, autenticación, contenido, relayer</td></tr>
-        <tr><td><strong>Blockchain</strong></td><td>Solidity · contratos UUPS</td><td>Propiedad, royalties automáticos, marketplace</td></tr>
-        <tr><td><strong>Almacenamiento</strong></td><td>IPFS + Cloudflare R2</td><td>Previews públicos + masters y Bound Content privados</td></tr>
+        <tr><td data-label="Capa"><strong>Frontend</strong></td><td data-label="Tecnología">React (web + móvil)</td><td data-label="Función">Marketplace, player, Pressing Studio</td></tr>
+        <tr><td data-label="Capa"><strong>Backend</strong></td><td data-label="Tecnología">Node.js · Fastify · Prisma</td><td data-label="Función">Lógica de negocio, autenticación, contenido, relayer</td></tr>
+        <tr><td data-label="Capa"><strong>Blockchain</strong></td><td data-label="Tecnología">Solidity · contratos UUPS</td><td data-label="Función">Propiedad, royalties automáticos, marketplace</td></tr>
+        <tr><td data-label="Capa"><strong>Almacenamiento</strong></td><td data-label="Tecnología">IPFS + Cloudflare R2</td><td data-label="Función">Previews públicos + masters y Bound Content privados</td></tr>
       </tbody>
     </table>
 
@@ -557,10 +557,10 @@ registerChapter('arquitectura', {
     <table>
       <thead><tr><th>Layer</th><th>Technology</th><th>Function</th></tr></thead>
       <tbody>
-        <tr><td><strong>Frontend</strong></td><td>React (web + mobile)</td><td>Marketplace, player, Pressing Studio</td></tr>
-        <tr><td><strong>Backend</strong></td><td>Node.js · Fastify · Prisma</td><td>Business logic, authentication, content, relayer</td></tr>
-        <tr><td><strong>Blockchain</strong></td><td>Solidity · UUPS contracts</td><td>Ownership, automatic royalties, marketplace</td></tr>
-        <tr><td><strong>Storage</strong></td><td>IPFS + Cloudflare R2</td><td>Public previews + private masters and Bound Content</td></tr>
+        <tr><td data-label="Layer"><strong>Frontend</strong></td><td data-label="Technology">React (web + mobile)</td><td data-label="Function">Marketplace, player, Pressing Studio</td></tr>
+        <tr><td data-label="Layer"><strong>Backend</strong></td><td data-label="Technology">Node.js · Fastify · Prisma</td><td data-label="Function">Business logic, authentication, content, relayer</td></tr>
+        <tr><td data-label="Layer"><strong>Blockchain</strong></td><td data-label="Technology">Solidity · UUPS contracts</td><td data-label="Function">Ownership, automatic royalties, marketplace</td></tr>
+        <tr><td data-label="Layer"><strong>Storage</strong></td><td data-label="Technology">IPFS + Cloudflare R2</td><td data-label="Function">Public previews + private masters and Bound Content</td></tr>
       </tbody>
     </table>
 
