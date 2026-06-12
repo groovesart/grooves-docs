@@ -153,6 +153,221 @@ registerChapter('bound-content', {
     <p class="pquote big">El Pressing no es un disco. Es una membresía creativa que crece en valor con la carrera del artista.</p>
 
     <p>Esta es la pieza que convierte a Grooves en algo más que un marketplace: cada obra es un objeto vivo al que el artista puede seguir añadiendo valor —nuevos archivos, nuevos accesos— mucho después de la venta. El dueño no compró una canción. Compró una puerta de entrada permanente.</p>
+
+    <h2>Lo prometido, prometido está</h2>
+    <p>Si el Pressing es una puerta que el artista puede seguir agrandando, hace falta una regla que proteja a quien ya entró. Es la promesa central de Grooves hacia el comprador, y es simple: <strong>se puede sumar, nunca quitar lo que ya estaba</strong>.</p>
+    <p>Funciona en dos momentos, separados por la primera venta:</p>
+    <ul>
+      <li><strong>Mientras no se vendió ningún Pressing</strong>, el artista edita libre: agrega, quita o reemplaza lo que quiera. Cada comprador ve el estado actual al momento de comprar — todavía no hay ninguna promesa hecha.</li>
+      <li><strong>Apenas se vende el primer Pressing</strong>, el contenido pasa a <em>append-only</em>: el artista puede <strong>seguir agregando</strong> —y eso beneficia a todos los dueños—, pero <strong>no puede quitar ni reemplazar</strong> lo que ya estaba prometido.</li>
+    </ul>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 300" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="apnd-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="40" width="218" height="232" rx="14" fill="#1a1d2e" stroke="#3a3a40" stroke-width="1.5"/>
+        <text x="129" y="68" text-anchor="middle" fill="#c9c6bd" font-family="'Fraunces',serif" font-size="17" font-weight="600">BORRADOR</text>
+        <text x="129" y="86" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9.5">antes de la 1.ª venta</text>
+        <line x1="44" y1="100" x2="214" y2="100" stroke="#2a2a30" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+          <circle cx="62" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="131" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Agregar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.50s" fill="freeze"/>
+          <circle cx="62" cy="162" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 162l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="167" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Quitar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+          <circle cx="62" cy="198" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 198l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="203" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Reemplazar</text>
+        </g>
+        <text x="129" y="240" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">edición libre</text>
+        <text x="129" y="254" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">cada comprador ve el estado actual</text>
+        <line x1="280" y1="48" x2="280" y2="264" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <circle cx="280" cy="132" r="22" fill="#131318" stroke="url(#apnd-g)" stroke-width="1.8"/>
+        <path d="M273 130v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="271" y="130" width="18" height="14" rx="2.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/>
+        <circle cx="280" cy="136" r="1.6" fill="#C8A96E"/>
+        <text x="280" y="180" text-anchor="middle" fill="#C8A96E" font-family="'Fraunces',serif" font-size="15" font-weight="600">1.ª venta</text>
+        <text x="280" y="196" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">se cristaliza</text>
+        <text x="280" y="208" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">la promesa</text>
+        <rect x="322" y="40" width="218" height="232" rx="14" fill="#1a1d2e" stroke="url(#apnd-g)" stroke-width="1.6"/>
+        <text x="431" y="68" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="17" font-weight="600">APPEND-ONLY</text>
+        <text x="431" y="86" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9.5">después de la 1.ª venta</text>
+        <line x1="346" y1="100" x2="516" y2="100" stroke="#3a3a40" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.90s" fill="freeze"/>
+          <circle cx="364" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M359 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="388" y="123" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Agregar</text>
+          <text x="388" y="137" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">todos ganan</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+          <circle cx="364" cy="166" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M360 162l8 8 M368 162l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="388" y="171" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Quitar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.30s" fill="freeze"/>
+          <circle cx="364" cy="202" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M360 198l8 8 M368 198l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="388" y="207" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Reemplazar</text>
+        </g>
+        <text x="431" y="240" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">lo prometido queda</text>
+        <text x="431" y="254" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">solo se suma</text>
+      </svg>
+      <svg viewBox="0 0 300 520" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="apnd-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="14" width="260" height="180" rx="14" fill="#1a1d2e" stroke="#3a3a40" stroke-width="1.5"/>
+        <text x="150" y="40" text-anchor="middle" fill="#c9c6bd" font-family="'Fraunces',serif" font-size="17" font-weight="600">BORRADOR</text>
+        <text x="150" y="57" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">antes de la 1.ª venta</text>
+        <line x1="44" y1="70" x2="256" y2="70" stroke="#2a2a30" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+          <circle cx="64" cy="94" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 94l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="99" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Agregar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.46s" fill="freeze"/>
+          <circle cx="64" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="131" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Quitar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.62s" fill="freeze"/>
+          <circle cx="64" cy="158" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 158l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="163" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Reemplazar</text>
+        </g>
+        <text x="150" y="184" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">edición libre · cada comprador ve el estado actual</text>
+        <line x1="150" y1="200" x2="150" y2="232" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <circle cx="150" cy="252" r="20" fill="#131318" stroke="url(#apnd-gv)" stroke-width="1.8"/>
+        <path d="M143 250v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="141" y="250" width="18" height="14" rx="2.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/>
+        <circle cx="150" cy="256" r="1.6" fill="#C8A96E"/>
+        <text x="186" y="248" fill="#C8A96E" font-family="'Fraunces',serif" font-size="15" font-weight="600">1.ª venta</text>
+        <text x="186" y="264" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">se fija la promesa</text>
+        <line x1="150" y1="272" x2="150" y2="304" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <rect x="20" y="320" width="260" height="186" rx="14" fill="#1a1d2e" stroke="url(#apnd-gv)" stroke-width="1.6"/>
+        <text x="150" y="346" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="17" font-weight="600">APPEND-ONLY</text>
+        <text x="150" y="363" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">después de la 1.ª venta</text>
+        <line x1="44" y1="376" x2="256" y2="376" stroke="#3a3a40" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.82s" fill="freeze"/>
+          <circle cx="64" cy="400" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 400l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="397" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Agregar</text>
+          <text x="88" y="411" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">todos ganan</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.98s" fill="freeze"/>
+          <circle cx="64" cy="440" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M60 436l8 8 M68 436l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="88" y="445" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Quitar</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.14s" fill="freeze"/>
+          <circle cx="64" cy="476" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M60 472l8 8 M68 472l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="88" y="481" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Reemplazar</text>
+        </g>
+        <text x="150" y="500" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">lo prometido queda; solo se suma</text>
+      </svg>
+      <div class="figure-cap">Fig. 4.6 — Antes de vender, edición libre; después, solo se suma</div>
+    </div>
+
+    <p>El disparador es la primera venta porque es ahí donde la promesa se cristaliza: alguien pagó por lo que vio. Quitar o cambiar ese contenido después sería romper el trato —le estarías sacando al comprador algo por lo que pagó—, y por eso el sistema no lo permite. En una edición limitada, además, mantiene la promesa consistente entre todos: lo que recibió el primero es, como mínimo, lo que reciben todos.</p>
+    <p>Y acá está la parte linda: como solo se puede sumar, el Contenido Exclusivo de una obra <strong>solo puede crecer</strong>. Un stem que el artista suba el año que viene, un podcast nuevo, la entrada a una gira futura — todo eso le llega también a quien compró el primer día, sin pagar de nuevo. La obra envejece para mejor.</p>
+
+    <div class="figure">
+          <svg viewBox="0 0 560 260" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grow-g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+              <radialGradient id="grow-g-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7fc99a" stop-opacity="0.30"/><stop offset="1" stop-color="#7fc99a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <line x1="56" y1="58" x2="520" y2="58" stroke="#3a3a40" stroke-width="1.5"/>
+            <line x1="56" y1="58" x2="520" y2="58" stroke="url(#grow-g-gold)" stroke-width="2" stroke-dasharray="5 9" opacity="0.7"><animate attributeName="stroke-dashoffset" values="56;0" dur="2.2s" repeatCount="indefinite"/></line>
+            <circle r="2.6" fill="#C8A96E"><animateMotion path="M56 58 L520 58" dur="3.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+            <circle r="2.6" fill="#7fc99a"><animateMotion path="M56 58 L520 58" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+              <circle cx="100" cy="58" r="7" fill="#C8A96E"/><circle cx="100" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="100" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">Venta</text>
+              <text x="100" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">día 0</text>
+              <rect x="62" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="100" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Álbum</text>
+              <rect x="62" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="100" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+              <circle cx="288" cy="58" r="7" fill="#C8A96E"/><circle cx="288" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="288" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+3 meses</text>
+              <text x="288" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">se suma</text>
+              <rect x="250" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="288" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Álbum</text>
+              <rect x="250" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="288" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+              <rect x="250" y="148" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="295" y="163" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <g transform="translate(258 153)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+              <circle cx="476" cy="58" r="7" fill="#C8A96E"/><circle cx="476" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="476" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+1 año</text>
+              <text x="476" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">se suma</text>
+              <rect x="438" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Álbum</text>
+              <rect x="438" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+              <rect x="438" y="148" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="163" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <rect x="438" y="176" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="483" y="191" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Entrada VIP</text>
+              <g transform="translate(446 181)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <path d="M288 170 L288 210" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="0.95s" fill="freeze"/></path>
+            <path d="M476 198 L476 210" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="1.35s" fill="freeze"/></path>
+            <ellipse cx="288" cy="226" rx="220" ry="30" fill="url(#grow-g-glow)"/>
+            <rect x="56" y="210" width="464" height="32" rx="9" fill="#16241c" stroke="#4a8c5c" stroke-width="1.4"/>
+            <g transform="translate(150 218)" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3 3 6-7"/></g>
+            <text x="298" y="231" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">→ llega a todos los dueños</text>
+            <text x="288" y="256" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">nunca se quita lo prometido · solo se suma valor</text>
+          </svg>
+          <svg viewBox="0 0 300 440" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grow-gv-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+              <radialGradient id="grow-gv-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7fc99a" stop-opacity="0.30"/><stop offset="1" stop-color="#7fc99a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <line x1="40" y1="40" x2="40" y2="356" stroke="#3a3a40" stroke-width="1.5"/>
+            <line x1="40" y1="40" x2="40" y2="356" stroke="url(#grow-gv-gold)" stroke-width="2" stroke-dasharray="5 9" opacity="0.7"><animate attributeName="stroke-dashoffset" values="56;0" dur="2.2s" repeatCount="indefinite"/></line>
+            <circle r="2.6" fill="#C8A96E"><animateMotion path="M40 40 L40 356" dur="3.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+            <circle r="2.6" fill="#7fc99a"><animateMotion path="M40 40 L40 356" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+              <circle cx="40" cy="64" r="7" fill="#C8A96E"/><circle cx="40" cy="64" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="58" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">Venta</text>
+              <text x="64" y="74" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">día 0</text>
+              <rect x="64" y="84" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="102" y="99" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Álbum</text>
+              <rect x="148" y="84" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="186" y="99" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+              <circle cx="40" cy="160" r="7" fill="#C8A96E"/><circle cx="40" cy="160" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="154" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+3 meses</text>
+              <text x="64" y="170" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">se suma Podcast</text>
+              <rect x="64" y="180" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="106" y="195" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <g transform="translate(70 185)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+              <circle cx="40" cy="248" r="7" fill="#C8A96E"/><circle cx="40" cy="248" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="242" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+1 año</text>
+              <text x="64" y="258" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">se suma Entrada VIP</text>
+              <rect x="64" y="268" width="100" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="118" y="283" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Entrada VIP</text>
+              <g transform="translate(70 273)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <path d="M40 356 L150 356" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="1.35s" fill="freeze"/></path>
+            <ellipse cx="150" cy="392" rx="130" ry="34" fill="url(#grow-gv-glow)"/>
+            <rect x="24" y="372" width="252" height="40" rx="9" fill="#16241c" stroke="#4a8c5c" stroke-width="1.4"/>
+            <g transform="translate(44 384)" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3 3 6-7"/></g>
+            <text x="160" y="389" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">→ llega a todos</text>
+            <text x="160" y="404" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">los dueños</text>
+            <text x="150" y="432" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="8.5">nunca se quita · solo se suma valor</text>
+          </svg>
+          <div class="figure-cap">Fig. 4.7 — Cada cosa que el artista suma, la reciben todos los dueños</div>
+        </div>
+
+    <div class="callout">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+      <p><strong>Ni inmutable total, ni editable total.</strong> Es <strong>append-only tras la primera venta</strong>: agregar siempre es seguro, porque solo da más; quitar o reemplazar lo prometido es lo único que rompería la confianza, y es justo lo que el sistema impide. La plataforma verifica si la Edition ya vendió al menos un Pressing para decidir qué se puede tocar.</p>
+    </div>
   `,
   en: `
     <div class="ch-eyebrow">
@@ -302,6 +517,221 @@ registerChapter('bound-content', {
     <p class="pquote big">A Pressing is not a record. It's a creative membership that grows in value with the artist's career.</p>
 
     <p>This is the piece that makes Grooves more than a marketplace: every work is a living object the artist can keep adding value to — new files, new access — long after the sale. The owner didn't buy a song. They bought a permanent door in.</p>
+
+    <h2>A promise that only grows</h2>
+    <p>If the Pressing is a door the artist can keep widening, there has to be a rule that protects whoever already walked through. It's Grooves' core promise to the buyer, and it's simple: <strong>you can add, never take away what was already there</strong>.</p>
+    <p>It works in two moments, split by the first sale:</p>
+    <ul>
+      <li><strong>While no Pressing has sold</strong>, the artist edits freely: add, remove or replace anything. Each buyer sees the current state at the moment of purchase — no promise has been made yet.</li>
+      <li><strong>The moment the first Pressing sells</strong>, the content becomes <em>append-only</em>: the artist can <strong>keep adding</strong> — which benefits every owner — but <strong>cannot remove or replace</strong> what was already promised.</li>
+    </ul>
+
+    <div class="figure">
+      <svg viewBox="0 0 560 300" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="apnd-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="40" width="218" height="232" rx="14" fill="#1a1d2e" stroke="#3a3a40" stroke-width="1.5"/>
+        <text x="129" y="68" text-anchor="middle" fill="#c9c6bd" font-family="'Fraunces',serif" font-size="17" font-weight="600">DRAFT</text>
+        <text x="129" y="86" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9.5">before the first sale</text>
+        <line x1="44" y1="100" x2="214" y2="100" stroke="#2a2a30" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+          <circle cx="62" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="131" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Add</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.50s" fill="freeze"/>
+          <circle cx="62" cy="162" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 162l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="167" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Remove</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+          <circle cx="62" cy="198" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M57 198l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="86" y="203" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Replace</text>
+        </g>
+        <text x="129" y="240" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">edit freely</text>
+        <text x="129" y="254" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">every buyer sees the current state</text>
+        <line x1="280" y1="48" x2="280" y2="264" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <circle cx="280" cy="132" r="22" fill="#131318" stroke="url(#apnd-g)" stroke-width="1.8"/>
+        <path d="M273 130v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="271" y="130" width="18" height="14" rx="2.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/>
+        <circle cx="280" cy="136" r="1.6" fill="#C8A96E"/>
+        <text x="280" y="180" text-anchor="middle" fill="#C8A96E" font-family="'Fraunces',serif" font-size="15" font-weight="600">first sale</text>
+        <text x="280" y="196" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">the promise</text>
+        <text x="280" y="208" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">is locked in</text>
+        <rect x="322" y="40" width="218" height="232" rx="14" fill="#1a1d2e" stroke="url(#apnd-g)" stroke-width="1.6"/>
+        <text x="431" y="68" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="17" font-weight="600">APPEND-ONLY</text>
+        <text x="431" y="86" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9.5">after the first sale</text>
+        <line x1="346" y1="100" x2="516" y2="100" stroke="#3a3a40" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.90s" fill="freeze"/>
+          <circle cx="364" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M359 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="388" y="123" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Add</text>
+          <text x="388" y="137" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">everybody wins</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+          <circle cx="364" cy="166" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M360 162l8 8 M368 162l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="388" y="171" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Remove</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.30s" fill="freeze"/>
+          <circle cx="364" cy="202" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M360 198l8 8 M368 198l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="388" y="207" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Replace</text>
+        </g>
+        <text x="431" y="240" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">what was promised stays</text>
+        <text x="431" y="254" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">you can only add</text>
+      </svg>
+      <svg viewBox="0 0 300 520" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="apnd-gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+        </defs>
+        <rect x="20" y="14" width="260" height="180" rx="14" fill="#1a1d2e" stroke="#3a3a40" stroke-width="1.5"/>
+        <text x="150" y="40" text-anchor="middle" fill="#c9c6bd" font-family="'Fraunces',serif" font-size="17" font-weight="600">DRAFT</text>
+        <text x="150" y="57" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">before the first sale</text>
+        <line x1="44" y1="70" x2="256" y2="70" stroke="#2a2a30" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+          <circle cx="64" cy="94" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 94l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="99" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Add</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.46s" fill="freeze"/>
+          <circle cx="64" cy="126" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 126l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="131" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Remove</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.62s" fill="freeze"/>
+          <circle cx="64" cy="158" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 158l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="163" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Replace</text>
+        </g>
+        <text x="150" y="184" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">edit freely · every buyer sees the current state</text>
+        <line x1="150" y1="200" x2="150" y2="232" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <circle cx="150" cy="252" r="20" fill="#131318" stroke="url(#apnd-gv)" stroke-width="1.8"/>
+        <path d="M143 250v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="141" y="250" width="18" height="14" rx="2.5" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/>
+        <circle cx="150" cy="256" r="1.6" fill="#C8A96E"/>
+        <text x="186" y="248" fill="#C8A96E" font-family="'Fraunces',serif" font-size="15" font-weight="600">first sale</text>
+        <text x="186" y="264" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">the promise locks in</text>
+        <line x1="150" y1="272" x2="150" y2="304" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <rect x="20" y="320" width="260" height="186" rx="14" fill="#1a1d2e" stroke="url(#apnd-gv)" stroke-width="1.6"/>
+        <text x="150" y="346" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="17" font-weight="600">APPEND-ONLY</text>
+        <text x="150" y="363" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="9">after the first sale</text>
+        <line x1="44" y1="376" x2="256" y2="376" stroke="#3a3a40" stroke-width="1"/>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.82s" fill="freeze"/>
+          <circle cx="64" cy="400" r="11" fill="#131318" stroke="#4a8c5c" stroke-width="1.6"/>
+          <path d="M59 400l3.4 3.4 6-6.8" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="88" y="397" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Add</text>
+          <text x="88" y="411" fill="#7fc99a" font-family="'JetBrains Mono',monospace" font-size="8.5">everybody wins</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.98s" fill="freeze"/>
+          <circle cx="64" cy="440" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M60 436l8 8 M68 436l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="88" y="445" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Remove</text>
+        </g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.14s" fill="freeze"/>
+          <circle cx="64" cy="476" r="11" fill="#131318" stroke="#c0563f" stroke-width="1.6"/>
+          <path d="M60 472l8 8 M68 472l-8 8" fill="none" stroke="#e08a72" stroke-width="2" stroke-linecap="round"/>
+          <text x="88" y="481" fill="#9a978f" font-family="'Spline Sans',sans-serif" font-size="13.5" font-weight="600">Replace</text>
+        </g>
+        <text x="150" y="500" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">what was promised stays; you can only add</text>
+      </svg>
+      <div class="figure-cap">Fig. 4.6 — Before the first sale you edit freely; after, you can only add</div>
+    </div>
+
+    <p>The trigger is the first sale because that's where the promise crystallizes: someone paid for what they saw. Removing or changing that content afterward would break the deal — you'd be taking from the buyer something they paid for — so the system doesn't allow it. In a limited edition it also keeps the promise consistent across everyone: what the first owner received is, at minimum, what everyone receives.</p>
+    <p>And here's the beautiful part: since you can only add, a work's Bound Content <strong>can only grow</strong>. A stem the artist uploads next year, a new podcast, the pass to a future tour — all of it reaches whoever bought on day one too, with no extra payment. The work ages for the better.</p>
+
+    <div class="figure">
+          <svg viewBox="0 0 560 260" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grow-g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+              <radialGradient id="grow-g-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7fc99a" stop-opacity="0.30"/><stop offset="1" stop-color="#7fc99a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <line x1="56" y1="58" x2="520" y2="58" stroke="#3a3a40" stroke-width="1.5"/>
+            <line x1="56" y1="58" x2="520" y2="58" stroke="url(#grow-g-gold)" stroke-width="2" stroke-dasharray="5 9" opacity="0.7"><animate attributeName="stroke-dashoffset" values="56;0" dur="2.2s" repeatCount="indefinite"/></line>
+            <circle r="2.6" fill="#C8A96E"><animateMotion path="M56 58 L520 58" dur="3.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+            <circle r="2.6" fill="#7fc99a"><animateMotion path="M56 58 L520 58" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+              <circle cx="100" cy="58" r="7" fill="#C8A96E"/><circle cx="100" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="100" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">Sale</text>
+              <text x="100" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">day 0</text>
+              <rect x="62" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="100" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Album</text>
+              <rect x="62" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="100" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+              <circle cx="288" cy="58" r="7" fill="#C8A96E"/><circle cx="288" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="288" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+3 months</text>
+              <text x="288" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">added</text>
+              <rect x="250" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="288" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Album</text>
+              <rect x="250" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="288" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+              <rect x="250" y="148" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="295" y="163" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <g transform="translate(258 153)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+              <circle cx="476" cy="58" r="7" fill="#C8A96E"/><circle cx="476" cy="58" r="13" fill="none" stroke="url(#grow-g-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="476" y="38" text-anchor="middle" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+1 year</text>
+              <text x="476" y="80" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">added</text>
+              <rect x="438" y="92" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="107" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Album</text>
+              <rect x="438" y="120" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="135" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+              <rect x="438" y="148" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="476" y="163" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <rect x="438" y="176" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="483" y="191" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">VIP Pass</text>
+              <g transform="translate(446 181)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <path d="M288 170 L288 210" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="0.95s" fill="freeze"/></path>
+            <path d="M476 198 L476 210" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="1.35s" fill="freeze"/></path>
+            <ellipse cx="288" cy="226" rx="220" ry="30" fill="url(#grow-g-glow)"/>
+            <rect x="56" y="210" width="464" height="32" rx="9" fill="#16241c" stroke="#4a8c5c" stroke-width="1.4"/>
+            <g transform="translate(150 218)" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3 3 6-7"/></g>
+            <text x="298" y="231" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">→ reaches every owner</text>
+            <text x="288" y="256" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="9">what was promised is never removed · only value is added</text>
+          </svg>
+          <svg viewBox="0 0 300 440" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grow-gv-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9bf8a"/><stop offset="1" stop-color="#C8A96E"/></linearGradient>
+              <radialGradient id="grow-gv-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7fc99a" stop-opacity="0.30"/><stop offset="1" stop-color="#7fc99a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <line x1="40" y1="40" x2="40" y2="356" stroke="#3a3a40" stroke-width="1.5"/>
+            <line x1="40" y1="40" x2="40" y2="356" stroke="url(#grow-gv-gold)" stroke-width="2" stroke-dasharray="5 9" opacity="0.7"><animate attributeName="stroke-dashoffset" values="56;0" dur="2.2s" repeatCount="indefinite"/></line>
+            <circle r="2.6" fill="#C8A96E"><animateMotion path="M40 40 L40 356" dur="3.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+            <circle r="2.6" fill="#7fc99a"><animateMotion path="M40 40 L40 356" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.30s" fill="freeze"/>
+              <circle cx="40" cy="64" r="7" fill="#C8A96E"/><circle cx="40" cy="64" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="58" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">Sale</text>
+              <text x="64" y="74" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">day 0</text>
+              <rect x="64" y="84" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="102" y="99" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Album</text>
+              <rect x="148" y="84" width="76" height="22" rx="11" fill="#1a1d2e" stroke="#5a5852" stroke-width="1.2"/><text x="186" y="99" text-anchor="middle" fill="#ece9e1" font-family="'Spline Sans',sans-serif" font-size="11">Stems</text>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+              <circle cx="40" cy="160" r="7" fill="#C8A96E"/><circle cx="40" cy="160" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="154" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+3 months</text>
+              <text x="64" y="170" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">Podcast added</text>
+              <rect x="64" y="180" width="76" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="106" y="195" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">Podcast</text>
+              <g transform="translate(70 185)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.10s" fill="freeze"/>
+              <circle cx="40" cy="248" r="7" fill="#C8A96E"/><circle cx="40" cy="248" r="13" fill="none" stroke="url(#grow-gv-gold)" stroke-width="1.6" opacity="0.6"/>
+              <text x="64" y="242" fill="#d9bf8a" font-family="'Fraunces',serif" font-size="14" font-weight="600">+1 year</text>
+              <text x="64" y="258" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8.5">VIP Pass added</text>
+              <rect x="64" y="268" width="100" height="22" rx="11" fill="#16241c" stroke="#7fc99a" stroke-width="1.4"/><text x="118" y="283" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="11">VIP Pass</text>
+              <g transform="translate(70 273)" stroke="#7fc99a" stroke-width="1.8" stroke-linecap="round"><path d="M6 0v12M0 6h12"/></g>
+            </g>
+            <path d="M40 356 L150 356" stroke="#7fc99a" stroke-width="1.6" stroke-dasharray="4 4" opacity="0"><animate attributeName="opacity" values="0;0.8" dur="0.5s" begin="1.35s" fill="freeze"/></path>
+            <ellipse cx="150" cy="392" rx="130" ry="34" fill="url(#grow-gv-glow)"/>
+            <rect x="24" y="372" width="252" height="40" rx="9" fill="#16241c" stroke="#4a8c5c" stroke-width="1.4"/>
+            <g transform="translate(44 384)" fill="none" stroke="#7fc99a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3 3 6-7"/></g>
+            <text x="160" y="389" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">→ reaches</text>
+            <text x="160" y="404" text-anchor="middle" fill="#9fd9b4" font-family="'Spline Sans',sans-serif" font-size="12" font-weight="600">every owner</text>
+            <text x="150" y="432" text-anchor="middle" fill="#8a877f" font-family="'JetBrains Mono',monospace" font-size="8.5">never removed · only value added</text>
+          </svg>
+          <div class="figure-cap">Fig. 4.7 — Everything the artist adds reaches every owner</div>
+        </div>
+
+    <div class="callout">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+      <p><strong>Neither fully immutable nor fully editable.</strong> It's <strong>append-only after the first sale</strong>: adding is always safe, because it only gives more; removing or replacing what was promised is the only thing that would break trust, and it's exactly what the system prevents. The platform checks whether the Edition has already sold at least one Pressing to decide what can be touched.</p>
+    </div>
 
   `
 });
