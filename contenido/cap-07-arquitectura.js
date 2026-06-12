@@ -67,7 +67,7 @@ registerChapter('arquitectura', {
         <tr><td data-label="Capa"><strong>Frontend</strong></td><td data-label="Tecnología">React (web + móvil)</td><td data-label="Función">Marketplace, player, Pressing Studio</td></tr>
         <tr><td data-label="Capa"><strong>Backend</strong></td><td data-label="Tecnología">Node.js · Fastify · Prisma</td><td data-label="Función">Lógica de negocio, autenticación, contenido, relayer</td></tr>
         <tr><td data-label="Capa"><strong>Blockchain</strong></td><td data-label="Tecnología">Solidity · contratos UUPS</td><td data-label="Función">Propiedad, royalties automáticos, marketplace</td></tr>
-        <tr><td data-label="Capa"><strong>Almacenamiento</strong></td><td data-label="Tecnología">IPFS + Cloudflare R2</td><td data-label="Función">Previews públicos + masters y Bound Content privados</td></tr>
+        <tr><td data-label="Capa"><strong>Almacenamiento</strong></td><td data-label="Tecnología">IPFS + Cloudflare R2</td><td data-label="Función">Previews públicos + masters y Contenido Exclusivo privados</td></tr>
       </tbody>
     </table>
 
@@ -482,12 +482,12 @@ registerChapter('arquitectura', {
     <ul>
       <li><strong>Metadata y propiedad:</strong> on-chain, en la blockchain. Público y auditable por cualquiera, para siempre.</li>
       <li><strong>Preview de 30 segundos:</strong> en IPFS público. Es la vitrina — cualquiera puede oírlo, no requiere wallet.</li>
-      <li><strong>Master completo y Bound Content:</strong> en almacenamiento privado (Cloudflare R2), sin acceso público. Se entrega solo al dueño, mediante una URL firmada temporal, tras verificar la propiedad on-chain.</li>
+      <li><strong>Master completo y Contenido Exclusivo:</strong> en almacenamiento privado (Cloudflare R2), sin acceso público. Se entrega solo al dueño, mediante una URL firmada temporal, tras verificar la propiedad on-chain.</li>
     </ul>
 
     <div class="callout">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-      <p>El master nunca se publica en una URL pública ni aparece en los metadatos del NFT. La única forma de acceder al audio completo o al Bound Content es siendo el dueño verificado del Pressing — la propiedad on-chain es la llave.</p>
+      <p>El master nunca se publica en una URL pública ni aparece en los metadatos del NFT. La única forma de acceder al audio completo o al Contenido Exclusivo es siendo el dueño verificado del Pressing — la propiedad on-chain es la llave.</p>
     </div>
 
     <h2>En la hoja de ruta</h2>

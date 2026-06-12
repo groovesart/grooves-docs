@@ -122,7 +122,7 @@ registerChapter('modelo-economico', {
           <div class="figure-cap">Fig. 6.2 — El 95% del artista se reparte entre sus colaboradores</div>
         </div>
 
-    <p>Cuando un fan compra, el reparto se distribuye <strong>solo y en la misma transacción</strong>: cada wallet recibe su parte al instante, sin que nadie tenga que repartir nada a mano después. Y reparte <em>ingresos</em>, no propiedad: las wallets del reparto cobran su porcentaje, pero el acceso al master y al Bound Content sigue siendo exclusivo del dueño del Pressing.</p>
+    <p>Cuando un fan compra, el reparto se distribuye <strong>solo y en la misma transacción</strong>: cada wallet recibe su parte al instante, sin que nadie tenga que repartir nada a mano después. Y reparte <em>ingresos</em>, no propiedad: las wallets del reparto cobran su porcentaje, pero el acceso al master y al Contenido Exclusivo sigue siendo exclusivo del dueño del Pressing.</p>
 
     <h2>Porciones con fecha</h2>
     <p>No todos los acuerdos son para siempre. Una porción del reparto puede tener <strong>fecha de vencimiento</strong>: por ejemplo, el productor cobra el 10% durante el primer año y, cumplido el plazo, ese porcentaje vuelve automáticamente al creador. No se redistribuye a terceros ni hay que renegociar nada — el contrato lo hace solo.</p>

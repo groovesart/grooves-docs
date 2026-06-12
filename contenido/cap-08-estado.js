@@ -41,7 +41,7 @@ registerChapter('estado', {
       </div>
       <div class="st-card op">
         <div class="st-head"><span class="st-dot"></span> Operativo</div>
-        <h4>Bound Content</h4>
+        <h4>Contenido Exclusivo</h4>
         <p>Archivos descargables (PDF) y accesos por enlace, entregados solo al dueño tras verificación on-chain.</p>
       </div>
       <div class="st-card op">

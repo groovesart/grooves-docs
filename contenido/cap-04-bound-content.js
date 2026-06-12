@@ -1,5 +1,5 @@
 /* ============================================================
-   CAPÍTULO 04 — BOUND CONTENT
+   CAPÍTULO 04 — CONTENIDO EXCLUSIVO
    Las dos familias (Archivos + Accesos), enriquecidas.
    Operativo: PDF descargable + enlaces. Roadmap: QR de eventos.
    ============================================================ */
@@ -12,12 +12,12 @@ registerChapter('bound-content', {
       <span class="ch-status op"><span class="dot"></span> Operativo</span>
     </div>
 
-    <h1 class="ch-title">Bound Content — la obra es <em>solo el comienzo</em></h1>
+    <h1 class="ch-title">Contenido Exclusivo — la obra es <em>solo el comienzo</em></h1>
     <p class="ch-lead">Un Pressing no termina en el audio. Es una llave que abre todo un mundo creativo: archivos que el dueño descarga y accesos que solo él desbloquea. Y nadie más.</p>
 
-    <p>En Grooves, poseer un Pressing significa tener acceso permanente a lo que el artista decida vincularle. A ese material exclusivo lo llamamos <strong>Bound Content</strong>: contenido atado a la propiedad del Pressing, que se entrega únicamente a quien lo posee y se verifica directamente en la blockchain.</p>
+    <p>En Grooves, poseer un Pressing significa tener acceso permanente a lo que el artista decida vincularle. A ese material exclusivo lo llamamos <strong>Contenido Exclusivo</strong>: contenido atado a la propiedad del Pressing, que se entrega únicamente a quien lo posee y se verifica directamente en la blockchain.</p>
 
-    <p>Y acá está lo esencial: el Bound Content <strong>no es "un archivo"</strong>. Es <strong>todo un mundo creativo</strong>. Lo que el dueño recibe depende enteramente de lo que el creador quiera ofrecer — y la imaginación del artista es el único límite. Un Pressing puede abrir desde el álbum en calidad de estudio hasta un universo completo: las partituras, las sesiones inéditas, un podcast donde el artista cuenta cada secreto, la llave de su comunidad, la entrada a su próximo concierto. El creador construye ese mundo; el Pressing es la llave que lo abre.</p>
+    <p>Y acá está lo esencial: el Contenido Exclusivo <strong>no es "un archivo"</strong>. Es <strong>todo un mundo creativo</strong>. Lo que el dueño recibe depende enteramente de lo que el creador quiera ofrecer — y la imaginación del artista es el único límite. Un Pressing puede abrir desde el álbum en calidad de estudio hasta un universo completo: las partituras, las sesiones inéditas, un podcast donde el artista cuenta cada secreto, la llave de su comunidad, la entrada a su próximo concierto. El creador construye ese mundo; el Pressing es la llave que lo abre.</p>
 
     <p>Ese mundo se organiza en dos familias, y un artista puede combinar cuantas quiera —y tantas como imagine— dentro de una misma Edición.</p>
 
@@ -28,11 +28,11 @@ registerChapter('bound-content', {
       <svg viewBox="0 0 300 235" class="svg-mobile" xmlns="http://www.w3.org/2000/svg">
         <circle cx="145.8" cy="34" r="10" fill="#131318" stroke="#ece9e1" stroke-width="1.8"/><circle cx="154.2" cy="34" r="10" fill="#131318" stroke="#C8A96E" stroke-width="1.8"/><circle cx="145.8" cy="34" r="2" fill="#ece9e1"/><circle cx="154.2" cy="34" r="2" fill="#C8A96E"/><text x="150" y="64" text-anchor="middle" fill="#d9bf8a" font-family="'JetBrains Mono',monospace" font-size="9">un Pressing = la llave</text><path d="M150 78 Q78 86 78 112" fill="none" stroke="#C8A96E" stroke-width="1.3" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></path><path d="M150 78 Q222 86 222 112" fill="none" stroke="#4a6fa5" stroke-width="1.3" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/></path><circle cx="78" cy="140" r="28" fill="#131318" stroke="#C8A96E" stroke-width="2"/><g transform="translate(67.2 129.2) scale(0.9)" fill="none" stroke="#d9bf8a" stroke-width="1.78" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 12l5 5 5-5M5 21h14"/></g><text x="78" y="186" text-anchor="middle" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">ARCHIVOS</text><text x="78" y="201" text-anchor="middle" fill="#C8A96E" font-family="'JetBrains Mono',monospace" font-size="9">se descargan</text><text x="78" y="214" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">a tu dispositivo</text><circle cx="222" cy="140" r="28" fill="#131318" stroke="#4a6fa5" stroke-width="2"/><g transform="translate(211.2 129.2) scale(0.9)" fill="none" stroke="#8fa8d0" stroke-width="1.78" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l3 3M15 8l2 2"/></g><text x="222" y="186" text-anchor="middle" fill="#8fa8d0" font-family="'Spline Sans',sans-serif" font-size="12.5" font-weight="600">ACCESOS</text><text x="222" y="201" text-anchor="middle" fill="#8fa8d0" font-family="'JetBrains Mono',monospace" font-size="9">se desbloquean</text><text x="222" y="214" text-anchor="middle" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="8">al mundo del artista</text>
       </svg>
-      <div class="figure-cap">Fig. 4.1 — Las dos familias del Bound Content</div>
+      <div class="figure-cap">Fig. 4.1 — Las dos familias del Contenido Exclusivo</div>
     </div>
 
     <h2>Una caja fuerte, no una puerta abierta</h2>
-    <p>La diferencia entre el <em>preview</em> de 30 segundos y el Bound Content es deliberada y fundamental. El preview es público: vive en almacenamiento abierto y cualquiera puede oírlo — es la vitrina. El Bound Content es privado: vive bajo llave, y esa llave solo se entrega tras comprobar, contra la blockchain, que quien la pide es el dueño en ese instante.</p>
+    <p>La diferencia entre el <em>preview</em> de 30 segundos y el Contenido Exclusivo es deliberada y fundamental. El preview es público: vive en almacenamiento abierto y cualquiera puede oírlo — es la vitrina. El Contenido Exclusivo es privado: vive bajo llave, y esa llave solo se entrega tras comprobar, contra la blockchain, que quien la pide es el dueño en ese instante.</p>
 
     <div class="figure">
       <svg viewBox="0 0 560 300" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ registerChapter('bound-content', {
         <path d="M134 322 h32 M134 332 h32 M134 342 h20" stroke="#C8A96E" stroke-width="2" stroke-linecap="round"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.6s" fill="freeze"/></path>
         <text x="200" y="338" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="11">CONTENIDO</text>
       </svg>
-      <div class="figure-cap">Fig. 4.2 — Flujo de entrega segura del Bound Content</div>
+      <div class="figure-cap">Fig. 4.2 — Flujo de entrega segura del Contenido Exclusivo</div>
     </div>
 
     <p>Cuando el dueño pulsa <strong>"Descargar"</strong> o <strong>"Abrir"</strong>, el servidor de Grooves no devuelve el archivo directamente. Primero pregunta a la blockchain si esa billetera posee el Pressing. Solo si la respuesta es afirmativa, genera una <strong>URL firmada que expira</strong> — una llave de un solo uso con tiempo de vida limitado. El que no es dueño nunca llega a recibirla.</p>
@@ -101,7 +101,7 @@ registerChapter('bound-content', {
     <h2>Esto es, exactamente, qué es la criptografía</h2>
     <p>Mucha gente escucha "blockchain" o "criptografía" y piensa en algo abstracto o especulativo. Pero lo que acabás de leer <em>es</em> la criptografía, en su forma más concreta y útil. Vale la pena entenderlo, porque es la base de toda la confianza en Grooves.</p>
 
-    <p>La idea es simple y poderosa: en lugar de pedirte que <em>confíes</em> en que somos honestos, el sistema te da una <strong>prueba matemática</strong>. La blockchain es un registro público donde cada Pressing y cada dueño quedan anotados de forma que nadie —ni siquiera nosotros— puede alterar ni borrar. Cuando pedís tu Bound Content, no abrimos una base de datos privada para ver si "figurás en la lista": le preguntamos a ese registro público e inmutable, y la respuesta es verificable por cualquiera.</p>
+    <p>La idea es simple y poderosa: en lugar de pedirte que <em>confíes</em> en que somos honestos, el sistema te da una <strong>prueba matemática</strong>. La blockchain es un registro público donde cada Pressing y cada dueño quedan anotados de forma que nadie —ni siquiera nosotros— puede alterar ni borrar. Cuando pedís tu Contenido Exclusivo, no abrimos una base de datos privada para ver si "figurás en la lista": le preguntamos a ese registro público e inmutable, y la respuesta es verificable por cualquiera.</p>
 
     <div class="figure">
       <svg viewBox="0 0 560 210" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">

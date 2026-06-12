@@ -11,7 +11,7 @@ registerChapter('roadmap', {
     </div>
 
     <h1 class="ch-title">El camino <em>hacia adelante</em></h1>
-    <p class="ch-lead">Grooves avanza por fases. El núcleo del producto —crear, vender, revender, royalties y Bound Content— ya está construido y validado en testnet. Lo que sigue es llevarlo a la red principal, sumar artistas y ampliar el ecosistema.</p>
+    <p class="ch-lead">Grooves avanza por fases. El núcleo del producto —crear, vender, revender, royalties y Contenido Exclusivo— ya está construido y validado en testnet. Lo que sigue es llevarlo a la red principal, sumar artistas y ampliar el ecosistema.</p>
 
     <div class="figure">
       <svg viewBox="0 0 560 120" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ registerChapter('roadmap', {
       <li>Pressing Studio: subida, configuración y creación — <strong>hecho</strong>.</li>
       <li>Marketplace con venta primaria, gas pagado en USDC — <strong>hecho</strong>.</li>
       <li>Mercado secundario con royalties automáticos — <strong>hecho</strong>.</li>
-      <li>Bound Content (archivos + accesos) — <strong>hecho</strong>.</li>
+      <li>Contenido Exclusivo (archivos + accesos) — <strong>hecho</strong>.</li>
       <li>Auditoría de seguridad profesional + despliegue en mainnet — <strong>siguiente</strong>.</li>
       <li>Onboarding de los primeros artistas pioneros.</li>
     </ul>
