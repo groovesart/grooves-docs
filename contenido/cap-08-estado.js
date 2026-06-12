@@ -26,8 +26,8 @@ registerChapter('estado', {
       </div>
       <div class="st-card op">
         <div class="st-head"><span class="st-dot"></span> Operativo</div>
-        <h4>Venta primaria sin gas</h4>
-        <p>El relayer registra la compra y el costo se descuenta en USDC. El comprador no necesita gas.</p>
+        <h4>Venta primaria: gas en USDC</h4>
+        <p>El relayer registra la compra y adelanta el gas; ese costo de red se le cobra al comprador en USDC. No necesita la criptomoneda nativa.</p>
       </div>
       <div class="st-card op">
         <div class="st-head"><span class="st-dot"></span> Operativo</div>
@@ -62,11 +62,6 @@ registerChapter('estado', {
       </div>
       <div class="st-card dev">
         <div class="st-head"><span class="st-dot"></span> Roadmap</div>
-        <h4>Pago con tarjeta / PayPal</h4>
-        <p>Conversión de moneda tradicional a USDC, integrada en la compra y entregada a la wallet conectada del usuario, vía proveedores regulados.</p>
-      </div>
-      <div class="st-card dev">
-        <div class="st-head"><span class="st-dot"></span> Roadmap</div>
         <h4>Multi-chain</h4>
         <p>Soporte para redes adicionales y una biblioteca unificada del usuario entre todas ellas.</p>
       </div>
@@ -74,11 +69,6 @@ registerChapter('estado', {
         <div class="st-head"><span class="st-dot"></span> Roadmap</div>
         <h4>Entradas con QR</h4>
         <p>El Pressing como boleto físico: validación on-chain en la puerta de eventos mediante escaneo.</p>
-      </div>
-      <div class="st-card dev">
-        <div class="st-head"><span class="st-dot"></span> Roadmap</div>
-        <h4>Programa de referidos</h4>
-        <p>Comisión automática para quien comparte un enlace que termina en una compra.</p>
       </div>
       <div class="st-card dev">
         <div class="st-head"><span class="st-dot"></span> Roadmap</div>
@@ -112,7 +102,7 @@ registerChapter('estado', {
 
     <div class="status-grid">
       <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Pressing creation</h4><p>Sealed (ERC-721) and Open (ERC-1155). The artist uploads audio, art and metadata, configures the Edition and creates on-chain.</p></div>
-      <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Gasless primary sale</h4><p>The relayer records the purchase and the cost is deducted in USDC. The buyer needs no gas.</p></div>
+      <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Primary sale: gas in USDC</h4><p>The relayer records the purchase and fronts the gas; that network cost is charged to the buyer in USDC. No native cryptocurrency needed.</p></div>
       <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Secondary market</h4><p>List and buy Pressings between users, with atomic splitting of royalty + commission + seller payment.</p></div>
       <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Automatic royalties</h4><p>On every resale, the artist collects their percentage via EIP-2981, with no one's intervention.</p></div>
       <div class="st-card op"><div class="st-head"><span class="st-dot"></span> Live</div><h4>Bound Content</h4><p>Downloadable files (PDF) and link-based access, delivered only to the owner after on-chain verification.</p></div>
@@ -124,10 +114,8 @@ registerChapter('estado', {
 
     <div class="status-grid">
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Authenticity Engine</h4><p>Copyright verification via acoustic fingerprinting and visual similarity when creating the Pressing.</p></div>
-      <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Card / PayPal payment</h4><p>Traditional-to-USDC currency conversion integrated into checkout and delivered to the user's connected wallet, via regulated providers.</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Multi-chain</h4><p>Support for additional networks and a unified user library across all of them.</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>QR tickets</h4><p>The Pressing as a physical ticket: on-chain validation at event doors via scanning.</p></div>
-      <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Referral program</h4><p>Automatic commission for whoever shares a link that ends in a purchase.</p></div>
       <div class="st-card dev"><div class="st-head"><span class="st-dot"></span> Roadmap</div><h4>Native mobile app</h4><p>Dedicated iOS and Android apps, with the full playback experience.</p></div>
     </div>
 

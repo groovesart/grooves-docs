@@ -48,7 +48,7 @@ registerChapter('roadmap', {
     <ul>
       <li>Smart contracts desplegados (Sealed, Open y Marketplace) — <strong>hecho, en testnet</strong>.</li>
       <li>Pressing Studio: subida, configuración y creación — <strong>hecho</strong>.</li>
-      <li>Marketplace con venta primaria sin gas — <strong>hecho</strong>.</li>
+      <li>Marketplace con venta primaria, gas pagado en USDC — <strong>hecho</strong>.</li>
       <li>Mercado secundario con royalties automáticos — <strong>hecho</strong>.</li>
       <li>Bound Content (archivos + accesos) — <strong>hecho</strong>.</li>
       <li>Auditoría de seguridad profesional + despliegue en mainnet — <strong>siguiente</strong>.</li>
@@ -58,10 +58,9 @@ registerChapter('roadmap', {
     <h2>Fase 2 — Expansión</h2>
     <ul>
       <li>Authenticity Engine (verificación de copyright automática).</li>
-      <li>Pago con tarjeta y PayPal; el importe llega como USDC a tu wallet conectada.</li>
       <li>Soporte multi-chain y biblioteca unificada.</li>
       <li>App móvil nativa (iOS + Android).</li>
-      <li>Herramientas para sellos discográficos y programa de embajadores.</li>
+      <li>Herramientas para sellos discográficos.</li>
       <li>Entradas a eventos con validación por QR.</li>
     </ul>
 
@@ -123,7 +122,7 @@ registerChapter('roadmap', {
     <ul>
       <li>Smart contracts deployed (Sealed, Open and Marketplace) — <strong>done, on testnet</strong>.</li>
       <li>Pressing Studio: upload, configuration and creation — <strong>done</strong>.</li>
-      <li>Marketplace with gasless primary sale — <strong>done</strong>.</li>
+      <li>Marketplace with primary sale, gas paid in USDC — <strong>done</strong>.</li>
       <li>Secondary market with automatic royalties — <strong>done</strong>.</li>
       <li>Bound Content (files + access) — <strong>done</strong>.</li>
       <li>Professional security audit + mainnet deployment — <strong>next</strong>.</li>
@@ -133,10 +132,9 @@ registerChapter('roadmap', {
     <h2>Phase 2 — Expansion</h2>
     <ul>
       <li>Authenticity Engine (automatic copyright verification).</li>
-      <li>Card and PayPal payments; the amount arrives as USDC in your connected wallet.</li>
       <li>Multi-chain support and unified library.</li>
       <li>Native mobile app (iOS + Android).</li>
-      <li>Tools for record labels and an ambassador program.</li>
+      <li>Tools for record labels.</li>
       <li>Event tickets with QR validation.</li>
     </ul>
 

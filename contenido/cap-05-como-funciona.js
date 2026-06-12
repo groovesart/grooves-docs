@@ -1,7 +1,7 @@
 /* ============================================================
    CAPÍTULO 05 — CÓMO FUNCIONA
    Flujos: fan/coleccionista + onboarding sin fricción.
-   Onboarding con tarjeta/PayPal = Roadmap. Gasless = Operativo.
+   Pago en USDC desde la wallet conectada. El gas se cubre en USDC via relayer.
    ============================================================ */
 registerChapter('como-funciona', {
   order: 5,
@@ -57,18 +57,15 @@ registerChapter('como-funciona', {
     <p>Grooves es <strong>no-custodial</strong> por diseño, y ahora más nítido que nunca: las llaves que controlan los activos de un usuario son siempre suyas, y solo suyas. La plataforma no genera, no guarda y no tiene acceso a ninguna llave privada de usuario, y no puede mover, congelar ni tocar los fondos o los Pressings de nadie. Toda transferencia de valor la autoriza el usuario, firmando desde su propia wallet; lo único que Grooves firma con su llave operativa son autorizaciones internas, nunca los activos del usuario.</p>
     <p>Para poseer un Pressing, el usuario <strong>conecta su propia wallet con un clic</strong>: la que ya usa —de navegador, móvil o hardware, fría o caliente— se vincula y opera directamente, y las llaves nunca salen de su dispositivo. Grooves no crea ni custodia ninguna wallet: la regla es la misma e innegociable, las llaves son del usuario, no de Grooves.</p>
 
-    <h2>Compra sin pagar gas</h2>
-    <p>En la venta primaria, Grooves absorbe la complejidad de la blockchain con un sistema <em>gasless</em>: el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. El usuario autoriza la compra firmando desde su propia wallet, y un componente de Grooves (el relayer) la registra en la blockchain cubriendo el gas por él; el costo se descuenta de forma transparente. El fan solo ve el precio del Pressing — nada más.</p>
-
-    <h2>Pago con tarjeta y PayPal</h2>
-    <p>El fan no necesita comprar USDC por su cuenta. La interfaz integra servicios de conversión de moneda tradicional a digital directamente en la pantalla de compra. El usuario ve un botón que dice <em>"Pagar con tarjeta"</em> o <em>"Pagar con PayPal"</em>, ingresa sus datos, y el servicio convierte automáticamente el dinero y completa la compra; el Pressing queda en su wallet conectada. <span class="rm-badge">Roadmap</span></p>
+    <h2>El gas, cubierto en USDC</h2>
+    <p>Operar en la blockchain tiene un costo de red: el <em>gas</em>. En Grooves el usuario no necesita la criptomoneda nativa de la red para pagarlo. Autoriza la compra firmando desde su propia wallet, y un componente de Grooves (el relayer) registra la transacción adelantando el gas en la moneda nativa; ese costo se le cobra al usuario en USDC, de forma transparente. No paga gas en la moneda nativa, pero sí cubre su costo en USDC —sin tener que conseguir el token de la red—.</p>
 
     <div class="figure">
       <svg viewBox="0 0 600 110" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
         <g font-family="'Spline Sans',sans-serif" font-size="11" fill="#c9c6bd" text-anchor="middle">
           <rect x="30" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="78" y="64">Ve un Pressing</text>
           <rect x="166" y="40" width="96" height="40" rx="9" fill="#2e2a1a" stroke="#C8A96E"/><text x="214" y="64" fill="#d9bf8a">Clic Comprar</text>
-          <rect x="302" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="350" y="60">Tarjeta /</text><text x="350" y="73">PayPal / Cripto</text>
+          <rect x="302" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="350" y="67">Paga en USDC</text>
           <rect x="438" y="40" width="132" height="40" rx="9" fill="#1a2e1a" stroke="#4a8c5c"/><text x="504" y="64" fill="#7fc99a">Recibe su Pressing</text>
           <path d="M126 60 h40 M262 60 h40 M398 60 h40" stroke="#C8A96E" stroke-width="1.5"/>
         </g>
@@ -79,7 +76,7 @@ registerChapter('como-funciona', {
           <path d="M150 54 v22" stroke="#C8A96E" stroke-width="1.5"/>
           <rect x="80" y="78" width="140" height="40" rx="9" fill="#2e2a1a" stroke="#C8A96E"/><text x="150" y="103" fill="#d9bf8a">Clic en Comprar</text>
           <path d="M150 118 v22" stroke="#C8A96E" stroke-width="1.5"/>
-          <rect x="65" y="142" width="170" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="150" y="167">Tarjeta / PayPal / Cripto</text>
+          <rect x="65" y="142" width="170" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="150" y="167">Paga en USDC</text>
           <path d="M150 182 v22" stroke="#C8A96E" stroke-width="1.5"/>
           <rect x="70" y="206" width="160" height="40" rx="9" fill="#1a2e1a" stroke="#4a8c5c"/><text x="150" y="231" fill="#7fc99a">Recibe su Pressing</text>
         </g>
@@ -89,7 +86,7 @@ registerChapter('como-funciona', {
 
     <div class="callout note">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>Explorar y escuchar previews no requiere nada. Para poseer, el único paso técnico es conectar la wallet —un clic—; de ahí en más, la complejidad on-chain (el gas, el USDC, las redes, la jerga) queda invisible gracias al sistema gasless y al diseño, y comprar se siente como en cualquier tienda online. Y conectar no es ceder: la wallet y sus llaves son siempre del usuario, nunca de Grooves.</p>
+      <p>Explorar y escuchar previews no requiere nada. Para poseer, el único paso técnico es conectar la wallet —un clic—; de ahí en más, la complejidad on-chain (el gas, el USDC, las redes, la jerga) queda en segundo plano: el costo de red se cubre en USDC y la plataforma absorbe lo demás, y comprar se siente como en cualquier tienda online. Y conectar no es ceder: la wallet y sus llaves son siempre del usuario, nunca de Grooves.</p>
     </div>
   `,
   en: `
@@ -144,18 +141,15 @@ registerChapter('como-funciona', {
     <p>Grooves is <strong>non-custodial</strong> by design, and now sharper than ever: the keys that control a user's assets are always theirs, and theirs alone. The platform does not generate, store, or have access to any user's private key, and it cannot move, freeze, or touch anyone's funds or Pressings. Every transfer of value is authorized by the user, signing from their own wallet; the only thing Grooves signs with its operational key are internal authorizations, never the user's assets.</p>
     <p>To own a Pressing, the user <strong>connects their own wallet in one click</strong>: the one they already use — browser, mobile, or hardware, cold or hot — links up and operates directly, and the keys never leave their device. Grooves neither creates nor custodies any wallet: the rule is the same and non-negotiable — the keys belong to the user, not to Grooves.</p>
 
-    <h2>Buying without gas</h2>
-    <p>On the primary sale, Grooves absorbs the blockchain's complexity with a <em>gasless</em> system: the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. The user authorizes the purchase by signing from their own wallet, and a Grooves component (the relayer) records it on the blockchain, covering the gas on their behalf; the cost is deducted transparently. The fan only sees the Pressing's price — nothing else.</p>
-
-    <h2>Card and PayPal payments</h2>
-    <p>The fan doesn't need to buy USDC themselves. The interface integrates traditional-to-digital currency conversion services right on the purchase screen. The user sees a button that says <em>"Pay with card"</em> or <em>"Pay with PayPal,"</em> enters their details, and the service automatically converts the money and completes the purchase. <span class="rm-badge">Roadmap</span></p>
+    <h2>Gas, covered in USDC</h2>
+    <p>Operating on the blockchain has a network cost: the <em>gas</em>. On Grooves the user doesn't need the network's native cryptocurrency to pay it. They authorize the purchase by signing from their own wallet, and a Grooves component (the relayer) records the transaction, fronting the gas in the native currency; that cost is charged to the user in USDC, transparently. They don't pay gas in the native currency, but they do cover its cost in USDC — without having to obtain the network's token.</p>
 
     <div class="figure">
       <svg viewBox="0 0 600 110" class="svg-desktop" xmlns="http://www.w3.org/2000/svg">
         <g font-family="'Spline Sans',sans-serif" font-size="11" fill="#c9c6bd" text-anchor="middle">
           <rect x="30" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="78" y="64">Sees a Pressing</text>
           <rect x="166" y="40" width="96" height="40" rx="9" fill="#2e2a1a" stroke="#C8A96E"/><text x="214" y="64" fill="#d9bf8a">Click Buy</text>
-          <rect x="302" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="350" y="60">Card /</text><text x="350" y="73">PayPal / Crypto</text>
+          <rect x="302" y="40" width="96" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="350" y="67">Pay in USDC</text>
           <rect x="438" y="40" width="132" height="40" rx="9" fill="#1a2e1a" stroke="#4a8c5c"/><text x="504" y="64" fill="#7fc99a">Receives their Pressing</text>
           <path d="M126 60 h40 M262 60 h40 M398 60 h40" stroke="#C8A96E" stroke-width="1.5"/>
         </g>
@@ -166,7 +160,7 @@ registerChapter('como-funciona', {
           <path d="M150 54 v22" stroke="#C8A96E" stroke-width="1.5"/>
           <rect x="80" y="78" width="140" height="40" rx="9" fill="#2e2a1a" stroke="#C8A96E"/><text x="150" y="103" fill="#d9bf8a">Click Buy</text>
           <path d="M150 118 v22" stroke="#C8A96E" stroke-width="1.5"/>
-          <rect x="65" y="142" width="170" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="150" y="167">Card / PayPal / Crypto</text>
+          <rect x="65" y="142" width="170" height="40" rx="9" fill="#131318" stroke="#5a5852"/><text x="150" y="167">Pay in USDC</text>
           <path d="M150 182 v22" stroke="#C8A96E" stroke-width="1.5"/>
           <rect x="70" y="206" width="160" height="40" rx="9" fill="#1a2e1a" stroke="#4a8c5c"/><text x="150" y="231" fill="#7fc99a">Receives their Pressing</text>
         </g>
@@ -176,7 +170,7 @@ registerChapter('como-funciona', {
 
     <div class="callout note">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <p>Exploring and listening to previews requires nothing. To own, the only technical step is connecting a wallet — one click; from there, the on-chain complexity (gas, USDC, networks, jargon) stays invisible thanks to the gasless system and the design, and buying feels like any online store. And connecting isn't surrendering: the wallet and its keys are always the user's, never Grooves'.</p>
+      <p>Exploring and listening to previews requires nothing. To own, the only technical step is connecting a wallet — one click; from there, the on-chain complexity (gas, USDC, networks, jargon) stays in the background: the network cost is covered in USDC and the platform absorbs the rest, and buying feels like any online store. And connecting isn't surrendering: the wallet and its keys are always the user's, never Grooves'.</p>
     </div>
 
   `

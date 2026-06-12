@@ -1,7 +1,7 @@
 /* ============================================================
    CAPÍTULO 07 — ARQUITECTURA TÉCNICA
    Refleja el MVP real: Polygon, 3 contratos UUPS, R2 privado + IPFS,
-   gasless via relayer, ECDSA. Multi-chain/HLS/Authenticity = Roadmap.
+   gas en USDC via relayer, ECDSA. Multi-chain/HLS/Authenticity = Roadmap.
    ============================================================ */
 registerChapter('arquitectura', {
   order: 7,
@@ -27,7 +27,7 @@ registerChapter('arquitectura', {
         <g>
           <rect x="120" y="118" width="320" height="62" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
           <text x="140" y="144" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Backend</text>
-          <text x="140" y="164" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">Node.js · Fastify · Prisma · relayer (gasless)</text>
+          <text x="140" y="164" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">Node.js · Fastify · Prisma · relayer · gas USDC</text>
         </g>
         <g>
           <rect x="120" y="206" width="320" height="62" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
@@ -97,10 +97,10 @@ registerChapter('arquitectura', {
       <p><strong>Seguridad por firma criptográfica.</strong> El backend es el único que puede autorizar la creación de un Pressing mediante una firma ECDSA. Aunque un usuario intente llamar al contrato directamente desde su wallet, sin la firma del servidor el contrato rechaza la operación. Las firmas son de un solo uso (nonce) para prevenir ataques de repetición.</p>
     </div>
 
-    <h2>Compra sin gas: el relayer</h2>
-    <p>En la venta primaria, el usuario no necesita tener la criptomoneda nativa de la red para pagar las comisiones de transacción. Un componente del backend —el <em>relayer</em>— registra la operación en la blockchain en nombre del usuario, y el costo se descuenta de forma transparente del pago. Esto elimina la barrera más grande para un usuario nuevo: tener que conseguir "gas" antes de poder comprar.</p>
+    <h2>El gas, pagado en USDC: el relayer</h2>
+    <p>En la venta primaria, el usuario no necesita tener la criptomoneda nativa de la red para pagar el gas. Un componente del backend —el <em>relayer</em>— registra la operación en la blockchain en nombre del usuario, adelantando el gas en la moneda nativa; ese costo de red se le cobra al usuario en USDC, descontado de forma transparente del pago. No paga gas en la moneda nativa, pero sí cubre su costo en USDC, y desaparece la barrera más grande para un usuario nuevo: conseguir el token de gas antes de comprar.</p>
 
-    <p><strong>Crear también es sin gas.</strong> El mismo mecanismo cubre la creación de Pressings: el artista firma una autorización —un permit EIP-2612— para cubrir el costo de red en USDC, y el relayer adelanta la criptomoneda nativa. El creador no necesita tenerla; el costo se descuenta de su USDC de forma atómica, sin que Grooves lo retenga en ningún momento.</p>
+    <p><strong>Crear funciona igual.</strong> El mismo mecanismo cubre la creación de Pressings: el artista firma una autorización —un permit EIP-2612— y el relayer adelanta la moneda nativa para registrar la obra; el costo de red se le cobra en USDC, de forma atómica, sin que el creador necesite la criptomoneda nativa y sin que Grooves retenga sus fondos en ningún momento.</p>
 
     <h2>Cómo se reparte el dinero on-chain</h2>
     <p>El reparto de cada Edition —las wallets, sus porcentajes y, si las hay, sus fechas de vencimiento— no vive en una base de datos editable: se reduce a un hash que el backend <strong>firma dentro del voucher de creación</strong>. Esa firma es la que el contrato exige para crear el Pressing. Si alguien intentara alterar una sola wallet o un solo porcentaje, el hash cambiaría, la firma dejaría de coincidir y el contrato rechazaría la operación. Ni el artista ni Grooves pueden inyectar o modificar a quién se le paga.</p>
@@ -495,7 +495,7 @@ registerChapter('arquitectura', {
 
     <div class="cards c2">
       <div class="card"><span class="card-tag">Roadmap</span><h4>Authenticity Engine</h4><p>Verificación automática de copyright por fingerprinting acústico (estilo Content ID) y análisis de similitud visual, al momento de crear el Pressing.</p></div>
-      <div class="card"><span class="card-tag">Roadmap</span><h4>Multi-chain & on-ramp</h4><p>Soporte para redes adicionales EVM-compatibles, biblioteca unificada entre chains, y pago con tarjeta/PayPal integrado.</p></div>
+      <div class="card"><span class="card-tag">Roadmap</span><h4>Multi-chain</h4><p>Soporte para redes adicionales EVM-compatibles y una biblioteca unificada del usuario entre chains.</p></div>
     </div>
   `,
   en: `
@@ -520,7 +520,7 @@ registerChapter('arquitectura', {
         <g>
           <rect x="120" y="118" width="320" height="62" rx="12" fill="#131318" stroke="#C8A96E" stroke-width="1.4"/>
           <text x="140" y="144" fill="#d9bf8a" font-family="'Spline Sans',sans-serif" font-size="13" font-weight="600">Backend</text>
-          <text x="140" y="164" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">Node.js · Fastify · Prisma · relayer (gasless)</text>
+          <text x="140" y="164" fill="#9a978f" font-family="'JetBrains Mono',monospace" font-size="10">Node.js · Fastify · Prisma · relayer · gas USDC</text>
         </g>
         <g>
           <rect x="120" y="206" width="320" height="62" rx="12" fill="#131318" stroke="#4a8c5c" stroke-width="1.4"/>
@@ -590,10 +590,10 @@ registerChapter('arquitectura', {
       <p><strong>Security by cryptographic signature.</strong> The backend is the only party that can authorize creating a Pressing, via an ECDSA signature. Even if a user tries to call the contract directly from their wallet, without the server's signature the contract rejects the operation. Signatures are single-use (nonce) to prevent replay attacks.</p>
     </div>
 
-    <h2>Buying without gas: the relayer</h2>
-    <p>On the primary sale, the user doesn't need to hold the network's native cryptocurrency to pay transaction fees. A backend component — the <em>relayer</em> — records the operation on the blockchain on the user's behalf, and the cost is deducted transparently from the payment. This removes the biggest barrier for a new user: having to obtain "gas" before they can buy.</p>
+    <h2>Gas, paid in USDC: the relayer</h2>
+    <p>On the primary sale, the user doesn't need to hold the network's native cryptocurrency to pay the gas. A backend component — the <em>relayer</em> — records the operation on the blockchain on the user's behalf, fronting the gas in the native currency; that network cost is charged to the user in USDC, deducted transparently from the payment. They don't pay gas in the native currency, but they do cover its cost in USDC, and the biggest barrier for a new user disappears: obtaining the gas token before buying.</p>
 
-    <p><strong>Creating is gasless too.</strong> The same mechanism covers the creation of Pressings: the artist signs an authorization — an EIP-2612 permit — to cover the network cost in USDC, and the relayer fronts the native cryptocurrency. The creator doesn't need to hold it; the cost is deducted from their USDC atomically, without Grooves ever holding it.</p>
+    <p><strong>Creating works the same way.</strong> The same mechanism covers the creation of Pressings: the artist signs an authorization — an EIP-2612 permit — and the relayer fronts the native currency to register the work; the network cost is charged in USDC, atomically, without the creator needing the native cryptocurrency and without Grooves ever holding their funds.</p>
 
     <h2>How the money is split on-chain</h2>
     <p>Each Edition's split — the wallets, their percentages and, where they exist, their expiration dates — does not live in an editable database: it is reduced to a hash that the backend <strong>signs inside the creation voucher</strong>. That signature is what the contract requires to create the Pressing. If anyone tried to alter a single wallet or a single percentage, the hash would change, the signature would no longer match, and the contract would reject the operation. Neither the artist nor Grooves can inject or modify who gets paid.</p>
@@ -988,7 +988,7 @@ registerChapter('arquitectura', {
 
     <div class="cards c2">
       <div class="card"><span class="card-tag">Roadmap</span><h4>Authenticity Engine</h4><p>Automatic copyright verification via acoustic fingerprinting (Content ID style) and visual similarity analysis, at the moment of creating the Pressing.</p></div>
-      <div class="card"><span class="card-tag">Roadmap</span><h4>Multi-chain & on-ramp</h4><p>Support for additional EVM-compatible networks, a unified library across chains, and integrated card/PayPal payments.</p></div>
+      <div class="card"><span class="card-tag">Roadmap</span><h4>Multi-chain</h4><p>Support for additional EVM-compatible networks and a unified user library across chains.</p></div>
     </div>
 
   `

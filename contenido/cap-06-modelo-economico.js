@@ -1,7 +1,7 @@
 /* ============================================================
    CAPÍTULO 06 — MODELO ECONÓMICO
    Primaria 95/5 (decisión del autor). Reventa: royalty 5-15% + 2.5% Grooves.
-   Referidos = Roadmap. USDC.
+   USDC. Creacion: el artista paga el gas en USDC.
    ============================================================ */
 registerChapter('modelo-economico', {
   order: 6,
@@ -13,9 +13,9 @@ registerChapter('modelo-economico', {
     </div>
 
     <h1 class="ch-title">Grooves solo gana <em>cuando el artista gana</em></h1>
-    <p class="ch-lead">Publicar una obra en Grooves no tiene ningún costo para el artista. No hay tarifas de creación, ni costos de subida, ni comisiones por listar. La plataforma cobra comisión únicamente cuando un Pressing se vende.</p>
+    <p class="ch-lead">Grooves no cobra comisión por publicar: no hay tarifas de creación, ni costos de subida, ni comisiones por listar. La única comisión de la plataforma aparece cuando un Pressing se vende. La salvedad: registrar la obra en la blockchain tiene un costo de red —el gas—, que el artista cubre en USDC.</p>
 
-    <p>El artista sube su obra al Pressing Studio, configura su Edition y crea sus Pressings sin pagar un solo centavo (más allá del costo mínimo de registro en la red). Si el artista no vende, Grooves no cobra. Los incentivos están completamente alineados.</p>
+    <p>El artista sube su obra al Pressing Studio, configura su Edition y crea sus Pressings sin pagar comisión a Grooves; lo único que abona es el costo de red para registrarlos en la blockchain, que se le cobra en USDC (no necesita la criptomoneda nativa). Grooves no gana con eso —solo cubre la red—: si el artista no vende, Grooves no cobra. Los incentivos están completamente alineados.</p>
 
     <h2>Venta primaria — del artista al fan</h2>
     <p>Cuando un fan compra un Pressing directamente del artista, el reparto es simple y transparente:</p>
@@ -394,11 +394,6 @@ registerChapter('modelo-economico', {
       <div class="figure-cap">Fig. 6.5 — La regalía de reventa también se reparte entre el equipo</div>
     </div>
 
-    <div class="callout">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
-      <p><strong>Programa de referidos. <span class="rm-badge">Roadmap</span></strong> En el futuro, cuando un fan comparta un enlace y alguien compre a través de él, ese fan recibirá una comisión automática — convirtiendo a la comunidad en promotores con incentivo real.</p>
-    </div>
-
     <h2>Comparativa de valor</h2>
 
     <div class="figure">
@@ -439,9 +434,9 @@ registerChapter('modelo-economico', {
     </div>
 
     <h1 class="ch-title">Grooves only earns <em>when the artist earns</em></h1>
-    <p class="ch-lead">Publishing a work on Grooves costs the artist nothing. No creation fees, no upload costs, no listing commissions. The platform charges a commission only when a Pressing sells.</p>
+    <p class="ch-lead">Grooves charges no commission to publish: no creation fees, no upload costs, no listing commissions. The platform's only commission appears when a Pressing sells. The caveat: registering the work on the blockchain has a network cost — the gas — which the artist covers in USDC.</p>
 
-    <p>The artist uploads their work to the Pressing Studio, configures their Edition and creates their Pressings without paying a cent (beyond the network's minimal registration cost). If the artist doesn't sell, Grooves doesn't charge. Incentives are completely aligned.</p>
+    <p>The artist uploads their work to the Pressing Studio, configures their Edition and creates their Pressings without paying any commission to Grooves; the only thing they pay is the network cost to register them on the blockchain, charged in USDC (no native cryptocurrency needed). Grooves doesn't profit from that — it only covers the network: if the artist doesn't sell, Grooves doesn't charge. Incentives are completely aligned.</p>
 
     <h2>Primary sale — from artist to fan</h2>
     <p>When a fan buys a Pressing directly from the artist, the split is simple and transparent:</p>
@@ -818,11 +813,6 @@ registerChapter('modelo-economico', {
         </g>
       </svg>
       <div class="figure-cap">Fig. 6.5 — The resale royalty is split among the team too</div>
-    </div>
-
-    <div class="callout">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
-      <p><strong>Referral program. <span class="rm-badge">Roadmap</span></strong> In the future, when a fan shares a link and someone buys through it, that fan will receive an automatic commission — turning the community into promoters with real incentive.</p>
     </div>
 
     <h2>Value comparison</h2>

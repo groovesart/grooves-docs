@@ -31,13 +31,11 @@ registerChapter('glosario', {
         <tr><td><strong>Splitter</strong></td><td>Contrato repartidor</td><td>Contrato propio de cada Edition que recibe las regalías de reventa y las reparte entre las wallets del equipo, según porcentajes fijos.</td></tr>
         <tr><td><strong>Voucher</strong></td><td>Autorización firmada</td><td>Firma del backend que habilita crear un Pressing bajo las reglas de la plataforma; incluye el reparto, de modo que nadie puede alterar quién cobra.</td></tr>
         <tr><td><strong>Anclar</strong></td><td>Publicar on-chain</td><td>Pasar una Edition de borrador a la blockchain. Antes de anclar todo es editable; después, el reparto y las reglas quedan fijos.</td></tr>
-        <tr><td><strong>Relayer</strong></td><td>Pago sin gas</td><td>Componente que registra la compra en blockchain por el usuario, para que no necesite la criptomoneda nativa de la red.</td></tr>
-        <tr><td><strong>Gasless</strong></td><td>Sin comisión de red</td><td>Experiencia de compra donde el usuario no paga ni gestiona el "gas" de la transacción.</td></tr>
+        <tr><td><strong>Relayer</strong></td><td>Gas en USDC</td><td>Componente que registra la compra en blockchain por el usuario y adelanta el gas; el costo de red se le cobra en USDC, sin necesitar la criptomoneda nativa.</td></tr>
+        <tr><td><strong>Gas</strong></td><td>Costo de red</td><td>La comisión que cobra la blockchain por procesar una transacción. En Grooves el usuario no la paga en la moneda nativa de la red: se le cobra en USDC a través del relayer.</td></tr>
         <tr><td><strong>URL firmada</strong></td><td>Signed URL</td><td>Enlace temporal y de un solo uso que entrega un archivo privado solo al dueño verificado, y que expira en minutos.</td></tr>
         <tr><td><strong>KYC</strong></td><td>Verificación de identidad</td><td>Proceso por el que un usuario confirma su identidad para poder crear Pressings.</td></tr>
         <tr><td><strong>Authenticity Engine</strong> <span class="rm-badge">Roadmap</span></td><td>Content ID</td><td>Motor de verificación de copyright que analizará audio y arte antes de la creación. En desarrollo.</td></tr>
-        <tr><td><strong>Referral</strong> <span class="rm-badge">Roadmap</span></td><td>Sistema de referidos</td><td>Comisión para quien refiere a un comprador mediante su enlace. En desarrollo.</td></tr>
-        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Pasarela de pago</td><td>Servicio que convertirá dinero de tarjeta o PayPal a USDC en la wallet conectada del usuario, automáticamente. En desarrollo.</td></tr>
       </tbody>
     </table>
 
@@ -73,13 +71,11 @@ registerChapter('glosario', {
         <tr><td><strong>Splitter</strong></td><td>Royalty splitter</td><td>Each Edition's own contract that receives resale royalties and distributes them among the team's wallets, by fixed percentages.</td></tr>
         <tr><td><strong>Voucher</strong></td><td>Signed authorization</td><td>The backend's signature that enables creating a Pressing under the platform's rules; it includes the split, so no one can alter who gets paid.</td></tr>
         <tr><td><strong>Anchor</strong></td><td>Publish on-chain</td><td>Moving an Edition from draft to the blockchain. Before anchoring everything is editable; afterward, the split and the rules are fixed.</td></tr>
-        <tr><td><strong>Relayer</strong></td><td>Gasless payment</td><td>A component that records the purchase on the blockchain for the user, so they don't need the network's native cryptocurrency.</td></tr>
-        <tr><td><strong>Gasless</strong></td><td>No network fee</td><td>A buying experience where the user neither pays nor manages the transaction's "gas."</td></tr>
+        <tr><td><strong>Relayer</strong></td><td>Gas in USDC</td><td>A component that records the purchase on the blockchain for the user and fronts the gas; the network cost is charged in USDC, with no need for the native cryptocurrency.</td></tr>
+        <tr><td><strong>Gas</strong></td><td>Network cost</td><td>The fee the blockchain charges to process a transaction. On Grooves the user doesn't pay it in the network's native currency: it's charged in USDC through the relayer.</td></tr>
         <tr><td><strong>Signed URL</strong></td><td>Signed URL</td><td>A temporary, single-use link that delivers a private file only to the verified owner, and expires in minutes.</td></tr>
         <tr><td><strong>KYC</strong></td><td>Identity verification</td><td>The process by which a user confirms their identity in order to create Pressings.</td></tr>
         <tr><td><strong>Authenticity Engine</strong> <span class="rm-badge">Roadmap</span></td><td>Content ID</td><td>A copyright-verification engine that will analyze audio and art before creation. In development.</td></tr>
-        <tr><td><strong>Referral</strong> <span class="rm-badge">Roadmap</span></td><td>Referral system</td><td>A commission for whoever refers a buyer through their link. In development.</td></tr>
-        <tr><td><strong>Fiat On-Ramp</strong> <span class="rm-badge">Roadmap</span></td><td>Payment gateway</td><td>A service that will convert card or PayPal money to USDC in the user's connected wallet, automatically. In development.</td></tr>
       </tbody>
     </table>
 
